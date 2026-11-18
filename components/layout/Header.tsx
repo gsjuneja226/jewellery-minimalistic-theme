@@ -51,7 +51,7 @@ export function Header({
     <>
       <header
         className={cn(
-          "w-full z-50 transition-all duration-300 sticky top-0 bg-white/95 backdrop-blur-md border-b border-[#E7DCC6]/80 px-4 md:px-8",
+          "w-full z-50 transition-all duration-300 sticky top-0 bg-[#2A1218]/95 backdrop-blur-md border-b border-[#BA9048]/40 px-4 md:px-8 text-[#F5E5C9]",
           isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
         )}
       >
@@ -60,18 +60,18 @@ export function Header({
           <div className="flex items-center space-x-2 md:space-x-3">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Open navigation menu"
             >
-              <Menu className="w-5 h-5 text-espresso" />
+              <Menu className="w-5 h-5 text-[#F5E5C9]" />
             </button>
             <Link
               href="/search"
-              className="flex items-center gap-2 p-2 sm:px-3 sm:py-1.5 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors border border-transparent sm:border-[#E7DCC6]/60 focus:outline-none focus:ring-2 focus:ring-gold"
+              className="flex items-center gap-2 p-2 sm:px-3 sm:py-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors border border-transparent sm:border-[#BA9048]/40 focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Search catalogue"
             >
-              <Search className="w-4 h-4 text-espresso" />
-              <span className="hidden sm:inline text-xs font-sans text-brown-text/70">
+              <Search className="w-4 h-4 text-[#BA9048]" />
+              <span className="hidden sm:inline text-xs font-sans text-[#E0D0BC]">
                 Search &quot;kundan&quot;, &quot;jhumka&quot;, &quot;solitaire&quot;...
               </span>
             </Link>
@@ -81,11 +81,11 @@ export function Header({
           <div className="flex-1 flex justify-center items-center">
             <Link
               href="/"
-              className="transition-all duration-300 relative block opacity-100 scale-100 h-9 sm:h-11 w-36 sm:w-48"
+              className="transition-all duration-300 relative block opacity-100 scale-100 h-8 sm:h-10 w-32 sm:w-44"
               aria-label="Phabulous by Mitthat Home"
             >
               <Image
-                src="/brand/logo-wordmark.png"
+                src="/brand/logo-wordmark-light.png"
                 alt="Phabulous by Mitthat"
                 fill
                 className="object-contain"
@@ -95,20 +95,20 @@ export function Header({
           </div>
 
           {/* Right: Account, Wishlist, Cart */}
-          <div className="flex items-center space-x-1 sm:space-x-2">
+          <div className="flex items-center space-x-1 sm:space-x-2 text-[#F5E5C9]">
             <Link
               href="/account"
-              className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Account"
             >
-              <User className="w-5 h-5 text-espresso" />
+              <User className="w-5 h-5 text-[#F5E5C9]" />
             </Link>
             <Link
               href="/account/wishlist"
-              className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors relative focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors relative focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Wishlist"
             >
-              <Heart className="w-5 h-5 text-espresso" />
+              <Heart className="w-5 h-5 text-[#F5E5C9]" />
               {wishlistCount > 0 && (
                 <span className="absolute top-1 right-1 bg-antique-gold text-white text-[10px] font-sans font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {wishlistCount}
@@ -117,12 +117,12 @@ export function Header({
             </Link>
             <Link
               href="/cart"
-              className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors relative focus:outline-none focus:ring-2 focus:ring-gold"
+              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors relative focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Shopping Cart"
             >
-              <ShoppingBag className="w-5 h-5 text-espresso" />
+              <ShoppingBag className="w-5 h-5 text-[#F5E5C9]" />
               {cartCount > 0 && (
-                <span className="absolute top-1 right-1 bg-espresso text-white text-[10px] font-sans font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute top-1 right-1 bg-[#BA9048] text-[#2A1218] text-[10px] font-sans font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               )}

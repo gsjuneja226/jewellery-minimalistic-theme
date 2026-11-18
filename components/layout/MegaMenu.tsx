@@ -21,36 +21,36 @@ export const OCCASIONS_NAV = [
 
 export function MegaMenu() {
   return (
-    <nav className="hidden lg:flex items-center justify-center space-x-8 py-3 text-sm font-sans tracking-wide border-b border-[#F1E8D8]/70 bg-warm-white">
+    <nav className="hidden lg:flex items-center justify-center space-x-8 py-2.5 text-xs font-sans font-semibold tracking-wider border-t border-[#BA9048]/25 bg-[#230E14] text-[#F5E5C9]">
       <Link
         href="/collections/new-arrivals"
-        className="text-espresso font-medium hover:text-antique-gold transition-colors flex items-center gap-1.5"
+        className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors flex items-center gap-1.5"
       >
-        <Sparkles className="w-3.5 h-3.5 text-antique-gold" />
-        New Arrivals
+        <Sparkles className="w-3.5 h-3.5 text-[#BA9048]" />
+        NEW ARRIVALS
       </Link>
       <Link
         href="/collections/bestsellers"
-        className="text-espresso font-medium hover:text-antique-gold transition-colors"
+        className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors"
       >
-        Bestsellers
+        BESTSELLERS
       </Link>
 
       {/* Categories Dropdown */}
       <div className="relative group">
         <Link
           href="/collections"
-          className="text-espresso font-medium hover:text-antique-gold transition-colors py-2"
+          className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors py-2"
         >
-          Categories
+          CATEGORIES
         </Link>
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[480px] bg-white border border-[#E7DCC6] rounded-[14px] shadow-card p-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[480px] bg-[#FCFAF5] border border-[#D6C2A3] rounded-[14px] shadow-card p-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
           <div className="grid grid-cols-2 gap-4">
             {CATEGORIES_NAV.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/collections/${cat.slug}`}
-                className="group/item p-2 rounded-lg hover:bg-soft-cream transition-colors block"
+                className="group/item p-2 rounded-lg hover:bg-[#F2EAE0] transition-colors block"
               >
                 <div className="text-sm font-medium text-espresso group-hover/item:text-antique-gold">
                   {cat.name}
@@ -61,7 +61,7 @@ export function MegaMenu() {
               </Link>
             ))}
           </div>
-          <div className="mt-4 pt-3 border-t border-[#F1E8D8] flex justify-between items-center text-xs">
+          <div className="mt-4 pt-3 border-t border-[#EAE0D0] flex justify-between items-center text-xs">
             <span className="text-brown-text">Browse all handcrafted categories</span>
             <Link
               href="/collections"
@@ -75,16 +75,16 @@ export function MegaMenu() {
 
       {/* Occasions Dropdown */}
       <div className="relative group">
-        <span className="text-espresso font-medium hover:text-antique-gold transition-colors py-2 cursor-pointer">
-          Shop by Occasion
+        <span className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors py-2 cursor-pointer">
+          SHOP BY OCCASION
         </span>
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[400px] bg-white border border-[#E7DCC6] rounded-[14px] shadow-card p-5 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
+        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[400px] bg-[#FCFAF5] border border-[#D6C2A3] rounded-[14px] shadow-card p-5 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
           <div className="space-y-3">
             {OCCASIONS_NAV.map((occ) => (
               <Link
                 key={occ.slug}
                 href={`/collections/${occ.slug}`}
-                className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-soft-cream transition-colors"
+                className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-[#F2EAE0] transition-colors"
               >
                 <div>
                   <div className="text-sm font-medium text-espresso group-hover/item:text-antique-gold">

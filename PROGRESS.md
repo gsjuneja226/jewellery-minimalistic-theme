@@ -106,3 +106,20 @@
     - Instagram Community Grid (6 curated lifestyle jewellery styling photos).
     - Top catalogue products in `lib/data/mockData.ts` updated with real primary photos.
   - [x] Verified build: 59/59 static pages generated, 130 kB First Load JS, 6/6 tests passing, 0 type errors, 0 ESLint warnings.
+
+- [x] **Mobile Optimization & Rich Maroonish-Brown Navbar Integration**
+  - [x] Removed the strip above the navbar completely so the navigation sits cleanly at the top of the viewport.
+  - [x] Redesigned the navbar in an opulent deep royal maroon-espresso (`#2A1218`) with an antique gold hairline border (`#BA9048`/40).
+  - [x] Eliminated the white rectangular box artifact on the logo:
+    - Generated a 100% transparent antique champagne gold & white wordmark (`public/brand/logo-wordmark-light.png`) with true alpha transparency (alpha 0 at edges).
+    - Applied clean SVG/PNG rendering without CSS inversion filters.
+  - [x] Enhanced the hero carousel with real photoshoot photography across all 4 slides:
+    - Slide 1: BIBA photoshoot with models, marigolds, and traditional kundan jewellery (`/hero/biba-hero-desktop.jpg` & `/hero/biba-hero-mobile.jpg`).
+    - Slide 2: Royal Kundan & Bridal wedding photoshoot (`/images/occasions/wedding.jpg`).
+    - Slide 3: Everyday Anti-Tarnish chic photoshoot (`/images/occasions/daily-wear.jpg`).
+    - Slide 4: Festive Chandbalis & Jhumkas photoshoot (`/images/occasions/festive.jpg`).
+  - [x] Fully optimized mobile responsive experience:
+    - Mobile navbar houses hamburger menu, clean centered light wordmark, wishlist, account, and shopping bag with gold counter badge.
+    - Integrated mobile search pill with gold magnifying glass and microphone icon directly inside the navbar.
+    - Hero banner scales naturally on mobile without cropping the models' faces or marigold garlands.
+  - [x] Verified production build (59 static pages, 130 kB First Load JS, 6/6 tests passing).
