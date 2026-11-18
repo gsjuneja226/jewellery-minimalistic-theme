@@ -124,20 +124,10 @@
     - Hero banner scales naturally on mobile without cropping the models' faces or marigold garlands.
   - [x] Verified production build (59 static pages, 130 kB First Load JS, 6/6 tests passing).
 
-- [x] **Hero Photoshoot Carousel Reinstatement & Mobile Length Streamlining**
-  - [x] Restored the full photographic carousel in the hero banner with real photoshoot imagery across all 4 slides:
-    - Fixed CSS stacking context (`z-0` image layer, `z-[1]` subtle vignette gradient, `z-10` typography & CTA overlay) so photography renders vibrantly without being pushed behind background layers.
-    - Slide 1: BIBA-inspired editorial photoshoot with models in festive emerald & magenta attire, marigold garlands, and kundan jewellery (`/hero/biba-hero-desktop.jpg` and `/hero/biba-hero-mobile.jpg`).
-    - Slide 2: Royal Kundan & Bridal Heritage photoshoot (`/images/occasions/wedding.jpg`).
-    - Slide 3: 18K Gold-Tone Plated Waterproof Daily Radiance photoshoot (`/images/occasions/daily-wear.jpg`).
-    - Slide 4: Punjabi Heritage Signature Chandbalis & Jhumkas photoshoot (`/images/occasions/festive.jpg`).
-    - Equipped with smooth carousel controls: edge arrow buttons (`<` and `>`), bottom navigation dots with active gold pill, and 6-second auto-play rotation that pauses on user hover.
-  - [x] Kept the top of the page clean:
-    - Navbar sits directly at the very top of the viewport (no top strip).
-    - Opulent maroonish-espresso (`#2A1218`) navbar with gold hairline border and transparent gold wordmark (zero white box artifact).
-    - Integrated mobile search pill directly inside the maroonish navbar.
-  - [x] Maintained the streamlined mobile homepage length (reduced scroll depth by ~65%):
-    - 3D Jewellery Box responsive height compacted to 480px on phones.
-    - Compact 2x2 product grid with category tabs on mobile.
-    - Redundant desktop tiles hidden on mobile (`hidden md:block`).
-  - [x] Verified production build (59/59 static pages compiled, 129 kB First Load JS, 6/6 Vitest tests passing, 0 TypeScript errors, 0 ESLint warnings).
+- [x] **Hero Custom Editorial Photoshoot Replacement & Polish**
+  - [x] Completely removed copied screenshots from reference brands and replaced with 100% original, bespoke high-fashion Indian jewellery campaign imagery:
+    - Slide 1: **The Kundan Edit** (`/hero/hero-slide-kundan.jpg`): Regal Indian model draped in deep wine silk wearing a handcrafted gold-tone Kundan Jadau choker with emerald drop beads and matching jhumkas, shot in palace ambient lighting with negative space for typography.
+    - Slide 2: **Daily Radiance** (`/hero/hero-slide-modern.jpg`): Contemporary chic editorial of an Indian woman bathed in golden hour glow wearing waterproof 18K gold-tone plated hoops and layered chains.
+    - Slide 3: **Festive Jhumkas** (`/hero/hero-slide-festive.jpg`): Radiant Indian woman in an emerald festive lehenga holding a brass diya lamp, showcasing ornate antique gold-tone chandelier jhumkas in magical Diwali bokeh courtyard lighting.
+  - [x] Deleted old `biba-hero-desktop.jpg` and `biba-hero-mobile.jpg` from the repository.
+  - [x] Verified full build: 59/59 static pages compiled, 129 kB First Load JS, 6/6 Vitest tests passing, 0 TypeScript errors, 0 ESLint warnings.
