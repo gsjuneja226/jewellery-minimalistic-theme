@@ -52,11 +52,11 @@
   - [x] Customer returns & exchanges workflow
   - [x] Razorpay refunds integration
 
-- [ ] **Phase 7: Growth & Marketing**
-  - [ ] Verified customer reviews with photo upload
-  - [ ] Back-in-stock notifications & abandoned cart outbox jobs
-  - [ ] CMS pages (About, Care Guide, Policies, FAQ)
-  - [ ] Analytics & Reports (GST summary, sales, inventory valuation)
+- [x] **Phase 7: Growth & Marketing**
+  - [x] Verified customer reviews with photo upload
+  - [x] Back-in-stock notifications & abandoned cart outbox jobs
+  - [x] CMS pages (About, Care Guide, Policies, FAQ)
+  - [x] Analytics & Reports (GST summary, sales, inventory valuation)
 
 - [ ] **Phase 8: Hardening & Compliance**
   - [ ] Strict CSP & security headers
