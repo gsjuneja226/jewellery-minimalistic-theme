@@ -8,7 +8,7 @@ export function Interactive3DShowcase() {
   return (
     <section
       aria-label="3D Interactive Jewellery Box Showcase"
-      className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-b from-warm-white via-soft-cream/40 to-warm-white relative overflow-hidden border-y border-[#E7DCC6]/60"
+      className="py-16 md:py-20 px-4 md:px-8 bg-gradient-to-b from-[#F5EFE6] via-[#EFE5D7] to-[#F5EFE6] relative overflow-hidden border-y border-[#D6C2A3]/80"
     >
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
@@ -45,7 +45,7 @@ export function Interactive3DShowcase() {
         </div>
 
         {/* 3D Box Container with Elegant Luxury Border */}
-        <div className="relative rounded-2xl md:rounded-3xl border border-[#E7DCC6] bg-white/70 backdrop-blur-sm shadow-card overflow-hidden">
+        <div className="relative rounded-2xl md:rounded-3xl border border-[#D6C2A3] bg-[#FAF6EF]/95 backdrop-blur-sm shadow-card overflow-hidden">
           <JewelleryBoxHero isSection={true} />
         </div>
       </div>

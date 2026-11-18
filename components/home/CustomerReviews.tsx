@@ -1,7 +1,17 @@
 import * as React from "react";
+import Image from "next/image";
 import { Rating } from "@/components/ui/Rating";
 import { REVIEWS_DATA } from "@/lib/data/mockData";
 import { CheckCircle2, Quote } from "lucide-react";
+
+const REVIEW_PHOTOS = [
+  "/images/reviews/review-1.jpg",
+  "/images/reviews/review-2.jpg",
+  "/images/reviews/review-3.jpg",
+  "/images/reviews/review-4.jpg",
+  "/images/reviews/review-1.jpg",
+  "/images/reviews/review-2.jpg",
+];
 
 export function CustomerReviews() {
   const reviews = REVIEWS_DATA.slice(0, 6);
@@ -22,10 +32,10 @@ export function CustomerReviews() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {reviews.map((rev) => (
+        {reviews.map((rev, idx) => (
           <div
             key={rev.id}
-            className="flex flex-col justify-between rounded-[14px] border border-[#E7DCC6]/80 bg-white p-6 shadow-subtle hover:border-gold/60 hover:shadow-card transition-all duration-300"
+            className="flex flex-col justify-between rounded-[14px] border border-[#D6C2A3] bg-[#FCFAF5] p-6 shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">
@@ -44,14 +54,24 @@ export function CustomerReviews() {
               </p>
             </div>
 
-            <div className="pt-4 mt-4 border-t border-[#F1E8D8] flex items-center justify-between">
-              <div>
-                <p className="font-sans text-xs font-semibold text-espresso">
-                  {rev.authorName}
-                </p>
-                <p className="text-[11px] text-brown-text/60 font-sans">
-                  {rev.city}, India
-                </p>
+            <div className="pt-4 mt-4 border-t border-[#EAE0D0] flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="relative w-9 h-9 rounded-full overflow-hidden border border-[#D6C2A3] flex-shrink-0">
+                  <Image
+                    src={REVIEW_PHOTOS[idx % REVIEW_PHOTOS.length]}
+                    alt={rev.authorName}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-sans text-xs font-semibold text-espresso">
+                    {rev.authorName}
+                  </p>
+                  <p className="text-[11px] text-brown-text/60 font-sans">
+                    {rev.city}, India
+                  </p>
+                </div>
               </div>
 
               {rev.isVerifiedPurchase && (

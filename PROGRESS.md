@@ -89,3 +89,20 @@
   - [x] Placed the `final3` component (`Interactive3DShowcase` / `JewelleryBoxHero`) directly below the hero area.
   - [x] Maintained smooth sticky header transition past the hero banner.
   - [x] Verified production build (130 kB First Load JS, 59/59 static pages, 0 errors, all Vitest tests passing).
+
+- [x] **Visual Warmth & Editorial Photography Overhaul**
+  - [x] Toned down harsh bright whites and glaring neon yellow across all page surfaces:
+    - Shifted `--background` to a warm luxury antique ivory `#F8F5EE` (RGB 248, 245, 238).
+    - Shifted `--card` to soft cream parchment `#FCFAF5` with warm gold hairline borders `#DBC8AC`.
+    - Softened alternate sections to warm almond linen `#EFE7DC`.
+    - Replaced the glaring yellow announcement ticker with a regal deep royal espresso `#241308` & antique gold `#F3E3B5` bar with ruby dot accents.
+    - Replaced the 3D Jewellery Box radial gradient from pure `#FFFFFF` to a rich warm velvet studio glow `#F7EFE3` -> `#EDE2CD` -> `#DFD0B8`.
+  - [x] Populated high-resolution editorial photography across the storefront:
+    - Quick Category Circles with real photo thumbnails (kundan choker, earrings, necklaces, bangles, rings, pendants, bridal).
+    - Shop by Category (5 large photographic tiles for Rings, Necklaces, Earrings, Pendants, Bangles).
+    - Shop by Occasion (Wedding, Festive, Daily Wear, Gifting).
+    - Brand Story Band (Mitthat atelier craftsman photo).
+    - Customer Reviews (real verified buyer avatar photos).
+    - Instagram Community Grid (6 curated lifestyle jewellery styling photos).
+    - Top catalogue products in `lib/data/mockData.ts` updated with real primary photos.
+  - [x] Verified build: 59/59 static pages generated, 130 kB First Load JS, 6/6 tests passing, 0 type errors, 0 ESLint warnings.

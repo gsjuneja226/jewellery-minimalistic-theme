@@ -4,16 +4,16 @@ import { Instagram } from "lucide-react";
 
 export function InstagramGrid() {
   const posts = [
-    { id: 1, image: "/products/kundan-jadau-choker-set-2.svg", handle: "@phabulousbymitthat" },
-    { id: 2, image: "/products/chandbali-festive-jhumkas-2.svg", handle: "@phabulousbymitthat" },
-    { id: 3, image: "/products/ad-solitaire-statement-ring-2.svg", handle: "@phabulousbymitthat" },
-    { id: 4, image: "/products/temple-peacock-cuff-bangle-2.svg", handle: "@phabulousbymitthat" },
-    { id: 5, image: "/products/rose-gold-tennis-bracelet-2.svg", handle: "@phabulousbymitthat" },
-    { id: 6, image: "/products/sapphire-teardrop-pendant-2.svg", handle: "@phabulousbymitthat" },
+    { id: 1, image: "/images/instagram/insta-1.jpg", handle: "@phabulousbymitthat" },
+    { id: 2, image: "/images/instagram/insta-2.jpg", handle: "@phabulousbymitthat" },
+    { id: 3, image: "/images/instagram/insta-3.jpg", handle: "@phabulousbymitthat" },
+    { id: 4, image: "/images/instagram/insta-4.jpg", handle: "@phabulousbymitthat" },
+    { id: 5, image: "/images/instagram/insta-5.jpg", handle: "@phabulousbymitthat" },
+    { id: 6, image: "/images/instagram/insta-6.jpg", handle: "@phabulousbymitthat" },
   ];
 
   return (
-    <section className="py-16 bg-soft-cream/30 border-t border-[#F1E8D8]">
+    <section className="py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center space-y-2 mb-10">
           <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">

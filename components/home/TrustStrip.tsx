@@ -28,7 +28,7 @@ export function TrustStrip() {
   return (
     <section
       aria-label="Brand guarantees and service assurances"
-      className="py-10 bg-soft-cream/60 border-y border-[#E7DCC6]/60"
+      className="py-10 bg-[#EFE7DC] border-y border-[#D6C2A3]"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
@@ -39,7 +39,7 @@ export function TrustStrip() {
                 key={idx}
                 className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3.5"
               >
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-white border border-gold/40 text-antique-gold shadow-sm">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#FCFAF5] border border-gold/40 text-antique-gold shadow-sm">
                   <Icon className="h-6 w-6 stroke-[1.6]" />
                 </div>
                 <div>

@@ -53,7 +53,7 @@ export function ProductCard({
   return (
     <div
       className={cn(
-        "group relative flex flex-col rounded-[14px] border border-[#E7DCC6]/60 bg-white p-3 shadow-subtle transition-all duration-300 hover:border-gold/60 hover:shadow-card",
+        "group relative flex flex-col rounded-[14px] border border-[#D6C2A3] bg-[#FCFAF5] p-3 shadow-subtle transition-all duration-300 hover:border-gold hover:shadow-card",
         className
       )}
       onMouseEnter={() => setIsHovered(true)}
@@ -63,7 +63,7 @@ export function ProductCard({
       {/* 4:5 Aspect Ratio Image Container */}
       <Link
         href={`/products/${product.slug}`}
-        className="relative block w-full aspect-[4/5] overflow-hidden rounded-[10px] bg-soft-cream/40"
+        className="relative block w-full aspect-[4/5] overflow-hidden rounded-[10px] bg-[#EFE7DC]/60"
       >
         <Image
           src={isHovered ? hoverImage : primaryImage}

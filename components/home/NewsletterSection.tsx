@@ -23,7 +23,7 @@ export function NewsletterSection() {
 
   return (
     <section className="py-20 px-4 md:px-8 bg-warm-white">
-      <div className="max-w-3xl mx-auto rounded-[18px] border border-gold/40 bg-gradient-to-br from-white via-soft-cream/40 to-light-blush/30 p-8 md:p-12 shadow-card text-center relative overflow-hidden">
+      <div className="max-w-3xl mx-auto rounded-[18px] border border-[#D6C2A3] bg-gradient-to-br from-[#FCFAF5] via-[#F3ECE1] to-[#EFE4DA] p-8 md:p-12 shadow-card text-center relative overflow-hidden">
         {/* Subtle decorative gold sparkle */}
         <div className="absolute top-4 right-6 text-gold/30">
           <Sparkles className="w-8 h-8" />

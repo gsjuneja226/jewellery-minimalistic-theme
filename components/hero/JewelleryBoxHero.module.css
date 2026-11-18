@@ -8,7 +8,7 @@
   justify-content: center;
   padding-top: 60px;
   padding-bottom: 40px;
-  background: radial-gradient(ellipse at 50% 30%, #FFFFFF, #FFFDF9 55%, #F6EFE3 100%);
+  background: radial-gradient(ellipse at 50% 35%, #F7EFE3, #EDE2CD 55%, #DFD0B8 100%);
   color: #2a2118;
   overflow: hidden;
   touch-action: pan-y;

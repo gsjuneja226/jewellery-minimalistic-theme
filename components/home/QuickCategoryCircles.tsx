@@ -16,45 +16,45 @@ export const CATEGORY_CIRCLES: CategoryCircleItem[] = [
     name: "Earrings",
     badge: "Trending",
     href: "/collections/earrings",
-    image: "/products/chandbali-festive-jhumkas-1.svg",
+    image: "/images/categories/earrings.jpg",
   },
   {
     name: "Kundan Sets",
     badge: "Festive",
     href: "/collections/jewellery-sets",
-    image: "/products/kundan-jadau-choker-set-1.svg",
+    image: "/images/categories/kundan-choker.jpg",
   },
   {
     name: "Necklaces",
     href: "/collections/necklaces",
-    image: "/products/emerald-stone-layered-necklace-1.svg",
+    image: "/images/categories/necklaces.jpg",
   },
   {
     name: "Bangles & Cuffs",
     href: "/collections/bangles-bracelets",
-    image: "/products/temple-peacock-cuff-bangle-1.svg",
+    image: "/images/categories/bangles.jpg",
   },
   {
     name: "AD Rings",
     badge: "Hot",
     href: "/collections/rings",
-    image: "/products/ad-solitaire-statement-ring-1.svg",
+    image: "/images/categories/rings.jpg",
   },
   {
     name: "Pendants",
     href: "/collections/pendants",
-    image: "/products/sapphire-teardrop-pendant-1.svg",
+    image: "/images/categories/pendants.jpg",
   },
   {
     name: "Anti-Tarnish",
     badge: "Daily",
     href: "/collections/daily-wear",
-    image: "/products/classic-gold-tone-daily-hoops-1.svg",
+    image: "/images/occasions/daily-wear.jpg",
   },
   {
     name: "Bridal Edit",
     href: "/collections/wedding",
-    image: "/products/ruby-drop-maang-tikka-1.svg",
+    image: "/images/occasions/wedding.jpg",
   },
 ];
 
@@ -62,7 +62,7 @@ export function QuickCategoryCircles() {
   return (
     <section
       aria-label="Quick Category Stories"
-      className="w-full bg-soft-cream/60 py-6 border-b border-[#E7DCC6]/60 overflow-hidden"
+      className="w-full bg-[#F3ECE1] py-6 border-b border-[#D6C2A3] overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex items-center justify-between mb-3 md:hidden">

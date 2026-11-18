@@ -10,33 +10,33 @@ export function ShopByOccasion() {
       slug: "wedding",
       tagline: "Bridal Opulence & Heritage Kundan",
       desc: "Choker sets, heavy jhumkas & mathapattis designed for vows & royal celebrations.",
-      image: "/products/kundan-jadau-choker-set-1.svg",
+      image: "/images/occasions/wedding.jpg",
     },
     {
       title: "Festive",
       slug: "festive",
       tagline: "Diwali, Karwa Chauth & Lohri Radiance",
       desc: "Lustrous antique gold-tone finishes with vibrant meenakari and gemstone hues.",
-      image: "/products/chandbali-festive-jhumkas-1.svg",
+      image: "/images/occasions/festive.jpg",
     },
     {
       title: "Daily Wear",
       slug: "daily-wear",
       tagline: "Effortless Studio & Workday Chic",
       desc: "Anti-tarnish hoops, solitaire AD bands and featherlight chains you'll never take off.",
-      image: "/products/classic-gold-tone-daily-hoops-1.svg",
+      image: "/images/occasions/daily-wear.jpg",
     },
     {
       title: "Gifting",
       slug: "gifting",
       tagline: "Tokens of Love in Velvet Keepsake Boxes",
       desc: "Curated tennis bracelets, romantic pendants and thoughtful personalized charms.",
-      image: "/products/rose-gold-tennis-bracelet-1.svg",
+      image: "/images/occasions/gifting.jpg",
     },
   ];
 
   return (
-    <section className="py-16 bg-soft-cream/50 border-t border-[#F1E8D8]">
+    <section className="py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="text-center space-y-2 mb-12">
           <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
@@ -56,7 +56,7 @@ export function ShopByOccasion() {
             <Link
               key={occ.slug}
               href={`/collections/${occ.slug}`}
-              className="group relative flex flex-col rounded-[14px] overflow-hidden border border-[#E7DCC6] bg-white shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
+              className="group relative flex flex-col rounded-[14px] overflow-hidden border border-[#D6C2A3] bg-[#FCFAF5] shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-warm-white">
                 <Image

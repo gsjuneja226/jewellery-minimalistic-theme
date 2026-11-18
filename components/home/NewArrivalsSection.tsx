@@ -10,7 +10,7 @@ export function NewArrivalsSection() {
   const newArrivals = PRODUCTS_DATA.slice(0, 4);
 
   return (
-    <section className="py-16 bg-soft-cream/30 border-y border-[#F1E8D8]">
+    <section className="py-16 bg-[#EFE7DC] border-y border-[#D6C2A3]">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col sm:flex-row items-baseline justify-between mb-8">
           <div>

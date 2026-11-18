@@ -9,31 +9,31 @@ export function ShopByCategory() {
       title: "Rings",
       slug: "rings",
       subtitle: "Solitaire AD & Cocktail Bands",
-      image: "/products/ad-solitaire-statement-ring-1.svg",
+      image: "/images/categories/rings.jpg",
     },
     {
       title: "Necklaces",
       slug: "necklaces",
       subtitle: "Chains, Chokers & Layered Drops",
-      image: "/products/emerald-stone-layered-necklace-1.svg",
+      image: "/images/categories/kundan-choker.jpg",
     },
     {
       title: "Earrings",
       slug: "earrings",
       subtitle: "Jhumkas, Chandbalis & Studs",
-      image: "/products/chandbali-festive-jhumkas-1.svg",
+      image: "/images/categories/earrings.jpg",
     },
     {
       title: "Pendants",
       slug: "pendants",
       subtitle: "Gemstone Drops & Lockets",
-      image: "/products/sapphire-teardrop-pendant-1.svg",
+      image: "/images/categories/pendants.jpg",
     },
     {
       title: "Bangles & Bracelets",
       slug: "bangles-bracelets",
       subtitle: "Kada Cuffs & Tennis Chains",
-      image: "/products/temple-peacock-cuff-bangle-1.svg",
+      image: "/images/categories/bangles.jpg",
     },
   ];
 
@@ -57,10 +57,10 @@ export function ShopByCategory() {
           <Link
             key={cat.slug}
             href={`/collections/${cat.slug}`}
-            className="group relative flex flex-col rounded-[14px] overflow-hidden border border-[#E7DCC6]/70 bg-white shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
+            className="group relative flex flex-col rounded-[14px] overflow-hidden border border-[#D6C2A3] bg-[#FCFAF5] shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
           >
             {/* 4:5 image container */}
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-soft-cream/30">
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#EFE7DC]">
               <Image
                 src={cat.image}
                 alt={cat.title}
@@ -68,14 +68,14 @@ export function ShopByCategory() {
                 sizes="(max-width: 768px) 50vw, 20vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-108"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-              <div className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/90 text-espresso shadow-xs backdrop-blur-xs opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
+              <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
+              <div className="absolute top-3 right-3 flex h-7 w-7 items-center justify-center rounded-full bg-white/95 text-espresso shadow-xs backdrop-blur-xs opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
                 <ArrowUpRight className="h-4 w-4 text-antique-gold" />
               </div>
             </div>
 
             {/* Title & subtitle */}
-            <div className="p-3 text-center bg-white flex flex-col justify-center">
+            <div className="p-3 text-center bg-[#FCFAF5] flex flex-col justify-center">
               <h3 className="font-serif text-lg font-medium text-espresso group-hover:text-antique-gold transition-colors">
                 {cat.title}
               </h3>

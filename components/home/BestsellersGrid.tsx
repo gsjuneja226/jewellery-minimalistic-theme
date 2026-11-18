@@ -84,7 +84,7 @@ export function BestsellersGrid() {
                 "px-4 py-1.5 rounded-full text-xs sm:text-sm font-sans font-medium transition-all duration-200 border",
                 activeTab === tab.id
                   ? "bg-antique-gold border-antique-gold text-white shadow-sm"
-                  : "bg-white border-[#E7DCC6] text-espresso hover:bg-soft-cream hover:border-gold"
+                  : "bg-[#FCFAF5] border-[#D6C2A3] text-espresso hover:bg-[#EFE7DC] hover:border-gold"
               )}
             >
               {tab.label}

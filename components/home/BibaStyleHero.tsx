@@ -113,13 +113,14 @@ export function BibaStyleHero() {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
-      {/* 1. Yellow/Gold Festive Announcement Ticker (from BIBA reference) */}
-      <div className="bg-[#FED24C] text-[#2A1408] text-[11px] sm:text-xs font-sans font-bold tracking-wider py-1.5 px-4 text-center border-b border-[#E6BC37]">
+      {/* 1. Festive Announcement Ticker (Rich Warm Royal Espresso & Gold) */}
+      <div className="bg-[#241308] text-[#F3E3B5] text-[11px] sm:text-xs font-sans font-bold tracking-wider py-2 px-4 text-center border-b border-[#8C621E]/60">
         <div className="max-w-7xl mx-auto flex items-center justify-center gap-2">
-          <span>✨ AW&apos;26 IS HERE! DISCOVER THE NEW SEASON OF ELEGANCE 🌸</span>
-          <span className="hidden sm:inline">•</span>
-          <span className="hidden sm:inline">PAN-INDIA COD AVAILABLE</span>
-          <span className="hidden md:inline">•</span>
+          <span className="text-[#BA9048]">✨</span>
+          <span>AW&apos;26 IS HERE: DISCOVER THE NEW SEASON OF ELEGANCE</span>
+          <span className="text-[#8C621E]">•</span>
+          <span>PAN-INDIA CASH ON DELIVERY</span>
+          <span className="hidden md:inline text-[#8C621E]">•</span>
           <span className="hidden md:inline">FREE EXPRESS SHIPPING ON ORDERS ABOVE ₹1,499</span>
         </div>
       </div>
@@ -127,7 +128,7 @@ export function BibaStyleHero() {
       {/* 2. Main Hero Stage with Background Photo & Overlaid Header */}
       <div className="relative min-h-[580px] sm:min-h-[640px] md:min-h-[680px] lg:min-h-[760px] w-full flex flex-col justify-between">
         {/* Background Images: Desktop & Mobile Responsive */}
-        <div className="absolute inset-0 -z-10 overflow-hidden bg-[#2d3a24]">
+        <div className="absolute inset-0 -z-10 overflow-hidden bg-[#242C1B]">
           {/* Desktop Photo */}
           <div className="hidden md:block relative w-full h-full">
             <Image
@@ -149,8 +150,8 @@ export function BibaStyleHero() {
             />
           </div>
 
-          {/* Vignette Gradients for Contrast & Text Legibility */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/50 md:bg-gradient-to-r md:from-black/60 md:via-black/20 md:to-transparent" />
+          {/* Vignette Gradients for Rich Warm Contrast & Text Legibility */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/25 to-black/65 md:bg-gradient-to-r md:from-black/75 md:via-black/35 md:to-transparent" />
         </div>
 
         {/* 3. Integrated Translucent Header (Desktop & Mobile) */}

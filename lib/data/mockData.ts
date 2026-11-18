@@ -197,9 +197,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 48,
     images: [
+      "/images/categories/kundan-choker.jpg",
       "/products/kundan-jadau-choker-set-1.svg",
       "/products/kundan-jadau-choker-set-2.svg",
-      "/products/kundan-jadau-choker-set-3.svg",
     ],
     variants: [
       { id: "var-1-1", title: "Antique Gold / Pearl White", sku: "PH-KND-001", price: 349900, compareAtPrice: 499900, stock: 8 },
@@ -224,9 +224,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 36,
     images: [
+      "/images/categories/rings.jpg",
       "/products/ad-solitaire-statement-ring-1.svg",
       "/products/ad-solitaire-statement-ring-2.svg",
-      "/products/ad-solitaire-statement-ring-3.svg",
     ],
     variants: [
       { id: "var-2-1", title: "Size 6 (16.5 mm)", sku: "PH-RNG-001-S6", price: 129900, compareAtPrice: 199900, size: "6", stock: 12 },
@@ -252,9 +252,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 64,
     images: [
+      "/images/categories/earrings.jpg",
       "/products/chandbali-festive-jhumkas-1.svg",
       "/products/chandbali-festive-jhumkas-2.svg",
-      "/products/chandbali-festive-jhumkas-3.svg",
     ],
     variants: [
       { id: "var-3-1", title: "Antique Gold-tone", sku: "PH-EAR-001", price: 189900, compareAtPrice: 269900, stock: 18 },
@@ -279,9 +279,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.7,
     reviewsCount: 22,
     images: [
+      "/images/categories/necklaces.jpg",
       "/products/emerald-stone-layered-necklace-1.svg",
       "/products/emerald-stone-layered-necklace-2.svg",
-      "/products/emerald-stone-layered-necklace-3.svg",
     ],
     variants: [
       { id: "var-4-1", title: "Rich Green / Gold", sku: "PH-NCK-001", price: 249900, compareAtPrice: 349900, stock: 7 },
@@ -305,9 +305,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 29,
     images: [
+      "/images/categories/bangles.jpg",
       "/products/temple-peacock-cuff-bangle-1.svg",
       "/products/temple-peacock-cuff-bangle-2.svg",
-      "/products/temple-peacock-cuff-bangle-3.svg",
     ],
     variants: [
       { id: "var-5-1", title: "Size 2.4", sku: "PH-BNG-001-24", price: 199900, compareAtPrice: 289900, size: "2.4", stock: 10 },
@@ -333,9 +333,9 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 19,
     images: [
+      "/images/categories/pendants.jpg",
       "/products/sapphire-teardrop-pendant-1.svg",
       "/products/sapphire-teardrop-pendant-2.svg",
-      "/products/sapphire-teardrop-pendant-3.svg",
     ],
     variants: [
       { id: "var-6-1", title: "Royal Blue / Gold-tone", sku: "PH-PND-001", price: 149900, compareAtPrice: 219900, stock: 16 },
