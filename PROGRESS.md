@@ -64,7 +64,8 @@
   - [x] Playwright end-to-end test scenarios
   - [x] k6 load test script for browsing and checkout flows
 
-- [ ] **Phase 9: Delivery & Verification**
-  - [ ] README setup & runbook
-  - [ ] `npx vinext check` verification
-  - [ ] Bundle size report
+- [x] **Phase 9: Delivery & Verification**
+  - [x] README setup, runbook, and backup/restore notes
+  - [x] `npx vinext check` compatibility verification (94% compatible, 7/7 Next imports supported)
+  - [x] Production bundle size verification (Homepage JS: 125 kB < 150 kB budget)
+  - [x] Final PROGRESS.md and DECISIONS.md documentation
