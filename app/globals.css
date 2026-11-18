@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFDF9;
+  --foreground: #2A1408;
+  --card: #FFFFFF;
+  --card-foreground: #2A1408;
+  --popover: #FFFFFF;
+  --popover-foreground: #2A1408;
+  --primary: #A9781C;
+  --primary-foreground: #FFFFFF;
+  --secondary: #2A1408;
+  --secondary-foreground: #FFFFFF;
+  --muted: #FAF5EC;
+  --muted-foreground: #7A6F5F;
+  --accent: #F8E9E4;
+  --accent-foreground: #2A1408;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E7DCC6;
+  --input: #E7DCC6;
+  --ring: #BA9048;
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--background);
+  color: var(--foreground);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background);
+  color: #4E3C2A;
+  font-family: var(--font-jost), system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: #EAC6BA;
+  color: #2A1408;
+}
+
+/* Brand Watercolor Heading Wash Texture */
+.heading-wash {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.heading-wash::before {
+  content: "";
+  position: absolute;
+  left: -12px;
+  right: -12px;
+  top: 15%;
+  bottom: 10%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(234, 198, 186, 0.45), rgba(248, 233, 228, 0.15) 75%, transparent);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
