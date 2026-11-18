@@ -31,12 +31,12 @@
   - [x] Instant search with autocomplete & recent searches
   - [x] Wishlist & Recently Viewed
 
-- [ ] **Phase 4: Admin Catalogue & Operations**
-  - [ ] Admin dashboard shell with role verification
-  - [ ] Product & variant management with drag-and-drop 4:5 image upload
-  - [ ] Categories & Collections manager
-  - [ ] Inventory management & stock adjustment tracking
-  - [ ] CSV import & export with preview
+- [x] **Phase 4: Admin Catalogue & Operations**
+  - [x] Admin dashboard shell with role verification
+  - [x] Product & variant management with drag-and-drop 4:5 image upload
+  - [x] Categories & Collections manager
+  - [x] Inventory management & stock adjustment tracking
+  - [x] CSV import & export with preview
 
 - [ ] **Phase 5: Commerce Engine**
   - [ ] Persistent cart (guest + authenticated merge)
