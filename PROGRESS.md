@@ -24,12 +24,12 @@
   - [x] Auth system: Sessions, email/password, Google, Phone OTP, TOTP 2FA, RBAC permission matrix
   - [x] Customer account basics & order state machine with tests
 
-- [ ] **Phase 3: Storefront Catalogue**
-  - [ ] Full 13-section homepage with brand story band, categories, reviews, instagram, newsletter
-  - [ ] Collection pages with multi-attribute filtering & sorting
-  - [ ] Rich product detail page: gallery, zoom, variant selector, pincode check, accordions, mobile sticky ATC
-  - [ ] Instant search with autocomplete & recent searches
-  - [ ] Wishlist & Recently Viewed
+- [x] **Phase 3: Storefront Catalogue**
+  - [x] Full 13-section homepage with brand story band, categories, reviews, instagram, newsletter
+  - [x] Collection pages with multi-attribute filtering & sorting
+  - [x] Rich product detail page: gallery, zoom, variant selector, pincode check, accordions, mobile sticky ATC
+  - [x] Instant search with autocomplete & recent searches
+  - [x] Wishlist & Recently Viewed
 
 - [ ] **Phase 4: Admin Catalogue & Operations**
   - [ ] Admin dashboard shell with role verification
