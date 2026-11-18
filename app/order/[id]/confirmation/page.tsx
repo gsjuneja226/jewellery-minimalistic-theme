@@ -98,7 +98,6 @@ export default function OrderConfirmationPage({
 
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      <AnnouncementBar />
       <Header isOverHero={false} />
 
       <main className="flex-1 max-w-4xl mx-auto px-4 md:px-8 py-12 w-full">

@@ -131,3 +131,16 @@
     - Slide 3: **Festive Jhumkas** (`/hero/hero-slide-festive.jpg`): Radiant Indian woman in an emerald festive lehenga holding a brass diya lamp, showcasing ornate antique gold-tone chandelier jhumkas in magical Diwali bokeh courtyard lighting.
   - [x] Deleted old `biba-hero-desktop.jpg` and `biba-hero-mobile.jpg` from the repository.
   - [x] Verified full build: 59/59 static pages compiled, 129 kB First Load JS, 6/6 Vitest tests passing, 0 TypeScript errors, 0 ESLint warnings.
+
+- [x] **Storewide Minimal Luxury Cleanup & Component De-cluttering**
+  - [x] Removed top announcement strip (`AnnouncementBar`) from every single page on the website.
+  - [x] Fixed the awkward side-by-side title and floating eyebrow tag bug across all collection and catalog pages:
+    - Converted all page title containers to clean flex columns with centered display serif typography.
+    - Removed awkward floating uppercase tags (`Handpicked Jewellery`, `Fresh Off the Bench`, `Saved Treasures`, etc.).
+    - Disabled `.heading-wash::before` in `globals.css` to eliminate the blurry blush watercolour stain behind headlines.
+  - [x] Compacted and decluttered the 3D Jewellery Box component:
+    - Removed the badge (`Interactive 3D Experience`), `<h2>` headline, paragraph, and 3 icon feature boxes from `Interactive3DShowcase.tsx`.
+    - Removed the inner brand header (`logo-wordmark.png` and tagline) from inside `JewelleryBoxHero.tsx`.
+    - Scaled down `.boxContainer` to `min(420px, 80vw, 42vh)` and `.heroSection` height to 380px (mobile) / 480px (desktop).
+  - [x] Removed all emojis from headings, dividers, and UI components across the entire codebase (`🪷`, `🎉`, `🇮🇳`, etc.).
+  - [x] Verified full build: 59/59 static pages compiled, 11.7 kB homepage size, 129 kB First Load JS, 6/6 tests passing, 0 type errors, 0 ESLint warnings.

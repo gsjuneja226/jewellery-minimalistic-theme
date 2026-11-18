@@ -113,7 +113,6 @@ export default function CartPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      <AnnouncementBar />
       <Header isOverHero={false} cartCount={cartItems.reduce((acc, i) => acc + i.quantity, 0)} />
 
       <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
@@ -135,7 +134,7 @@ export default function CartPage() {
                   <span className="font-medium text-espresso flex items-center gap-1.5">
                     <Truck className="w-4 h-4 text-antique-gold" />
                     {isFreeShipping ? (
-                      <span className="text-emerald-800 font-semibold">🎉 You have unlocked Free Express Shipping!</span>
+                      <span className="text-emerald-800 font-semibold">You have unlocked Free Express Shipping!</span>
                     ) : (
                       <span>Add <strong>{formatPrice(amountToFreeShipping)}</strong> more to unlock Free India-wide Shipping</span>
                     )}

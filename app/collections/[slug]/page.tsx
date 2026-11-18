@@ -84,16 +84,15 @@ export default function CollectionPage({
           className="mb-6"
         />
 
-        <div className="text-center space-y-2 mb-10">
-          <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-            Handpicked Jewellery
-          </span>
-          <h1 className="font-serif text-4xl md:text-5xl text-espresso heading-wash">
+        <div className="flex flex-col items-center text-center mb-8 sm:mb-10">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-espresso font-normal tracking-tight">
             {title}
           </h1>
-          <p className="text-sm text-brown-text/80 max-w-md mx-auto font-sans">
-            {description}
-          </p>
+          {description && (
+            <p className="text-sm text-brown-text/80 max-w-lg mt-2 font-sans font-normal leading-relaxed">
+              {description}
+            </p>
+          )}
         </div>
 
         <CollectionBrowser initialProducts={products} title={title} />

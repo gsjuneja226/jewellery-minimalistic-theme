@@ -50,7 +50,7 @@ export function BrandStoryBand() {
           </div>
 
           {/* Heading */}
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-espresso heading-wash leading-tight">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-espresso font-normal tracking-tight leading-tight">
             Where Timeless Heritage Meets Playful Luxury
           </h2>
 

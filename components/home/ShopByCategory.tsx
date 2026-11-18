@@ -39,14 +39,11 @@ export function ShopByCategory() {
 
   return (
     <section className="hidden md:block py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="text-center space-y-2 mb-10">
-        <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-          Curated Essentials
-        </span>
-        <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+      <div className="flex flex-col items-center text-center mb-10">
+        <h2 className="font-serif text-3xl md:text-4xl text-espresso font-normal tracking-tight">
           Shop by Category
         </h2>
-        <p className="text-sm text-brown-text/80 max-w-lg mx-auto font-sans">
+        <p className="text-sm text-brown-text/80 max-w-lg mt-2 font-sans">
           Discover handpicked artificial jewellery tailored for every style,
           from traditional celebrations to modern everyday luxury.
         </p>

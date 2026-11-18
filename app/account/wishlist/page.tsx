@@ -22,7 +22,6 @@ export default function WishlistPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      <AnnouncementBar />
       <Header isOverHero={false} />
 
       <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
@@ -31,14 +30,11 @@ export default function WishlistPage() {
           className="mb-6"
         />
 
-        <div className="text-center space-y-2 mb-10">
-          <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-            Saved Treasures
-          </span>
-          <h1 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+        <div className="flex flex-col items-center text-center mb-8">
+          <h1 className="font-serif text-3xl md:text-4xl text-espresso font-normal tracking-tight">
             My Wishlist ({wishlistProducts.length})
           </h1>
-          <p className="text-xs md:text-sm text-brown-text/80 font-sans max-w-md mx-auto">
+          <p className="text-xs md:text-sm text-brown-text/80 font-sans max-w-md mt-2">
             Your personal curation of cherished pieces. Ready to sparkle when you are.
           </p>
         </div>

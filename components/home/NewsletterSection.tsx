@@ -18,7 +18,7 @@ export function NewsletterSection() {
     if (!email) return;
 
     setSubmitted(true);
-    showToast("🎉 Welcome to Phabulous! Use coupon code WELCOME10 for 10% off.", "success");
+    showToast("Welcome to Phabulous! Use coupon code WELCOME10 for 10% off.", "success");
   };
 
   return (
@@ -29,15 +29,11 @@ export function NewsletterSection() {
           <Sparkles className="w-6 h-6 sm:w-8 sm:h-8" />
         </div>
 
-        <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-          The VIP Sparkle Club
-        </span>
-
-        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash mt-1 sm:mt-2">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso font-normal tracking-tight">
           Enjoy 10% Off Your First Order
         </h2>
 
-        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto mt-1 sm:mt-2 font-sans">
+        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto mt-2 font-sans">
           Early access to festive launches & exclusive flash discounts.
         </p>
 

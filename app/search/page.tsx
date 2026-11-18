@@ -46,17 +46,16 @@ export default function SearchPage() {
 
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      <AnnouncementBar />
       <Header isOverHero={false} />
 
       <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
         <Breadcrumbs items={[{ label: "Search" }]} className="mb-6" />
 
-        <div className="max-w-2xl mx-auto text-center space-y-4 mb-10">
-          <h1 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+        <div className="max-w-2xl mx-auto flex flex-col items-center text-center mb-8">
+          <h1 className="font-serif text-3xl md:text-4xl text-espresso font-normal tracking-tight">
             Search Our Collection
           </h1>
-          <p className="text-xs md:text-sm text-brown-text/80 font-sans">
+          <p className="text-xs md:text-sm text-brown-text/80 font-sans mt-2">
             Search by jewellery type, stone, finish or occasion.
           </p>
 

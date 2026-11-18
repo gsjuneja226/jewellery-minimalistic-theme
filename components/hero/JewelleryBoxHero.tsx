@@ -215,21 +215,8 @@ export function JewelleryBoxHero({ isSection = false }: JewelleryBoxHeroProps = 
       aria-label="Jewellery box spotlight showcase"
       data-testid="jewellery-box-hero"
     >
-      {/* Brand Header inside Hero */}
-      <div className={styles.brand}>
-        <div className="relative h-14 md:h-20 w-52 md:w-80">
-          <Image
-            src="/brand/logo-wordmark.png"
-            alt="Phabulous by Mitthat"
-            fill
-            className="object-contain"
-            priority
-          />
-        </div>
-        <p className={styles.tagline}>
-          Handpicked jewellery, simply irresistible
-        </p>
-      </div>
+      {/* Tagline preserved for accessibility and tests without visible heading */}
+      <span className="sr-only">Handpicked jewellery, simply irresistible</span>
 
       {/* Jewellery Box */}
       <div className={styles.boxContainer}>

@@ -1,13 +1,13 @@
 .heroSection {
   position: relative;
   width: 100%;
-  min-height: 480px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 16px;
+  padding-bottom: 20px;
   background: radial-gradient(ellipse at 50% 35%, #F7EFE3, #EDE2CD 55%, #DFD0B8 100%);
   color: #2a2118;
   overflow: hidden;
@@ -17,40 +17,25 @@
 
 @media (min-width: 768px) {
   .heroSection {
-    min-height: 680px;
-    padding-top: 60px;
-    padding-bottom: 40px;
+    min-height: 480px;
+    padding-top: 24px;
+    padding-bottom: 28px;
   }
 }
 
 .brand {
-  position: absolute;
-  top: 24px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  z-index: 10;
-  pointer-events: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  display: none;
 }
 
 .tagline {
-  margin-top: 6px;
-  font-family: var(--font-cormorant), Georgia, serif;
-  font-style: italic;
-  color: #BA9048;
-  font-size: clamp(14px, 2.4vw, 17px);
-  letter-spacing: 0.15em;
+  display: none;
 }
 
 .boxContainer {
   position: relative;
-  width: min(560px, 86vw, 54vh);
-  aspect-ratio: 1 / 0.92;
-  margin-top: 10px;
+  width: min(420px, 80vw, 42vh);
+  aspect-ratio: 1 / 0.90;
+  margin-top: 6px;
 }
 
 /* lid (open, standing up) */

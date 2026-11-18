@@ -16,20 +16,16 @@ export const metadata = {
 export default function CollectionsIndexPage() {
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      <AnnouncementBar />
       <Header isOverHero={false} />
 
       <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
         <Breadcrumbs items={[{ label: "Collections" }]} className="mb-6" />
 
-        <div className="text-center space-y-2 mb-12">
-          <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-            Handpicked Catalog
-          </span>
-          <h1 className="font-serif text-4xl md:text-5xl text-espresso heading-wash">
+        <div className="flex flex-col items-center text-center mb-10">
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-espresso font-normal tracking-tight">
             Our Collections & Categories
           </h1>
-          <p className="text-sm text-brown-text/80 max-w-md mx-auto font-sans">
+          <p className="text-sm text-brown-text/80 max-w-md mt-2 font-sans font-normal leading-relaxed">
             Explore handcrafted fashion jewellery created for your most cherished moments.
           </p>
         </div>

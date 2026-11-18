@@ -16,14 +16,11 @@ export function InstagramGrid() {
   return (
     <section className="py-8 sm:py-12 md:py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
       <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8">
-        <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
-          <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-            Follow the Sparkle
-          </span>
-          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
+        <div className="flex flex-col items-center text-center mb-6 sm:mb-8">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso font-normal tracking-tight">
             #PhabulousJewels on Instagram
           </h2>
-          <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto font-sans">
+          <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mt-1.5 font-sans">
             Tag @phabulousbymitthat to get featured on our brand feed!
           </p>
         </div>

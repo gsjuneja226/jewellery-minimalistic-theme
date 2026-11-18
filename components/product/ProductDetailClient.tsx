@@ -395,7 +395,7 @@ export function ProductDetailClient({
               <p className="text-xs font-sans text-brown-text/80 italic">{rev.comment}</p>
               <div className="pt-2 text-[11px] font-sans text-brown-text/70 flex justify-between">
                 <span>{rev.authorName} ({rev.city})</span>
-                {rev.isVerifiedPurchase && <span className="text-emerald-700 font-medium">✓ Verified Buyer</span>}
+                {rev.isVerifiedPurchase && <span className="text-emerald-700 font-medium">Verified Buyer</span>}
               </div>
             </div>
           ))}
@@ -405,11 +405,8 @@ export function ProductDetailClient({
       {/* Complete the Look / Related Products */}
       {relatedProducts.length > 0 && (
         <div className="border-t border-[#F1E8D8] pt-12 space-y-6">
-          <div className="text-center space-y-1">
-            <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-              Curated Harmonies
-            </span>
-            <h3 className="font-serif text-3xl text-espresso heading-wash">
+          <div className="flex flex-col items-center text-center">
+            <h3 className="font-serif text-3xl text-espresso font-normal tracking-tight">
               Complete the Look
             </h3>
           </div>

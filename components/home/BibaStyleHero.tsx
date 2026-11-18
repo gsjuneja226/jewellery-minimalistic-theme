@@ -149,7 +149,7 @@ export function BibaStyleHero() {
               </Link>
 
               <div className="hidden lg:flex items-center gap-1 text-[#E6D4B8] text-xs font-sans font-medium pl-3 border-l border-[#BA9048]/30 cursor-pointer hover:text-white">
-                <span>Ship to 🇮🇳 India (₹)</span>
+                <span>Ship to India (₹)</span>
                 <ChevronDown className="w-3.5 h-3.5 text-[#BA9048]" />
               </div>
             </div>
@@ -293,11 +293,9 @@ export function BibaStyleHero() {
               {slide.title}
             </h1>
 
-            {/* Delicate Floral / Lotus Divider */}
-            <div className="flex items-center justify-center md:justify-start gap-3 py-0.5">
-              <div className="w-10 sm:w-14 h-[1px] bg-gradient-to-r from-transparent to-[#BA9048]" />
-              <span className="text-[#BA9048] text-sm sm:text-base select-none">🪷</span>
-              <div className="w-10 sm:w-14 h-[1px] bg-gradient-to-l from-transparent to-[#BA9048]" />
+            {/* Delicate Gold Hairline Divider */}
+            <div className="flex items-center justify-center md:justify-start py-0.5">
+              <div className="w-16 sm:w-20 h-[1px] bg-gradient-to-r from-[#BA9048] to-transparent" />
             </div>
 
             {/* Slogan */}

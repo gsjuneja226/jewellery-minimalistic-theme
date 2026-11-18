@@ -62,14 +62,11 @@ export function BestsellersGrid() {
 
   return (
     <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-6 md:px-8 max-w-7xl mx-auto">
-      <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
-        <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-          Customer Favourites
-        </span>
-        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
+      <div className="flex flex-col items-center text-center mb-6 sm:mb-8">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso font-normal tracking-tight">
           Most Loved & Bestselling
         </h2>
-        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto font-sans">
+        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mt-1.5 font-sans">
           Proven showstoppers designed to turn heads, celebrated by 20,000+ patrons.
         </p>
 

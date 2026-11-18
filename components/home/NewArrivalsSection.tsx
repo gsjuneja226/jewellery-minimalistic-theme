@@ -14,10 +14,7 @@ export function NewArrivalsSection() {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="flex flex-col sm:flex-row items-baseline justify-between mb-8">
           <div>
-            <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
-              Fresh Off the Bench
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash mt-1">
+            <h2 className="font-serif text-3xl md:text-4xl text-espresso font-normal tracking-tight">
               New Arrivals
             </h2>
           </div>
