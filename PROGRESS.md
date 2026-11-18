@@ -45,12 +45,12 @@
   - [x] Razorpay orders + webhook verification + COD with phone OTP
   - [x] Order confirmation, pure JS PDF invoice generation, transactional emails
 
-- [ ] **Phase 6: Fulfilment & After-Sales**
-  - [ ] Order workflow state machine
-  - [ ] Shiprocket integration + Mock provider with pincode tracking
-  - [ ] Guest order tracking lookup (`/track-order`)
-  - [ ] Customer returns & exchanges workflow
-  - [ ] Razorpay refunds integration
+- [x] **Phase 6: Fulfilment & After-Sales**
+  - [x] Order workflow state machine
+  - [x] Shiprocket integration + Mock provider with pincode tracking
+  - [x] Guest order tracking lookup (`/track-order`)
+  - [x] Customer returns & exchanges workflow
+  - [x] Razorpay refunds integration
 
 - [ ] **Phase 7: Growth & Marketing**
   - [ ] Verified customer reviews with photo upload
