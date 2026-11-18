@@ -75,7 +75,7 @@ export default function CollectionPage({
       <AnnouncementBar />
       <Header isOverHero={false} />
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-6 md:px-8 py-4 sm:py-8 w-full">
         <Breadcrumbs
           items={[
             { label: "Collections", href: "/collections" },

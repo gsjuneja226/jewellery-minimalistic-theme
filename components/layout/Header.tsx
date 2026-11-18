@@ -55,19 +55,19 @@ export function Header({
           isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
         )}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="relative max-w-7xl mx-auto flex items-center justify-between">
           {/* Left: Mobile Menu Button & Search */}
-          <div className="flex items-center space-x-2 md:space-x-3">
+          <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 z-10">
             <button
               onClick={() => setMobileMenuOpen(true)}
-              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
+              className="p-1.5 sm:p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Open navigation menu"
             >
               <Menu className="w-5 h-5 text-[#F5E5C9]" />
             </button>
             <Link
               href="/search"
-              className="flex items-center gap-2 p-2 sm:px-3 sm:py-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors border border-transparent sm:border-[#BA9048]/40 focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
+              className="flex items-center gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors border border-transparent sm:border-[#BA9048]/40 focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
               aria-label="Search catalogue"
             >
               <Search className="w-4 h-4 text-[#BA9048]" />
@@ -77,11 +77,28 @@ export function Header({
             </Link>
           </div>
 
-          {/* Center: Wordmark */}
-          <div className="flex-1 flex justify-center items-center">
+          {/* Mobile Center Logo (Dead center in mobile viewport) */}
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center md:hidden pointer-events-auto">
             <Link
               href="/"
-              className="transition-all duration-300 relative block opacity-100 scale-100 h-8 sm:h-10 w-32 sm:w-44"
+              className="transition-all duration-300 relative block h-8 w-32 focus:outline-none"
+              aria-label="Phabulous by Mitthat Home"
+            >
+              <Image
+                src="/brand/logo-wordmark-light.png"
+                alt="Phabulous by Mitthat"
+                fill
+                className="object-contain"
+                priority
+              />
+            </Link>
+          </div>
+
+          {/* Desktop Center Wordmark */}
+          <div className="hidden md:flex flex-1 justify-center items-center">
+            <Link
+              href="/"
+              className="transition-all duration-300 relative block opacity-100 scale-100 h-9 md:h-10 w-36 md:w-44 focus:outline-none"
               aria-label="Phabulous by Mitthat Home"
             >
               <Image
@@ -95,7 +112,7 @@ export function Header({
           </div>
 
           {/* Right: Account, Wishlist, Cart */}
-          <div className="flex items-center space-x-1 sm:space-x-2 text-[#F5E5C9]">
+          <div className="flex items-center space-x-1 sm:space-x-2 text-[#F5E5C9] z-10">
             <Link
               href="/account"
               className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"

@@ -144,3 +144,13 @@
     - Scaled down `.boxContainer` to `min(420px, 80vw, 42vh)` and `.heroSection` height to 380px (mobile) / 480px (desktop).
   - [x] Removed all emojis from headings, dividers, and UI components across the entire codebase (`🪷`, `🎉`, `🇮🇳`, etc.).
   - [x] Verified full build: 59/59 static pages compiled, 11.7 kB homepage size, 129 kB First Load JS, 6/6 tests passing, 0 type errors, 0 ESLint warnings.
+
+- [x] **Mobile Responsiveness Polish & Header Logo Centering**
+  - [x] Removed the 4-icon Trust Strip (`TrustStrip.tsx`) completely from the homepage as requested.
+  - [x] Centered the brand logo in the mobile navbar view (`absolute left-1/2 -translate-x-1/2 md:hidden`) across both `BibaStyleHero.tsx` and `Header.tsx`.
+  - [x] Removed the pill badge label above main text in hero section images, letting the typography breathe with clean pre-heading and headline.
+  - [x] Enhanced mobile responsiveness across all other pages:
+    - `CollectionBrowser.tsx`: Replaced wrapping filter pills with a sleek horizontal swipeable chip bar (`overflow-x-auto no-scrollbar flex-nowrap`) and compact sort dropdown.
+    - Adjusted mobile padding from bulky `px-4 py-8` to responsive `px-3 sm:px-6 md:px-8 py-4 sm:py-8` on collections, products, cart, checkout, account, search, and track order.
+    - Updated `/collections` page to a responsive 2-column mobile layout (`grid-cols-2 lg:grid-cols-4`) for occasions and categories, preventing gigantic full-width cards on small screens.
+  - [x] Verified full build: 59/59 static pages compiled, 11.7 kB homepage size, 129 kB First Load JS, 6/6 Vitest tests passing, 0 TypeScript errors, 0 ESLint warnings.

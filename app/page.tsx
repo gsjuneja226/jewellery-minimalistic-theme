@@ -3,7 +3,6 @@ import { Header } from "@/components/layout/Header";
 import { BibaStyleHero } from "@/components/home/BibaStyleHero";
 import { Interactive3DShowcase } from "@/components/home/Interactive3DShowcase";
 import { QuickCategoryCircles } from "@/components/home/QuickCategoryCircles";
-import { TrustStrip } from "@/components/home/TrustStrip";
 import { ShopByCategory } from "@/components/home/ShopByCategory";
 import { BestsellersGrid } from "@/components/home/BestsellersGrid";
 import { ShopByOccasion } from "@/components/home/ShopByOccasion";
@@ -28,10 +27,7 @@ export default function HomePage() {
       {/* 4. Quick Category Story Circles (Compact horizontal swipe on mobile) */}
       <QuickCategoryCircles />
 
-      {/* 5. Trust Strip (Anti-tarnish, COD, free shipping, easy returns) */}
-      <TrustStrip />
-
-      {/* 6. Shop by Category (5 large curated visual tiles, visible on tablet/desktop) */}
+      {/* 5. Shop by Category (5 large curated visual tiles, visible on tablet/desktop) */}
       <ShopByCategory />
 
       {/* 7. Bestsellers with Dynamic Category Filter Tabs (Compact 4 on phone, 8 on desktop) */}

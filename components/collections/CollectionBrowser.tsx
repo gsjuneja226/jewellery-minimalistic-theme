@@ -57,18 +57,15 @@ export function CollectionBrowser({
   return (
     <div className="space-y-6">
       {/* Top Filter Bar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-[#F1E8D8]">
-        <div className="flex items-center gap-2 flex-wrap">
-          <span className="text-xs font-semibold text-espresso uppercase tracking-wider font-sans">
-            Filters:
-          </span>
-          {/* Finish Filter Pills */}
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-[#F1E8D8]">
+        {/* Horizontal scrollable pills on mobile */}
+        <div className="flex items-center gap-1.5 overflow-x-auto no-scrollbar w-full sm:w-auto py-0.5">
           {finishes.map((f) => (
             <button
               key={f}
               type="button"
               onClick={() => setSelectedFinish(f)}
-              className={`text-xs font-sans px-3 py-1 rounded-full border transition-colors capitalize ${
+              className={`text-xs font-sans px-3 py-1 rounded-full border transition-colors capitalize whitespace-nowrap flex-shrink-0 ${
                 selectedFinish === f
                   ? "bg-antique-gold text-white border-antique-gold font-medium shadow-xs"
                   : "bg-white text-brown-text border-[#E7DCC6] hover:border-gold"
@@ -79,16 +76,16 @@ export function CollectionBrowser({
           ))}
         </div>
 
-        {/* Sort Dropdown */}
+        {/* Sort Dropdown & Item Count */}
         <div className="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-end">
           <span className="text-xs font-sans text-brown-text/80 whitespace-nowrap">
             {filteredProducts.length} {filteredProducts.length === 1 ? "design" : "designs"}
           </span>
-          <div className="w-44">
+          <div className="w-36 sm:w-44">
             <Select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value)}
-              className="h-9 text-xs rounded-full bg-white"
+              className="h-8 sm:h-9 text-xs rounded-full bg-white"
             >
               <option value="featured">Featured</option>
               <option value="price-low">Price: Low to High</option>
@@ -101,7 +98,7 @@ export function CollectionBrowser({
 
       {/* Active Filter Chips */}
       {(selectedFinish !== "all" || selectedOccasion !== "all") && (
-        <div className="flex items-center gap-2 text-xs">
+        <div className="flex items-center gap-2 text-xs flex-wrap">
           <span className="text-brown-text">Active filters:</span>
           {selectedFinish !== "all" && (
             <Badge variant="gold" className="flex items-center gap-1">
@@ -135,7 +132,7 @@ export function CollectionBrowser({
 
       {/* Product Grid */}
       {filteredProducts.length > 0 ? (
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5 sm:gap-4 md:gap-6">
           {filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

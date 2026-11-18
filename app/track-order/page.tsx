@@ -75,7 +75,7 @@ export default function TrackOrderPage() {
     <div className="min-h-screen flex flex-col bg-warm-white">
       <Header isOverHero={false} />
 
-      <main className="flex-1 max-w-4xl mx-auto px-4 md:px-8 py-8 w-full">
+      <main className="flex-1 max-w-4xl mx-auto px-3 sm:px-6 md:px-8 py-4 sm:py-8 w-full">
         <Breadcrumbs items={[{ label: "Track Your Order" }]} className="mb-6" />
 
         <div className="flex flex-col items-center text-center mb-8">

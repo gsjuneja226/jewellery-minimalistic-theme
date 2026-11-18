@@ -115,7 +115,7 @@ export default function CartPage() {
     <div className="min-h-screen flex flex-col bg-warm-white">
       <Header isOverHero={false} cartCount={cartItems.reduce((acc, i) => acc + i.quantity, 0)} />
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-6 md:px-8 py-4 sm:py-8 w-full">
         <Breadcrumbs items={[{ label: "Shopping Bag" }]} className="mb-6" />
 
         <div className="pb-4 border-b border-[#E7DCC6] mb-8">

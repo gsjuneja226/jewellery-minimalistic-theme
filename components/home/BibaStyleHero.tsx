@@ -118,26 +118,51 @@ export function BibaStyleHero() {
       <nav className="w-full z-40 bg-[#2A1218] border-b border-[#BA9048]/40 shadow-card">
         <div className="max-w-7xl mx-auto px-4 md:px-8 py-2.5 sm:py-3">
           {/* Top Bar Row */}
-          <div className="flex items-center justify-between gap-3 md:gap-6">
-            {/* Mobile Left: Menu Toggle */}
-            <div className="flex items-center gap-1 md:hidden">
+          <div className="relative flex items-center justify-between gap-3 md:gap-6">
+            {/* Left: Menu Toggle (Mobile) & Brand Logo (Desktop) */}
+            <div className="flex items-center gap-4">
+              {/* Mobile Left: Menu Toggle */}
               <button
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none"
+                className="p-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none md:hidden"
                 aria-label="Open mobile menu"
               >
                 <Menu className="w-5 h-5 text-[#F5E5C9]" />
               </button>
+
+              {/* Desktop Logo */}
+              <div className="hidden md:flex items-center gap-4">
+                <Link
+                  href="/"
+                  className="flex items-center gap-2 group focus:outline-none"
+                  aria-label="Phabulous by Mitthat Home"
+                >
+                  <div className="relative h-9 md:h-11 w-36 md:w-44">
+                    <Image
+                      src="/brand/logo-wordmark-light.png"
+                      alt="Phabulous by Mitthat"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
+                </Link>
+
+                <div className="hidden lg:flex items-center gap-1 text-[#E6D4B8] text-xs font-sans font-medium pl-3 border-l border-[#BA9048]/30 cursor-pointer hover:text-white">
+                  <span>Ship to India (₹)</span>
+                  <ChevronDown className="w-3.5 h-3.5 text-[#BA9048]" />
+                </div>
+              </div>
             </div>
 
-            {/* Logo: Clean Transparent Light Wordmark + Country Selector */}
-            <div className="flex items-center gap-4">
+            {/* Mobile Center Logo (Dead center in mobile viewport) */}
+            <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center md:hidden pointer-events-auto">
               <Link
                 href="/"
-                className="flex items-center gap-2 group focus:outline-none"
+                className="flex items-center justify-center focus:outline-none"
                 aria-label="Phabulous by Mitthat Home"
               >
-                <div className="relative h-8 sm:h-9 md:h-11 w-32 sm:w-36 md:w-44">
+                <div className="relative h-8 w-32">
                   <Image
                     src="/brand/logo-wordmark-light.png"
                     alt="Phabulous by Mitthat"
@@ -147,11 +172,6 @@ export function BibaStyleHero() {
                   />
                 </div>
               </Link>
-
-              <div className="hidden lg:flex items-center gap-1 text-[#E6D4B8] text-xs font-sans font-medium pl-3 border-l border-[#BA9048]/30 cursor-pointer hover:text-white">
-                <span>Ship to India (₹)</span>
-                <ChevronDown className="w-3.5 h-3.5 text-[#BA9048]" />
-              </div>
             </div>
 
             {/* Center: Search Bar Pill (Desktop) */}
@@ -276,13 +296,6 @@ export function BibaStyleHero() {
         {/* 3. Hero Content Overlay (z-10: On top of photo) */}
         <div className="relative z-10 max-w-7xl mx-auto w-full px-5 sm:px-8 md:px-12 py-8 sm:py-12">
           <div className="w-full md:max-w-xl text-center md:text-left space-y-3 sm:space-y-4">
-            {/* Pill Badge */}
-            <div className="inline-block">
-              <span className="px-3 py-1 rounded-sm bg-[#2A1218]/90 border border-[#BA9048]/60 text-[#F5E5C9] text-[10px] sm:text-xs font-sans uppercase tracking-widest font-semibold backdrop-blur-sm shadow-sm">
-                {slide.badge}
-              </span>
-            </div>
-
             {/* Pre-Heading (Italic Cormorant Garamond) */}
             <p className="font-serif italic text-xl sm:text-2xl md:text-3xl text-[#F9EBD3] font-normal drop-shadow-md">
               {slide.italicPre}

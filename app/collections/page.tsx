@@ -18,29 +18,29 @@ export default function CollectionsIndexPage() {
     <div className="min-h-screen flex flex-col bg-warm-white">
       <Header isOverHero={false} />
 
-      <main className="flex-1 max-w-7xl mx-auto px-4 md:px-8 py-8 w-full">
-        <Breadcrumbs items={[{ label: "Collections" }]} className="mb-6" />
+      <main className="flex-1 max-w-7xl mx-auto px-3 sm:px-6 md:px-8 py-4 sm:py-8 w-full">
+        <Breadcrumbs items={[{ label: "Collections" }]} className="mb-4 sm:mb-6" />
 
-        <div className="flex flex-col items-center text-center mb-10">
+        <div className="flex flex-col items-center text-center mb-8 sm:mb-10">
           <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-espresso font-normal tracking-tight">
             Our Collections & Categories
           </h1>
-          <p className="text-sm text-brown-text/80 max-w-md mt-2 font-sans font-normal leading-relaxed">
+          <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mt-1.5 font-sans font-normal leading-relaxed">
             Explore handcrafted fashion jewellery created for your most cherished moments.
           </p>
         </div>
 
         {/* Featured Occasion Collections */}
-        <div className="mb-14">
-          <h2 className="font-serif text-2xl text-espresso mb-6 border-b border-[#F1E8D8] pb-3">
+        <div className="mb-10 sm:mb-14">
+          <h2 className="font-serif text-xl sm:text-2xl text-espresso mb-4 sm:mb-6 border-b border-[#F1E8D8] pb-2.5">
             Shop by Occasion
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
             {COLLECTIONS_DATA.map((col) => (
               <Link
                 key={col.slug}
                 href={`/collections/${col.slug}`}
-                className="group rounded-[14px] overflow-hidden border border-[#E7DCC6] bg-white shadow-subtle hover:border-gold hover:shadow-card transition-all"
+                className="group rounded-[12px] sm:rounded-[14px] overflow-hidden border border-[#E7DCC6] bg-white shadow-subtle hover:border-gold hover:shadow-card transition-all"
               >
                 <div className="relative aspect-[4/5] bg-soft-cream/30">
                   <Image
@@ -49,17 +49,17 @@ export default function CollectionsIndexPage() {
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-espresso/70 via-transparent to-transparent" />
-                  <div className="absolute bottom-4 left-4 right-4 text-white">
-                    <h3 className="font-serif text-2xl">{col.name}</h3>
+                  <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 text-white">
+                    <h3 className="font-serif text-lg sm:text-2xl">{col.name}</h3>
                   </div>
                 </div>
-                <div className="p-4">
-                  <p className="text-xs text-brown-text/80 line-clamp-2">
+                <div className="p-2.5 sm:p-4">
+                  <p className="text-[11px] sm:text-xs text-brown-text/80 line-clamp-2 hidden sm:block">
                     {col.description}
                   </p>
-                  <span className="mt-3 text-xs font-semibold text-antique-gold inline-flex items-center gap-1 group-hover:text-deep-gold">
-                    View Collection <ArrowRight className="w-3.5 h-3.5" />
+                  <span className="mt-1 sm:mt-3 text-xs font-semibold text-antique-gold inline-flex items-center gap-1 group-hover:text-deep-gold">
+                    View <ArrowRight className="w-3.5 h-3.5" />
                   </span>
                 </div>
               </Link>
@@ -69,17 +69,17 @@ export default function CollectionsIndexPage() {
 
         {/* Categories */}
         <div>
-          <h2 className="font-serif text-2xl text-espresso mb-6 border-b border-[#F1E8D8] pb-3">
+          <h2 className="font-serif text-xl sm:text-2xl text-espresso mb-4 sm:mb-6 border-b border-[#F1E8D8] pb-2.5">
             Shop by Category
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-6">
             {CATEGORIES_DATA.map((cat) => (
               <Link
                 key={cat.slug}
                 href={`/collections/${cat.slug}`}
-                className="group p-4 rounded-[14px] border border-[#E7DCC6] bg-white hover:border-gold hover:shadow-card transition-all flex flex-col items-center text-center space-y-3"
+                className="group p-3 sm:p-4 rounded-[12px] sm:rounded-[14px] border border-[#E7DCC6] bg-white hover:border-gold hover:shadow-card transition-all flex flex-col items-center text-center space-y-2 sm:space-y-3"
               >
-                <div className="relative aspect-square w-32 rounded-full overflow-hidden border border-gold/40 bg-soft-cream/40">
+                <div className="relative aspect-square w-20 sm:w-28 md:w-32 rounded-full overflow-hidden border border-gold/40 bg-soft-cream/40">
                   <Image
                     src={cat.imageUrl}
                     alt={cat.name}
@@ -87,10 +87,10 @@ export default function CollectionsIndexPage() {
                     className="object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
-                <h3 className="font-serif text-xl font-medium text-espresso group-hover:text-antique-gold transition-colors">
+                <h3 className="font-serif text-base sm:text-xl font-medium text-espresso group-hover:text-antique-gold transition-colors">
                   {cat.name}
                 </h3>
-                <p className="text-xs text-brown-text/70 line-clamp-2">
+                <p className="text-[11px] sm:text-xs text-brown-text/70 line-clamp-2 hidden sm:block">
                   {cat.description}
                 </p>
               </Link>
