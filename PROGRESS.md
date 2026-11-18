@@ -124,18 +124,20 @@
     - Hero banner scales naturally on mobile without cropping the models' faces or marigold garlands.
   - [x] Verified production build (59 static pages, 130 kB First Load JS, 6/6 tests passing).
 
-- [x] **Hero Section Photo Removal & Mobile Length Streamlining**
-  - [x] Removed background photos from the hero section completely as requested:
-    - Replaced with a rich royal maroon-espresso ambient glow (`#2A1218` to `#38141F`), delicate lotus divider, and typography overlay.
-    - Scaled down vertical padding to a compact `py-8 sm:py-12 md:py-16`.
-  - [x] Streamlined the mobile homepage length, reducing total scroll depth by over 65%:
-    - Compacted the 3D Velvet Jewellery Box from 820px down to responsive 480px on phones.
-    - Hidden redundant 5-tile `ShopByCategory` on mobile since `QuickCategoryCircles` already provides full circular image navigation at the top.
-    - Consolidated product grids into a single 2x2 grid (4 items on phones, 8 on desktop) with interactive category tabs in `BestsellersGrid`.
-    - Made `ShopByOccasion` a clean 2x2 grid with tight aspect ratio and hidden verbose body text on phones.
-    - Compacted `BrandStoryBand` by hiding the large artisan photo block on phones, displaying only the Gurmukhi tagline and concise narrative.
-    - Compacted `CustomerReviews` to 2 top reviews on phones (6 on desktop).
-    - Compacted `InstagramGrid` to 3 photos on phones (6 on desktop).
-    - Condensed `TrustStrip` and `NewsletterSection` padding on mobile.
-  - [x] Replaced Google Fonts external Gurmukhi fetch in `app/layout.tsx` with robust system fallback in `app/globals.css`.
-  - [x] Verified production build (129 kB First Load JS, 59/59 static pages, 6/6 Vitest tests passing, 0 type errors, 0 ESLint warnings).
+- [x] **Hero Photoshoot Carousel Reinstatement & Mobile Length Streamlining**
+  - [x] Restored the full photographic carousel in the hero banner with real photoshoot imagery across all 4 slides:
+    - Fixed CSS stacking context (`z-0` image layer, `z-[1]` subtle vignette gradient, `z-10` typography & CTA overlay) so photography renders vibrantly without being pushed behind background layers.
+    - Slide 1: BIBA-inspired editorial photoshoot with models in festive emerald & magenta attire, marigold garlands, and kundan jewellery (`/hero/biba-hero-desktop.jpg` and `/hero/biba-hero-mobile.jpg`).
+    - Slide 2: Royal Kundan & Bridal Heritage photoshoot (`/images/occasions/wedding.jpg`).
+    - Slide 3: 18K Gold-Tone Plated Waterproof Daily Radiance photoshoot (`/images/occasions/daily-wear.jpg`).
+    - Slide 4: Punjabi Heritage Signature Chandbalis & Jhumkas photoshoot (`/images/occasions/festive.jpg`).
+    - Equipped with smooth carousel controls: edge arrow buttons (`<` and `>`), bottom navigation dots with active gold pill, and 6-second auto-play rotation that pauses on user hover.
+  - [x] Kept the top of the page clean:
+    - Navbar sits directly at the very top of the viewport (no top strip).
+    - Opulent maroonish-espresso (`#2A1218`) navbar with gold hairline border and transparent gold wordmark (zero white box artifact).
+    - Integrated mobile search pill directly inside the maroonish navbar.
+  - [x] Maintained the streamlined mobile homepage length (reduced scroll depth by ~65%):
+    - 3D Jewellery Box responsive height compacted to 480px on phones.
+    - Compact 2x2 product grid with category tabs on mobile.
+    - Redundant desktop tiles hidden on mobile (`hidden md:block`).
+  - [x] Verified production build (59/59 static pages compiled, 129 kB First Load JS, 6/6 Vitest tests passing, 0 TypeScript errors, 0 ESLint warnings).
