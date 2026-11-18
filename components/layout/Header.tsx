@@ -16,26 +16,19 @@ export interface HeaderProps {
 }
 
 export function Header({
-  isOverHero = true,
+  isOverHero = false,
   cartCount = 0,
   wishlistCount = 0,
 }: HeaderProps) {
   const [isScrolledPastHero, setIsScrolledPastHero] = React.useState(!isOverHero);
+  const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-  const [searchOpen, setSearchOpen] = React.useState(false);
 
   React.useEffect(() => {
-    if (!isOverHero) {
-      setIsScrolledPastHero(true);
-      return;
-    }
-
     const handleScroll = () => {
-      // Past hero threshold (around 650px)
-      if (window.scrollY > 480) {
-        setIsScrolledPastHero(true);
-      } else {
-        setIsScrolledPastHero(false);
+      setIsScrolled(window.scrollY > 20);
+      if (isOverHero) {
+        setIsScrolledPastHero(window.scrollY > 480);
       }
     };
 
@@ -44,43 +37,52 @@ export function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOverHero]);
 
+  const showWordmark = !isOverHero || isScrolledPastHero;
+  const isSticky = !isOverHero || isScrolledPastHero;
+
   return (
     <>
       <header
         className={cn(
           "w-full z-40 transition-all duration-300",
-          isScrolledPastHero
-            ? "sticky top-0 bg-white/95 backdrop-blur-md border-b border-[#E7DCC6]/70 shadow-subtle py-2.5 px-4 md:px-8"
+          isSticky
+            ? cn(
+                "sticky top-0 bg-white/95 backdrop-blur-md border-b border-[#E7DCC6]/80 px-4 md:px-8",
+                isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
+              )
             : "absolute top-0 left-0 right-0 py-3 px-4 md:px-8 pointer-events-auto"
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Left: Mobile Menu Button & Search */}
-          <div className="flex items-center space-x-3">
+          <div className="flex items-center space-x-2 md:space-x-3">
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
-              aria-label="Open mobile menu"
+              aria-label="Open navigation menu"
             >
               <Menu className="w-5 h-5 text-espresso" />
             </button>
             <Link
               href="/search"
-              className="p-2 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors focus:outline-none focus:ring-2 focus:ring-gold"
+              className="flex items-center gap-2 p-2 sm:px-3 sm:py-1.5 rounded-full text-espresso hover:bg-soft-cream/80 transition-colors border border-transparent sm:border-[#E7DCC6]/60 focus:outline-none focus:ring-2 focus:ring-gold"
               aria-label="Search catalogue"
             >
-              <Search className="w-5 h-5 text-espresso" />
+              <Search className="w-4 h-4 text-espresso" />
+              <span className="hidden sm:inline text-xs font-sans text-brown-text/70">
+                Search &quot;kundan&quot;, &quot;jhumka&quot;, &quot;solitaire&quot;...
+              </span>
             </Link>
           </div>
 
-          {/* Center: Wordmark (Visible when scrolled past hero or on non-hero pages) */}
+          {/* Center: Wordmark */}
           <div className="flex-1 flex justify-center items-center">
             <Link
               href="/"
               className={cn(
                 "transition-all duration-300 relative block",
-                isScrolledPastHero
-                  ? "opacity-100 scale-100 h-10 w-36 md:w-44"
+                showWordmark
+                  ? "opacity-100 scale-100 h-9 sm:h-11 w-36 sm:w-48"
                   : "opacity-0 scale-95 pointer-events-none h-8 w-28"
               )}
               aria-label="Phabulous by Mitthat Home"
@@ -131,8 +133,8 @@ export function Header({
           </div>
         </div>
 
-        {/* Mega Menu underneath sticky header on desktop when scrolled */}
-        {isScrolledPastHero && <MegaMenu />}
+        {/* Mega Menu underneath sticky header on desktop */}
+        {(!isOverHero || isScrolledPastHero) && <MegaMenu />}
       </header>
 
       {/* Mobile Drawer */}

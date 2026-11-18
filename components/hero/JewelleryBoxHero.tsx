@@ -47,7 +47,11 @@ export const HERO_SLIDES: HeroSlide[] = [
   },
 ];
 
-export function JewelleryBoxHero() {
+export interface JewelleryBoxHeroProps {
+  isSection?: boolean;
+}
+
+export function JewelleryBoxHero({ isSection = false }: JewelleryBoxHeroProps = {}) {
   const [currentIndex, setCurrentIndex] = React.useState(0);
   const [isReady, setIsReady] = React.useState(false);
   const [isInView, setIsInView] = React.useState(true);
@@ -320,11 +324,13 @@ export function JewelleryBoxHero() {
         </button>
       </div>
 
-      {/* Gentle Scroll Cue */}
-      <div className={styles.scrollCue} aria-hidden="true">
-        <span>Discover More</span>
-        <ChevronDown className="w-4 h-4 text-antique-gold animate-bounce" />
-      </div>
+      {/* Gentle Scroll Cue (only when hero, not embedded section) */}
+      {!isSection && (
+        <div className={styles.scrollCue} aria-hidden="true">
+          <span>Discover More</span>
+          <ChevronDown className="w-4 h-4 text-antique-gold animate-bounce" />
+        </div>
+      )}
     </section>
   );
 }

@@ -69,3 +69,11 @@
   - [x] `npx vinext check` compatibility verification (94% compatible, 7/7 Next imports supported)
   - [x] Production bundle size verification (Homepage JS: 125 kB < 150 kB budget)
   - [x] Final PROGRESS.md and DECISIONS.md documentation
+
+- [x] **Storefront Redesign: Rubans-Inspired Format & 3D Box Repositioning**
+  - [x] Designed high-impact editorial hero banner carousel (`components/home/RubansHeroBanner.tsx`) featuring festive and everyday collections with autoplay, indicators, and high-conversion CTAs.
+  - [x] Implemented Rubans-style quick category story navigation circles (`components/home/QuickCategoryCircles.tsx`) with gold rings, labels, and badges.
+  - [x] Repositioned the 3D Three.js Jewellery Box component into an experiential virtual studio section (`components/home/Interactive3DShowcase.tsx`) with luxury framing and guidance.
+  - [x] Enhanced `Header.tsx` to keep the brand logo, search bar, and mega menu permanently visible and sticky.
+  - [x] Added dynamic category filter tabs to `BestsellersGrid.tsx` ("All Bestsellers", "Kundan & Bridal", "AD Solitaires", "Earrings", "Necklaces", "Daily Anti-Tarnish").
+  - [x] Verified full production build (59 static pages generated, Homepage JS: 129 kB < 150 kB budget), all 6 tests passing, and 0 ESLint warnings.

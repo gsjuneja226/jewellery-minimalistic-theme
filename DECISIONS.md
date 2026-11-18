@@ -27,3 +27,10 @@
 - **Emails**: `EmailProvider` interface with `ResendProvider` and `ConsoleEmailProvider`.
 - **Storage**: `StorageProvider` interface with `CloudflareR2Provider` and `LocalStorageProvider`.
 - **Search**: `SearchProvider` interface with PostgreSQL Full-Text Search + pg_trgm and In-Memory fallback.
+
+## 6. Homepage & Hero Redesign (Rubans D2C E-commerce Standard)
+- **Rubans-Inspired Layout**: Replaced the initial full-screen 3D-only hero with an editorial lifestyle banner slider (`RubansHeroBanner`) featuring curated festive, daily anti-tarnish, and American diamond collections with clear CTAs, badges, and fast LCP rendering.
+- **Quick Category Navigation**: Added circular category story thumbnails (`QuickCategoryCircles`) right below the hero banner for high-intent instant browsing (Earrings, Kundan Sets, Necklaces, Bangles, Rings, Pendants, Daily Anti-Tarnish, Bridal Edit).
+- **Repositioned 3D Showcase**: Preserved the Three.js 3D Jewellery Box component (`JewelleryBoxHero`) by relocating it into a dedicated experiential section (`Interactive3DShowcase`: "Open The Phabulous Jewellery Box") with luxury framing, allowing shoppers to interact with 3D models without impeding initial homepage conversion.
+- **Sticky Navigation**: Ensured the official logo wordmark, search, account, wishlist, and cart are always visible from initial page load, paired with desktop mega menu and mobile navigation drawer.
+- **Dynamic Bestseller Tabs**: Upgraded `BestsellersGrid` with category filter tabs to allow instant zero-reload browsing between Kundan, AD Solitaires, Earrings, Necklaces, and Daily Wear.
