@@ -38,12 +38,12 @@
   - [x] Inventory management & stock adjustment tracking
   - [x] CSV import & export with preview
 
-- [ ] **Phase 5: Commerce Engine**
-  - [ ] Persistent cart (guest + authenticated merge)
-  - [ ] Dynamic coupons & bundle rules
-  - [ ] Multi-step checkout with server-side price calculation & 15-minute stock reservation
-  - [ ] Razorpay orders + webhook verification + COD with phone OTP
-  - [ ] Order confirmation, pure JS PDF invoice generation, transactional emails
+- [x] **Phase 5: Commerce Engine**
+  - [x] Persistent cart (guest + authenticated merge)
+  - [x] Dynamic coupons & bundle rules
+  - [x] Multi-step checkout with server-side price calculation & 15-minute stock reservation
+  - [x] Razorpay orders + webhook verification + COD with phone OTP
+  - [x] Order confirmation, pure JS PDF invoice generation, transactional emails
 
 - [ ] **Phase 6: Fulfilment & After-Sales**
   - [ ] Order workflow state machine
