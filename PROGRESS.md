@@ -18,11 +18,11 @@
   - [x] All hero bug fixes: 38px clasp, `pan-y` mobile scroll, light ambient gradient, scoped arrow keys, offscreen pause, official logo wordmark, artificial jewellery copy
   - [x] Hero unit & screenshot tests
 
-- [ ] **Phase 2: Data Model & Authentication**
-  - [ ] Drizzle ORM schema with PostgreSQL, migrations, docker-compose.yml
-  - [ ] Comprehensive seed script (categories, collections, 40+ products, coupons, reviews, Super Admin)
-  - [ ] Auth system: Sessions, email/password, Google, Phone OTP, TOTP 2FA, RBAC permission matrix
-  - [ ] Customer account basics
+- [x] **Phase 2: Data Model & Authentication**
+  - [x] Drizzle ORM schema with PostgreSQL, migrations, docker-compose.yml
+  - [x] Comprehensive seed script (categories, collections, 40+ products, coupons, reviews, Super Admin)
+  - [x] Auth system: Sessions, email/password, Google, Phone OTP, TOTP 2FA, RBAC permission matrix
+  - [x] Customer account basics & order state machine with tests
 
 - [ ] **Phase 3: Storefront Catalogue**
   - [ ] Full 13-section homepage with brand story band, categories, reviews, instagram, newsletter
