@@ -22,24 +22,23 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-warm-white">
-      <div className="max-w-3xl mx-auto rounded-[18px] border border-[#D6C2A3] bg-gradient-to-br from-[#FCFAF5] via-[#F3ECE1] to-[#EFE4DA] p-8 md:p-12 shadow-card text-center relative overflow-hidden">
+    <section className="py-8 sm:py-14 md:py-20 px-3 sm:px-6 md:px-8 bg-warm-white">
+      <div className="max-w-3xl mx-auto rounded-xl sm:rounded-[18px] border border-[#D6C2A3] bg-gradient-to-br from-[#FCFAF5] via-[#F3ECE1] to-[#EFE4DA] p-5 sm:p-8 md:p-12 shadow-card text-center relative overflow-hidden">
         {/* Subtle decorative gold sparkle */}
-        <div className="absolute top-4 right-6 text-gold/30">
-          <Sparkles className="w-8 h-8" />
+        <div className="absolute top-3 right-4 sm:top-4 sm:right-6 text-gold/30">
+          <Sparkles className="w-6 h-6 sm:w-8 sm:h-8" />
         </div>
 
-        <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
+        <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
           The VIP Sparkle Club
         </span>
 
-        <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash mt-2">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash mt-1 sm:mt-2">
           Enjoy 10% Off Your First Order
         </h2>
 
-        <p className="text-sm text-brown-text/80 max-w-md mx-auto mt-2 font-sans">
-          Subscribe for early access to festive launches, exclusive flash discounts,
-          and curated jewellery styling guides.
+        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto mt-1 sm:mt-2 font-sans">
+          Early access to festive launches & exclusive flash discounts.
         </p>
 
         {submitted ? (

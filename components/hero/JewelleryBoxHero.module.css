@@ -1,18 +1,26 @@
 .heroSection {
   position: relative;
   width: 100%;
-  min-height: min(100svh, 820px);
+  min-height: 480px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 24px;
+  padding-bottom: 24px;
   background: radial-gradient(ellipse at 50% 35%, #F7EFE3, #EDE2CD 55%, #DFD0B8 100%);
   color: #2a2118;
   overflow: hidden;
   touch-action: pan-y;
   outline: none;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    min-height: 680px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
 }
 
 .brand {

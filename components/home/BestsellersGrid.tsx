@@ -61,27 +61,26 @@ export function BestsellersGrid() {
   }, [activeTab]);
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="text-center space-y-2 mb-8">
-        <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
+    <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
+        <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
           Customer Favourites
         </span>
-        <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
           Most Loved & Bestselling
         </h2>
-        <p className="text-sm text-brown-text/80 max-w-md mx-auto font-sans">
-          Proven showstoppers designed to turn heads, celebrated by over 20,000+
-          delighted patrons across India.
+        <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto font-sans">
+          Proven showstoppers designed to turn heads, celebrated by 20,000+ patrons.
         </p>
 
-        {/* Rubans-style Category Filter Tabs */}
-        <div className="flex items-center justify-center gap-2 sm:gap-3 flex-wrap pt-4">
+        {/* Category Filter Tabs */}
+        <div className="flex items-center justify-center gap-1.5 sm:gap-3 flex-wrap pt-3">
           {TABS.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={cn(
-                "px-4 py-1.5 rounded-full text-xs sm:text-sm font-sans font-medium transition-all duration-200 border",
+                "px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[11px] sm:text-xs font-sans font-medium transition-all duration-200 border",
                 activeTab === tab.id
                   ? "bg-antique-gold border-antique-gold text-white shadow-sm"
                   : "bg-[#FCFAF5] border-[#D6C2A3] text-espresso hover:bg-[#EFE7DC] hover:border-gold"
@@ -93,15 +92,17 @@ export function BestsellersGrid() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
-        {filteredProducts.slice(0, 8).map((product) => (
-          <ProductCard key={product.id} product={product} />
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
+        {filteredProducts.slice(0, 8).map((product, idx) => (
+          <div key={product.id} className={idx >= 4 ? "hidden sm:block" : ""}>
+            <ProductCard product={product} />
+          </div>
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-8 sm:mt-12 text-center">
         <Link href="/collections/bestsellers">
-          <Button variant="primary" size="lg">
+          <Button variant="primary" size="default">
             View All Bestsellers
           </Button>
         </Link>

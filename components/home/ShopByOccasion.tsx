@@ -36,54 +36,44 @@ export function ShopByOccasion() {
   ];
 
   return (
-    <section className="py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center space-y-2 mb-12">
-          <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
+    <section className="py-8 sm:py-12 md:py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8">
+        <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-10">
+          <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
             Every Moment Celebrated
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
             Shop by Occasion
           </h2>
-          <p className="text-sm text-brown-text/80 max-w-lg mx-auto font-sans">
-            Whether walking down the aisle, dancing at a sangeet, or adding sparkle
-            to your morning coffee, we have your perfect pairing.
+          <p className="text-xs sm:text-sm text-brown-text/80 max-w-lg mx-auto font-sans">
+            Curated pairings for bridal vows, festive celebrations, and everyday sparkle.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
           {occasions.map((occ) => (
             <Link
               key={occ.slug}
               href={`/collections/${occ.slug}`}
-              className="group relative flex flex-col rounded-[14px] overflow-hidden border border-[#D6C2A3] bg-[#FCFAF5] shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
+              className="group relative flex flex-col rounded-xl sm:rounded-[14px] overflow-hidden border border-[#D6C2A3] bg-[#FCFAF5] shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
             >
               <div className="relative aspect-[4/5] w-full overflow-hidden bg-warm-white">
                 <Image
                   src={occ.image}
                   alt={occ.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 25vw"
+                  sizes="(max-width: 768px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-espresso/80 via-espresso/20 to-transparent" />
-                <div className="absolute bottom-4 left-4 right-4 text-white">
-                  <span className="text-[11px] font-sans tracking-wider uppercase text-gold font-medium">
+                <div className="absolute inset-0 bg-gradient-to-t from-espresso/85 via-espresso/25 to-transparent" />
+                <div className="absolute bottom-2.5 sm:bottom-4 left-2.5 sm:left-4 right-2.5 sm:right-4 text-white">
+                  <span className="hidden sm:block text-[11px] font-sans tracking-wider uppercase text-gold font-medium">
                     {occ.tagline}
                   </span>
-                  <h3 className="font-serif text-2xl font-normal text-white mt-0.5">
+                  <h3 className="font-serif text-base sm:text-2xl font-normal text-white mt-0.5">
                     {occ.title}
                   </h3>
                 </div>
-              </div>
-
-              <div className="p-4 flex-1 flex flex-col justify-between space-y-3 bg-white">
-                <p className="text-xs text-brown-text/80 leading-relaxed font-sans">
-                  {occ.desc}
-                </p>
-                <span className="inline-flex items-center gap-1 text-xs font-semibold text-antique-gold group-hover:text-deep-gold">
-                  Explore {occ.title} Collection <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </span>
               </div>
             </Link>
           ))}

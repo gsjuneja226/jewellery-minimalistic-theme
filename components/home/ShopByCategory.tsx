@@ -38,7 +38,7 @@ export function ShopByCategory() {
   ];
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
+    <section className="hidden md:block py-16 px-4 md:px-8 max-w-7xl mx-auto">
       <div className="text-center space-y-2 mb-10">
         <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
           Curated Essentials

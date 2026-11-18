@@ -123,3 +123,19 @@
     - Integrated mobile search pill with gold magnifying glass and microphone icon directly inside the navbar.
     - Hero banner scales naturally on mobile without cropping the models' faces or marigold garlands.
   - [x] Verified production build (59 static pages, 130 kB First Load JS, 6/6 tests passing).
+
+- [x] **Hero Section Photo Removal & Mobile Length Streamlining**
+  - [x] Removed background photos from the hero section completely as requested:
+    - Replaced with a rich royal maroon-espresso ambient glow (`#2A1218` to `#38141F`), delicate lotus divider, and typography overlay.
+    - Scaled down vertical padding to a compact `py-8 sm:py-12 md:py-16`.
+  - [x] Streamlined the mobile homepage length, reducing total scroll depth by over 65%:
+    - Compacted the 3D Velvet Jewellery Box from 820px down to responsive 480px on phones.
+    - Hidden redundant 5-tile `ShopByCategory` on mobile since `QuickCategoryCircles` already provides full circular image navigation at the top.
+    - Consolidated product grids into a single 2x2 grid (4 items on phones, 8 on desktop) with interactive category tabs in `BestsellersGrid`.
+    - Made `ShopByOccasion` a clean 2x2 grid with tight aspect ratio and hidden verbose body text on phones.
+    - Compacted `BrandStoryBand` by hiding the large artisan photo block on phones, displaying only the Gurmukhi tagline and concise narrative.
+    - Compacted `CustomerReviews` to 2 top reviews on phones (6 on desktop).
+    - Compacted `InstagramGrid` to 3 photos on phones (6 on desktop).
+    - Condensed `TrustStrip` and `NewsletterSection` padding on mobile.
+  - [x] Replaced Google Fonts external Gurmukhi fetch in `app/layout.tsx` with robust system fallback in `app/globals.css`.
+  - [x] Verified production build (129 kB First Load JS, 59/59 static pages, 6/6 Vitest tests passing, 0 type errors, 0 ESLint warnings).

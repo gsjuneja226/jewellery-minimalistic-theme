@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Jost, Noto_Sans_Gurmukhi } from "next/font/google";
+import { Cormorant_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import { ToastProvider } from "@/components/ui/Toast";
 
@@ -15,13 +15,6 @@ const jost = Jost({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
   variable: "--font-jost",
-  display: "swap",
-});
-
-const gurmukhi = Noto_Sans_Gurmukhi({
-  subsets: ["gurmukhi"],
-  weight: ["400", "500", "700"],
-  variable: "--font-gurmukhi",
   display: "swap",
 });
 
@@ -79,7 +72,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${cormorant.variable} ${jost.variable} ${gurmukhi.variable}`}
+      className={`${cormorant.variable} ${jost.variable}`}
     >
       <body className="min-h-screen bg-warm-white text-brown-text antialiased selection:bg-blush selection:text-espresso">
         <ToastProvider>{children}</ToastProvider>

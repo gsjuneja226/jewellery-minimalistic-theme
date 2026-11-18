@@ -28,25 +28,25 @@ export function TrustStrip() {
   return (
     <section
       aria-label="Brand guarantees and service assurances"
-      className="py-10 bg-[#EFE7DC] border-y border-[#D6C2A3]"
+      className="py-5 sm:py-8 bg-[#EFE7DC] border-y border-[#D6C2A3]"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8">
           {features.map((item, idx) => {
             const Icon = item.icon;
             return (
               <div
                 key={idx}
-                className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-3.5"
+                className="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left gap-2 sm:gap-3.5"
               >
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#FCFAF5] border border-gold/40 text-antique-gold shadow-sm">
-                  <Icon className="h-6 w-6 stroke-[1.6]" />
+                <div className="flex h-9 w-9 sm:h-12 sm:w-12 flex-shrink-0 items-center justify-center rounded-full bg-[#FCFAF5] border border-gold/40 text-antique-gold shadow-sm">
+                  <Icon className="h-4 w-4 sm:h-6 sm:w-6 stroke-[1.6]" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-lg font-medium text-espresso">
+                  <h4 className="font-serif text-sm sm:text-lg font-medium text-espresso">
                     {item.title}
                   </h4>
-                  <p className="mt-0.5 text-xs text-brown-text/80 leading-relaxed font-sans">
+                  <p className="hidden sm:block mt-0.5 text-xs text-brown-text/80 leading-relaxed font-sans">
                     {item.desc}
                   </p>
                 </div>

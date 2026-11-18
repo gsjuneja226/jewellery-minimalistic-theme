@@ -1,6 +1,7 @@
 import * as React from "react";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 export function InstagramGrid() {
   const posts = [
@@ -13,28 +14,31 @@ export function InstagramGrid() {
   ];
 
   return (
-    <section className="py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="text-center space-y-2 mb-10">
-          <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
+    <section className="py-8 sm:py-12 md:py-16 bg-[#EFE7DC] border-t border-[#D6C2A3]">
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8">
+        <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-8">
+          <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
             Follow the Sparkle
           </span>
-          <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
+          <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
             #PhabulousJewels on Instagram
           </h2>
-          <p className="text-sm text-brown-text/80 max-w-md mx-auto font-sans">
-            Tag @phabulousbymitthat to get featured on our brand feed & win a monthly jewellery hamper!
+          <p className="text-xs sm:text-sm text-brown-text/80 max-w-md mx-auto font-sans">
+            Tag @phabulousbymitthat to get featured on our brand feed!
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 md:gap-4">
-          {posts.map((post) => (
+        <div className="grid grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-3 md:gap-4">
+          {posts.map((post, idx) => (
             <a
               key={post.id}
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative aspect-square rounded-[12px] overflow-hidden border border-[#E7DCC6]/60 bg-white shadow-xs"
+              className={cn(
+                "group relative aspect-square rounded-[10px] sm:rounded-[12px] overflow-hidden border border-[#D6C2A3] bg-white shadow-xs",
+                idx >= 3 ? "hidden sm:block" : ""
+              )}
               aria-label="View Instagram post"
             >
               <Image

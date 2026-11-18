@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Rating } from "@/components/ui/Rating";
 import { REVIEWS_DATA } from "@/lib/data/mockData";
 import { CheckCircle2, Quote } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const REVIEW_PHOTOS = [
   "/images/reviews/review-1.jpg",
@@ -17,25 +18,27 @@ export function CustomerReviews() {
   const reviews = REVIEWS_DATA.slice(0, 6);
 
   return (
-    <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="text-center space-y-2 mb-12">
-        <span className="text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
+    <section className="py-8 sm:py-12 md:py-16 px-3 sm:px-6 md:px-8 max-w-7xl mx-auto">
+      <div className="text-center space-y-1.5 sm:space-y-2 mb-6 sm:mb-10">
+        <span className="text-[10px] sm:text-xs font-sans tracking-widest text-antique-gold uppercase font-semibold">
           Real Smiles & Stories
         </span>
-        <h2 className="font-serif text-3xl md:text-4xl text-espresso heading-wash">
-          Loved by Over 20,000+ Patrons
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl text-espresso heading-wash">
+          Loved by 20,000+ Patrons
         </h2>
-        <p className="text-sm text-brown-text/80 max-w-lg mx-auto font-sans">
-          Hear from women across India who celebrated their most cherished days
-          with Phabulous by Mitthat.
+        <p className="text-xs sm:text-sm text-brown-text/80 max-w-lg mx-auto font-sans">
+          Hear from women across India who celebrated their cherished days with Phabulous.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
         {reviews.map((rev, idx) => (
           <div
             key={rev.id}
-            className="flex flex-col justify-between rounded-[14px] border border-[#D6C2A3] bg-[#FCFAF5] p-6 shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300"
+            className={cn(
+              "flex flex-col justify-between rounded-xl sm:rounded-[14px] border border-[#D6C2A3] bg-[#FCFAF5] p-4 sm:p-6 shadow-subtle hover:border-gold hover:shadow-card transition-all duration-300",
+              idx >= 2 ? "hidden md:flex" : "flex"
+            )}
           >
             <div className="space-y-3">
               <div className="flex items-center justify-between">

@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 :root {
+  --font-gurmukhi: "Noto Sans Gurmukhi", "Raavi", system-ui, sans-serif;
   --background: #F8F5EE;
   --foreground: #241308;
   --card: #FCFAF5;
