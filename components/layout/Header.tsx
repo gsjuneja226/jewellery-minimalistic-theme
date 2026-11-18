@@ -28,7 +28,7 @@ export function Header({
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
       if (isOverHero) {
-        setIsScrolledPastHero(window.scrollY > 480);
+        setIsScrolledPastHero(window.scrollY > 520);
       }
     };
 
@@ -37,20 +37,22 @@ export function Header({
     return () => window.removeEventListener("scroll", handleScroll);
   }, [isOverHero]);
 
-  const showWordmark = !isOverHero || isScrolledPastHero;
-  const isSticky = !isOverHero || isScrolledPastHero;
+  // If isOverHero is true and user hasn't scrolled past hero, do not render floating bar
+  if (isOverHero && !isScrolledPastHero) {
+    return (
+      <MobileNavDrawer
+        open={mobileMenuOpen}
+        onClose={() => setMobileMenuOpen(false)}
+      />
+    );
+  }
 
   return (
     <>
       <header
         className={cn(
-          "w-full z-40 transition-all duration-300",
-          isSticky
-            ? cn(
-                "sticky top-0 bg-white/95 backdrop-blur-md border-b border-[#E7DCC6]/80 px-4 md:px-8",
-                isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
-              )
-            : "absolute top-0 left-0 right-0 py-3 px-4 md:px-8 pointer-events-auto"
+          "w-full z-50 transition-all duration-300 sticky top-0 bg-white/95 backdrop-blur-md border-b border-[#E7DCC6]/80 px-4 md:px-8",
+          isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
         )}
       >
         <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -79,12 +81,7 @@ export function Header({
           <div className="flex-1 flex justify-center items-center">
             <Link
               href="/"
-              className={cn(
-                "transition-all duration-300 relative block",
-                showWordmark
-                  ? "opacity-100 scale-100 h-9 sm:h-11 w-36 sm:w-48"
-                  : "opacity-0 scale-95 pointer-events-none h-8 w-28"
-              )}
+              className="transition-all duration-300 relative block opacity-100 scale-100 h-9 sm:h-11 w-36 sm:w-48"
               aria-label="Phabulous by Mitthat Home"
             >
               <Image
@@ -134,7 +131,7 @@ export function Header({
         </div>
 
         {/* Mega Menu underneath sticky header on desktop */}
-        {(!isOverHero || isScrolledPastHero) && <MegaMenu />}
+        <MegaMenu />
       </header>
 
       {/* Mobile Drawer */}

@@ -77,3 +77,15 @@
   - [x] Enhanced `Header.tsx` to keep the brand logo, search bar, and mega menu permanently visible and sticky.
   - [x] Added dynamic category filter tabs to `BestsellersGrid.tsx` ("All Bestsellers", "Kundan & Bridal", "AD Solitaires", "Earrings", "Necklaces", "Daily Anti-Tarnish").
   - [x] Verified full production build (59 static pages generated, Homepage JS: 129 kB < 150 kB budget), all 6 tests passing, and 0 ESLint warnings.
+
+- [x] **Storefront Hero Redesign (BIBA Editorial Style + final3 3D Box Component Integration)**
+  - [x] Built `components/home/BibaStyleHero.tsx` based on the user's uploaded reference:
+    - High-fashion Indian model photoshoots with festive marigold garlands (*genda phool*), olive-green backdrop, and vintage brass urli with jasmine.
+    - Fully responsive for both laptop/desktop (`/hero/biba-hero-desktop.jpg`) and mobile (`/hero/biba-hero-mobile.jpg`).
+    - Yellow/gold festive ticker: `✨ AW'26 IS HERE! DISCOVER THE NEW SEASON OF ELEGANCE 🌸`.
+    - Integrated translucent header with white logo, currency selector, search pill with mic icon, wishlist, account, cart, and category navigation.
+    - Editorial typography: `New Arrival`, italic `Make Room For`, bold `What's New`, centered lotus divider `— 🪷 —`, slogan `Too Phabulous To Blend In.`, and rectangular `SHOP NOW >` CTA.
+    - Carousel edge arrows (`<` and `>`), bottom indicators, and autoplay.
+  - [x] Placed the `final3` component (`Interactive3DShowcase` / `JewelleryBoxHero`) directly below the hero area.
+  - [x] Maintained smooth sticky header transition past the hero banner.
+  - [x] Verified production build (130 kB First Load JS, 59/59 static pages, 0 errors, all Vitest tests passing).

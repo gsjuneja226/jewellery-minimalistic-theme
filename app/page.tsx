@@ -1,14 +1,13 @@
 import * as React from "react";
-import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
-import { RubansHeroBanner } from "@/components/home/RubansHeroBanner";
+import { BibaStyleHero } from "@/components/home/BibaStyleHero";
+import { Interactive3DShowcase } from "@/components/home/Interactive3DShowcase";
 import { QuickCategoryCircles } from "@/components/home/QuickCategoryCircles";
 import { TrustStrip } from "@/components/home/TrustStrip";
 import { ShopByCategory } from "@/components/home/ShopByCategory";
 import { NewArrivalsSection } from "@/components/home/NewArrivalsSection";
 import { BestsellersGrid } from "@/components/home/BestsellersGrid";
 import { ShopByOccasion } from "@/components/home/ShopByOccasion";
-import { Interactive3DShowcase } from "@/components/home/Interactive3DShowcase";
 import { BrandStoryBand } from "@/components/home/BrandStoryBand";
 import { CustomerReviews } from "@/components/home/CustomerReviews";
 import { InstagramGrid } from "@/components/home/InstagramGrid";
@@ -18,49 +17,46 @@ import { Footer } from "@/components/layout/Footer";
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-warm-white">
-      {/* 1. Announcement bar with promo & shipping info */}
-      <AnnouncementBar />
+      {/* 1. Sticky floating header when scrolled past hero */}
+      <Header isOverHero={true} />
 
-      {/* 2. Sticky Header with logo, search, account, wishlist & cart */}
-      <Header isOverHero={false} />
+      {/* 2. Hero Area (BIBA Reference): Indian models photoshoot, marigold garlands, olive wall, integrated translucent header */}
+      <BibaStyleHero />
 
-      {/* 3. Rubans-style Lifestyle & Editorial Hero Banner Carousel */}
-      <RubansHeroBanner />
+      {/* 3. Directly below hero: final3 Interactive 3D Jewellery Box component */}
+      <Interactive3DShowcase />
 
-      {/* 4. Quick Category Story Circles (Rubans signature navigation) */}
+      {/* 4. Quick Category Story Circles */}
       <QuickCategoryCircles />
 
       {/* 5. Trust Strip (Anti-tarnish, COD, free shipping, easy returns) */}
       <TrustStrip />
 
-      {/* 6. Shop by Category (5 Large Curated Visual Tiles) */}
+      {/* 6. Shop by Category (5 large curated visual tiles) */}
       <ShopByCategory />
 
-      {/* 7. New Arrivals Carousel / Grid */}
+      {/* 7. New Arrivals */}
       <NewArrivalsSection />
 
-      {/* 8. Trending Bestsellers with Interactive Category Filter Tabs */}
+      {/* 8. Bestsellers with Dynamic Category Filter Tabs */}
       <BestsellersGrid />
 
       {/* 9. Shop by Occasion (Wedding, Festive, Daily Wear, Gifting) */}
       <ShopByOccasion />
 
-      {/* 10. Interactive 3D Craftsmanship Showcase (Relocated Jewellery Box) */}
-      <Interactive3DShowcase />
-
-      {/* 11. Brand Story Band about Mitthat */}
+      {/* 10. Brand Story Band about Mitthat */}
       <BrandStoryBand />
 
-      {/* 12. Customer Reviews with Photos & Verified Badges */}
+      {/* 11. Customer Reviews with Photos & Verified Badges */}
       <CustomerReviews />
 
-      {/* 13. Instagram Community Grid */}
+      {/* 12. Instagram Community Grid */}
       <InstagramGrid />
 
-      {/* 14. VIP Club & Newsletter Signup with WhatsApp Opt-in */}
+      {/* 13. VIP Club & Newsletter Signup with WhatsApp Opt-in */}
       <NewsletterSection />
 
-      {/* 15. Soft Cream Luxury Footer with full logo & policies */}
+      {/* 14. Soft Cream Luxury Footer with full logo & policies */}
       <Footer />
     </div>
   );
