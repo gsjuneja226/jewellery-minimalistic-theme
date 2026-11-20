@@ -80,7 +80,7 @@ export function PopularCategoriesSlider() {
               <h3 className="mt-2.5 text-[10px] sm:text-xs font-bold tracking-wider text-[#222222] uppercase group-hover/cat:text-[#BA9048] transition-colors leading-tight">
                 {cat.name}
               </h3>
-              <span className="hidden sm:block text-[11px] text-[#888888] font-sans mt-0.5">
+              <span className="block text-[10px] sm:text-[11px] text-[#888888] font-sans mt-0.5">
                 {cat.subtitle}
               </span>
             </Link>

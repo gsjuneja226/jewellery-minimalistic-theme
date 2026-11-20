@@ -18,18 +18,6 @@ export const SLIDES = [
     image: "/hero/user-hero-2.png",
     alt: "Spring Festival Sale - Get 30% Off Your First Order - Code: BLOOM30",
   },
-  {
-    id: 3,
-    link: "/collections/jewellery-sets",
-    image: "/hero/hero-slide-luxury.jpg",
-    alt: "Handcrafted Luxury Artificial Jewellery & Bridal Sets",
-  },
-  {
-    id: 4,
-    link: "/collections/necklaces",
-    image: "/hero/hero-slide-bridal.jpg",
-    alt: "Royal Bridal Kundan Chokers & Necklaces",
-  },
 ];
 
 export function AlukasHeroSlider() {
@@ -110,11 +98,11 @@ export function AlukasHeroSlider() {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      {/* Full Tap/Click Link to Connected Collection - Enlarged Aspect Ratio */}
+      {/* Full Tap/Click Link to Connected Collection - Full Aspect Ratio Showing Everything */}
       <Link
         href={slide.link}
         onClick={handleLinkClick}
-        className="block relative w-full aspect-[2.2/1] sm:aspect-[2.7/1] md:aspect-[3.22/1] min-h-[180px] sm:min-h-[260px] md:min-h-[360px] lg:min-h-[420px] max-h-[580px] cursor-pointer group"
+        className="block relative w-full aspect-[1024/318] cursor-pointer group bg-[#1A1A1A]"
         aria-label={slide.alt}
       >
         <Image
@@ -123,7 +111,7 @@ export function AlukasHeroSlider() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+          className="object-contain sm:object-cover object-center transition-transform duration-700 ease-out"
         />
       </Link>
 

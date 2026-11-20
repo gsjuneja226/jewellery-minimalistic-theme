@@ -268,6 +268,19 @@ export function Header({
             </nav>
           </div>
         </div>
+
+        {/* Mobile Category Strip - Displays All Laptop Navigation Links on Mobile */}
+        <div className="lg:hidden border-t border-[#EEEEEE] bg-[#FAF9F7] overflow-x-auto no-scrollbar px-3 py-2 flex items-center gap-4 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#333333] whitespace-nowrap">
+          <Link href="/" className="hover:text-[#BA9048] text-black transition-colors">HOME</Link>
+          <Link href="/collections" className="hover:text-[#BA9048] transition-colors">COLLECTIONS</Link>
+          <Link href="/collections/rings" className="hover:text-[#BA9048] transition-colors">RINGS</Link>
+          <Link href="/collections/necklaces" className="hover:text-[#BA9048] transition-colors">NECKLACES</Link>
+          <Link href="/collections/earrings" className="hover:text-[#BA9048] transition-colors">EARRINGS</Link>
+          <Link href="/collections/bangles-bracelets" className="hover:text-[#BA9048] transition-colors">BANGLES</Link>
+          <Link href="/collections/jewellery-sets" className="hover:text-[#BA9048] transition-colors">BRIDAL KUNDAN</Link>
+          <Link href="/collections/new-arrivals" className="text-[#BA9048] font-bold">NEW ARRIVALS</Link>
+          <Link href="/pages/about" className="hover:text-[#BA9048] transition-colors">OUR STORY</Link>
+        </div>
       </header>
 
       {/* Cart Drawer */}

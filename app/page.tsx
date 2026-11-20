@@ -28,13 +28,11 @@ export default function HomePage() {
       {/* 3. Popular Categories (Compact 3x2 Grid on Mobile, 6 Circles on Desktop) */}
       <PopularCategoriesSlider />
 
-      {/* 4. Promotional Banners (1 concise banner on Mobile, 3 on Desktop) */}
+      {/* 4. Promotional Banners (All 3 visible on mobile & laptop) */}
       <PromoBanners />
 
-      {/* 5. Trendy Collection (Desktop only to prevent duplicate product feed on Mobile) */}
-      <div className="hidden md:block">
-        <TrendyCollectionSlider />
-      </div>
+      {/* 5. Trendy Collection (Visible on mobile & laptop) */}
+      <TrendyCollectionSlider />
 
       {/* 6. Primary Curated Product Showcase (Tabbed: New Arrivals | Featured | Best Seller) */}
       <FeaturedProductsTabs />
@@ -42,18 +40,14 @@ export default function HomePage() {
       {/* 7. Flagship Boutique Banner */}
       <FindStoreBanner />
 
-      {/* 8. Split Feature Banners (Desktop only) */}
-      <div className="hidden md:block">
-        <SplitFeatureBanners />
-      </div>
+      {/* 8. Split Feature Banners (Visible on mobile & laptop) */}
+      <SplitFeatureBanners />
 
       {/* 9. Customer Reviews Carousel */}
       <AlukasCustomerReviews />
 
-      {/* 10. Read Journal (Desktop only) */}
-      <div className="hidden md:block">
-        <ReadJournalSection />
-      </div>
+      {/* 10. Read Journal (Visible on mobile & laptop) */}
+      <ReadJournalSection />
 
       {/* 11. Instagram Gallery */}
       <AlukasInstagramGrid />

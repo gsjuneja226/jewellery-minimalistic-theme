@@ -36,9 +36,7 @@ export function PromoBanners() {
           {BANNERS.map((banner, index) => (
             <div
               key={index}
-              className={`relative aspect-[16/9] sm:aspect-[4/3] md:aspect-[3.8/3] overflow-hidden bg-[#FAFAFA] group ${
-                index > 0 ? "hidden md:block" : ""
-              }`}
+              className="relative aspect-[16/9] sm:aspect-[4/3] md:aspect-[3.8/3] overflow-hidden bg-[#FAFAFA] group"
             >
               {/* Crisp Real Jewelry Image */}
               <Image
