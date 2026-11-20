@@ -8,15 +8,27 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export const SLIDES = [
   {
     id: 1,
-    link: "/collections",
-    image: "/hero/user-hero-1.png",
-    alt: "Holiday Season Sale - Buy 1 Get 1 Free - Code: GIFT",
+    link: "/collections/jewellery-sets",
+    image: "/hero/hero-slide-kundan.jpg",
+    alt: "Royal Bridal Kundan & Emerald Choker Sets",
   },
   {
     id: 2,
+    link: "/collections/necklaces",
+    image: "/hero/hero-slide-modern.jpg",
+    alt: "Modern Anti-Tarnish Gold Layered Necklaces & Hoops",
+  },
+  {
+    id: 3,
+    link: "/collections/festive",
+    image: "/hero/hero-slide-festive.jpg",
+    alt: "Handcrafted Festive Jhumkas & Bangles Collection",
+  },
+  {
+    id: 4,
     link: "/collections/new-arrivals",
-    image: "/hero/user-hero-2.png",
-    alt: "Spring Festival Sale - Get 30% Off Your First Order - Code: BLOOM30",
+    image: "/hero/hero-slide-bridal.jpg",
+    alt: "New Season Handcrafted Bridal Jewellery",
   },
 ];
 
@@ -98,11 +110,11 @@ export function AlukasHeroSlider() {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      {/* Full Tap/Click Link to Connected Collection - Full Aspect Ratio Showing Everything */}
+      {/* Full Tap/Click Link to Connected Collection - Luxury Mobile & Desktop Proportions */}
       <Link
         href={slide.link}
         onClick={handleLinkClick}
-        className="block relative w-full aspect-[1024/318] cursor-pointer group bg-[#1A1A1A]"
+        className="block relative w-full h-[52vh] min-h-[380px] max-h-[460px] sm:h-[60vh] sm:min-h-[460px] md:h-[68vh] md:min-h-[540px] lg:h-[75vh] lg:min-h-[620px] max-h-[720px] cursor-pointer group bg-[#111111]"
         aria-label={slide.alt}
       >
         <Image
@@ -111,7 +123,7 @@ export function AlukasHeroSlider() {
           fill
           priority
           sizes="100vw"
-          className="object-contain sm:object-cover object-center transition-transform duration-700 ease-out"
+          className="object-cover object-[72%_center] sm:object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
         />
       </Link>
 
@@ -145,11 +157,10 @@ export function AlukasHeroSlider() {
               setCurrentSlide(idx);
             }}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 focus:outline-none ${
-              currentSlide === idx
-                ? "w-6 sm:w-8 bg-white shadow-sm"
-                : "w-1.5 sm:w-2 bg-white/50 hover:bg-white/80"
-            }`}
+            className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 focus:outline-none ${currentSlide === idx
+              ? "w-6 sm:w-8 bg-white shadow-sm"
+              : "w-1.5 sm:w-2 bg-white/50 hover:bg-white/80"
+              }`}
           />
         ))}
       </div>
