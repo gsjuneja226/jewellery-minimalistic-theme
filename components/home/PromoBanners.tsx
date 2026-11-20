@@ -30,7 +30,7 @@ const BANNERS = [
 
 export function PromoBanners() {
   return (
-    <section className="w-full bg-white py-6 md:py-14">
+    <section className="w-full bg-white py-8 sm:py-12 md:py-16">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6">
           {BANNERS.map((banner, index) => (

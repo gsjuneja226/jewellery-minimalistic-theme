@@ -2,7 +2,6 @@ import * as React from "react";
 import { Header } from "@/components/layout/Header";
 import { AlukasHeroSlider } from "@/components/home/AlukasHeroSlider";
 import { PromoBanners } from "@/components/home/PromoBanners";
-import { PopularCategoriesSlider } from "@/components/home/PopularCategoriesSlider";
 import { TrendyCollectionSlider } from "@/components/home/TrendyCollectionSlider";
 import { FindStoreBanner } from "@/components/home/FindStoreBanner";
 import { SplitFeatureBanners } from "@/components/home/SplitFeatureBanners";
@@ -26,10 +25,7 @@ export default function HomePage() {
       {/* 2. Hero Slider with mobile-optimized height & bold CTAs */}
       <AlukasHeroSlider />
 
-      {/* 3. Popular Categories (Compact 3x2 Grid on Mobile, 6 Circles on Desktop) */}
-      <PopularCategoriesSlider />
-
-      {/* 4. Promotional Banners (All 3 visible on mobile & laptop) */}
+      {/* 3. Promotional 3-Card Feature Banners */}
       <PromoBanners />
 
       {/* 5. Trendy Collection (Visible on mobile & laptop) */}
