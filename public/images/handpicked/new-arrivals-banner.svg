@@ -1,0 +1,43 @@
+<svg width="1100" height="450" viewBox="0 0 1100 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgNew" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0E231F"/>
+      <stop offset="50%" stop-color="#071513"/>
+      <stop offset="100%" stop-color="#030A09"/>
+    </linearGradient>
+    <linearGradient id="goldNew" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9E0"/>
+      <stop offset="50%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#A67B28"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="450" fill="url(#bgNew)"/>
+  <circle cx="800" cy="225" r="240" fill="#1C4B3F" fill-opacity="0.3"/>
+
+  <!-- Left: Typography inside image -->
+  <g transform="translate(80, 190)">
+    <text x="0" y="0" font-family="'Cinzel', Georgia, serif" font-size="24" letter-spacing="5" fill="#EEEEEE" font-weight="600">
+      FRESH FROM THE ATELIER
+    </text>
+    <text x="0" y="55" font-family="'Brush Script MT', 'Great Vibes', 'Baskerville', cursive, serif" font-size="65" font-style="italic" fill="url(#goldNew)">
+      New Arrivals
+    </text>
+    <text x="0" y="95" font-family="system-ui, sans-serif" font-size="12" letter-spacing="3" fill="#69C2A4">
+      2026 BRIDAL POLKI & ANTI-TARNISH STATEMENT DROPS
+    </text>
+  </g>
+
+  <!-- Right: Choker & Pendant Setup -->
+  <g transform="translate(780, 210)">
+    <path d="M-150,0 Q0,80 150,0" fill="none" stroke="url(#goldNew)" stroke-width="24" stroke-linecap="round"/>
+    <!-- Emerald Green Center Stone -->
+    <rect x="-20" y="32" width="40" height="30" rx="6" fill="#0C523B" stroke="#F2CB75" stroke-width="3"/>
+    <circle cx="0" cy="47" r="5" fill="#FFFFFF"/>
+    <!-- Simulated Pearl Drops -->
+    <circle cx="-80" cy="45" r="8" fill="#FFFDF5"/>
+    <circle cx="-40" cy="62" r="9" fill="#FFFDF5"/>
+    <circle cx="0" cy="80" r="10" fill="#FFFDF5"/>
+    <circle cx="40" cy="62" r="9" fill="#FFFDF5"/>
+    <circle cx="80" cy="45" r="8" fill="#FFFDF5"/>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Realistic Gold Metallic Shaders -->
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF0"/>
+      <stop offset="25%" stop-color="#FCE5A2"/>
+      <stop offset="55%" stop-color="#D9A74A"/>
+      <stop offset="85%" stop-color="#B88628"/>
+      <stop offset="100%" stop-color="#805611"/>
+    </linearGradient>
+    <linearGradient id="rhodiumShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="35%" stop-color="#F2F4F8"/>
+      <stop offset="65%" stop-color="#D0D6E2"/>
+      <stop offset="100%" stop-color="#9CA3AF"/>
+    </linearGradient>
+    <linearGradient id="roseGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5F2"/>
+      <stop offset="30%" stop-color="#F7C4B8"/>
+      <stop offset="70%" stop-color="#D98A7B"/>
+      <stop offset="100%" stop-color="#9E5345"/>
+    </linearGradient>
+    <!-- Soft Studio Ground Contact Shadow -->
+    <radialGradient id="groundShadow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1A1817" stop-opacity="0.14"/>
+      <stop offset="60%" stop-color="#1A1817" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Sparkling Gem Gradients -->
+    <radialGradient id="diamondFacet" cx="40%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="50%" stop-color="#E8F4FF"/>
+      <stop offset="85%" stop-color="#BDD8F5"/>
+      <stop offset="100%" stop-color="#7EA5D1"/>
+    </radialGradient>
+    <radialGradient id="sapphireFacet" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#4F95FF"/>
+      <stop offset="45%" stop-color="#1A56C4"/>
+      <stop offset="85%" stop-color="#0B2F7A"/>
+      <stop offset="100%" stop-color="#041438"/>
+    </radialGradient>
+    <radialGradient id="emeraldFacet" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#54DF9D"/>
+      <stop offset="45%" stop-color="#15975F"/>
+      <stop offset="85%" stop-color="#085B38"/>
+      <stop offset="100%" stop-color="#022918"/>
+    </radialGradient>
+    <radialGradient id="rubyFacet" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF6B8B"/>
+      <stop offset="45%" stop-color="#D11545"/>
+      <stop offset="85%" stop-color="#800624"/>
+      <stop offset="100%" stop-color="#400211"/>
+    </radialGradient>
+  </defs>
+
+  <!-- PURE WHITE BACKGROUND (#FFFFFF) -->
+  <rect width="600" height="600" fill="#FFFFFF"/>
+
+  <!-- Soft Studio Contact Shadow -->
+  <ellipse cx="300" cy="480" rx="170" ry="16" fill="url(#groundShadow)"/>
+
+  <!-- Centered Isolated Jewellery Graphic -->
+  
+  <g transform="translate(300, 310)">
+    <!-- Ring Band -->
+    <ellipse cx="0" cy="30" rx="100" ry="120" fill="none" stroke="url(#rhodiumShine)" stroke-width="20"/>
+    <ellipse cx="0" cy="30" rx="100" ry="120" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-dasharray="7 8"/>
+    <!-- Cushion Halo Setting -->
+    <rect x="-48" y="-95" width="96" height="96" rx="20" fill="url(#rhodiumShine)" stroke="#CBD5E1" stroke-width="3"/>
+    <rect x="-42" y="-89" width="84" height="84" rx="16" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-dasharray="6 6"/>
+    <!-- Center AD Solitaire Stone -->
+    <polygon points="0,-82 32,-50 25,-16 -25,-16 -32,-50" fill="url(#diamondFacet)" stroke="#FFFFFF" stroke-width="2"/>
+    <polygon points="0,-82 14,-50 0,-16 -14,-50" fill="#FFFFFF" fill-opacity="0.6"/>
+  </g>
+
+</svg>

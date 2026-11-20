@@ -1,0 +1,65 @@
+<svg width="1200" height="550" viewBox="0 0 1200 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgWine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2B0E1B"/>
+      <stop offset="50%" stop-color="#1A0711"/>
+      <stop offset="100%" stop-color="#0E0209"/>
+    </linearGradient>
+    <linearGradient id="goldKundan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8D6"/>
+      <stop offset="40%" stop-color="#F2CB75"/>
+      <stop offset="70%" stop-color="#CFA043"/>
+      <stop offset="100%" stop-color="#7A530E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="550" fill="url(#bgWine)"/>
+  <circle cx="850" cy="275" r="320" fill="#BA9048" fill-opacity="0.15"/>
+
+  <!-- Left Side: Integrated Typography -->
+  <g transform="translate(100, 210)">
+    <text x="0" y="0" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="28" letter-spacing="6" fill="#EAEAEA" font-weight="600">
+      ROYAL HERITAGE
+    </text>
+    <text x="0" y="65" font-family="'Brush Script MT', 'Great Vibes', 'Cormorant Garamond', 'Baskerville', cursive, serif" font-size="74" font-style="italic" fill="url(#goldKundan)" font-weight="400">
+      Bridal Kundan
+    </text>
+    <text x="0" y="115" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3" fill="#D4AF37" font-weight="500">
+      SIMULATED POLKI, EMERALD & MEENAKARI JADAU
+    </text>
+  </g>
+
+  <!-- Right Side: Kundan Choker Graphic -->
+  <g transform="translate(850, 250)">
+    <!-- Base Crescent Choker Frame -->
+    <path d="M-220,-20 Q0,110 220,-20" fill="none" stroke="url(#goldKundan)" stroke-width="32" stroke-linecap="round"/>
+    <path d="M-200,-15 Q0,100 200,-15" fill="none" stroke="#2B0E1B" stroke-width="16"/>
+
+    <!-- Kundan Gemstones along curve -->
+    <g fill="#FFFDEB" stroke="#B8860B" stroke-width="2.5">
+      <rect x="-170" y="0" width="22" height="22" rx="4" transform="rotate(15 -159 11)"/>
+      <rect x="-120" y="25" width="24" height="24" rx="4" transform="rotate(22 -108 37)"/>
+      <rect x="-65" y="44" width="26" height="26" rx="4" transform="rotate(10 -52 57)"/>
+      <rect x="-14" y="52" width="28" height="28" rx="4"/>
+      <rect x="42" y="44" width="26" height="26" rx="4" transform="rotate(-10 55 57)"/>
+      <rect x="98" y="25" width="24" height="24" rx="4" transform="rotate(-22 110 37)"/>
+      <rect x="150" y="0" width="22" height="22" rx="4" transform="rotate(-15 161 11)"/>
+    </g>
+
+    <!-- Pearl & Emerald Drops Below Kundan Units -->
+    <g fill="#0E5A35" stroke="#BA9048" stroke-width="1.5">
+      <ellipse cx="-155" cy="45" rx="8" ry="14"/>
+      <ellipse cx="-105" cy="72" rx="9" ry="16"/>
+      <ellipse cx="-50" cy="94" rx="10" ry="18"/>
+      <ellipse cx="0" cy="102" rx="11" ry="20"/>
+      <ellipse cx="50" cy="94" rx="10" ry="18"/>
+      <ellipse cx="105" cy="72" rx="9" ry="16"/>
+      <ellipse cx="155" cy="45" rx="8" ry="14"/>
+    </g>
+    <!-- Pearl cluster beads at bottom of drops -->
+    <g fill="#FFFBF0">
+      <circle cx="-155" cy="62" r="4"/><circle cx="-105" cy="91" r="4.5"/><circle cx="-50" cy="115" r="5"/>
+      <circle cx="0" cy="125" r="5.5"/><circle cx="50" cy="115" r="5"/><circle cx="105" cy="91" r="4.5"/><circle cx="155" cy="62" r="4"/>
+    </g>
+  </g>
+</svg>

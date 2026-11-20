@@ -1,0 +1,106 @@
+<svg width="1200" height="550" viewBox="0 0 1200 550" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgMaroon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3D121B"/>
+      <stop offset="50%" stop-color="#280B12"/>
+      <stop offset="100%" stop-color="#190409"/>
+    </linearGradient>
+    <linearGradient id="goldText" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF5D1"/>
+      <stop offset="50%" stop-color="#E5C16C"/>
+      <stop offset="100%" stop-color="#BA9048"/>
+    </linearGradient>
+    <linearGradient id="pedestalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4F1A26"/>
+      <stop offset="100%" stop-color="#2D0B13"/>
+    </linearGradient>
+    <linearGradient id="goldJewel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9E0"/>
+      <stop offset="30%" stop-color="#F2CB75"/>
+      <stop offset="70%" stop-color="#CFA043"/>
+      <stop offset="100%" stop-color="#8C6415"/>
+    </linearGradient>
+    <radialGradient id="spotlight" cx="65%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#BA9048" stop-opacity="0.25"/>
+      <stop offset="60%" stop-color="#3D121B" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="550" fill="url(#bgMaroon)"/>
+  <rect width="1200" height="550" fill="url(#spotlight)"/>
+
+  <!-- Left Side: Integrated Typography -->
+  <g transform="translate(100, 210)">
+    <text x="0" y="0" font-family="'Cinzel', 'Playfair Display', Georgia, serif" font-size="28" letter-spacing="6" fill="#EAEAEA" font-weight="600">
+      EVERYDAY ELEGANCE
+    </text>
+    <text x="0" y="65" font-family="'Brush Script MT', 'Great Vibes', 'Cormorant Garamond', 'Baskerville', cursive, serif" font-size="76" font-style="italic" fill="url(#goldText)" font-weight="400">
+      Redefined
+    </text>
+    <text x="0" y="115" font-family="system-ui, sans-serif" font-size="13" letter-spacing="3" fill="#D4AF37" font-weight="500">
+      BESPOKE 18K MICRO GOLD-TONE ATELIER
+    </text>
+  </g>
+
+  <!-- Right Side: Luxury Jewelry Staging (Podiums & Pieces matching reference photo) -->
+  <g transform="translate(560, 40)">
+    <!-- Main Hexagonal Podiums -->
+    <!-- Rear Podium -->
+    <path d="M220,160 L380,160 L420,240 L380,320 L220,320 L180,240 Z" fill="#381019" stroke="#5C1F2D" stroke-width="2"/>
+    <path d="M220,160 L380,160 L420,240 L180,240 Z" fill="#4A1622"/>
+
+    <!-- Front Low Hexagonal Podium -->
+    <path d="M40,240 L220,240 L260,330 L220,410 L40,410 L0,330 Z" fill="url(#pedestalGrad)" stroke="#5C1F2D" stroke-width="2"/>
+    <path d="M40,240 L220,240 L260,330 L0,330 Z" fill="#581926"/>
+
+    <!-- Three Gold Leaf Studs / Cluster on Front Podium -->
+    <g transform="translate(85, 260) scale(0.9)" fill="url(#goldJewel)">
+      <path d="M0,0 C-12,-15 -18,-35 0,-45 C18,-35 12,-15 0,0 Z"/>
+      <path d="M-15,10 C-35,6 -45,-10 -35,-24 C-20,-18 -10,-5 -15,10 Z"/>
+      <path d="M15,10 C35,6 45,-10 35,-24 C20,-18 10,-5 15,10 Z"/>
+      <circle cx="0" cy="0" r="4" fill="#FFE599"/>
+    </g>
+
+    <g transform="translate(145, 275) scale(0.75)" fill="url(#goldJewel)">
+      <path d="M0,0 C-12,-15 -18,-35 0,-45 C18,-35 12,-15 0,0 Z"/>
+      <path d="M-15,10 C-35,6 -45,-10 -35,-24 C-20,-18 -10,-5 -15,10 Z"/>
+      <path d="M15,10 C35,6 45,-10 35,-24 C20,-18 10,-5 15,10 Z"/>
+      <circle cx="0" cy="0" r="4" fill="#FFE599"/>
+    </g>
+
+    <!-- Ribbed Gold Cuff Ring on Front Podium -->
+    <g transform="translate(210, 255)">
+      <ellipse cx="0" cy="0" rx="26" ry="36" fill="none" stroke="url(#goldJewel)" stroke-width="18" stroke-dasharray="140 30" transform="rotate(-15)"/>
+      <path d="M-18,-25 L-12,-32 M-10,-28 L-4,-35 M-2,-28 L4,-35 M6,-26 L12,-33 M14,-22 L20,-29" stroke="#FFF5D1" stroke-width="3" stroke-linecap="round"/>
+    </g>
+
+    <!-- Hanging Delicate Chain with Ginkgo Leaf Pendant -->
+    <path d="M420,10 L430,120 L445,260" fill="none" stroke="url(#goldJewel)" stroke-width="2.5" stroke-dasharray="4 2"/>
+    <!-- Ginkgo Leaf Silhouette -->
+    <g transform="translate(445, 270) scale(1.1)" fill="url(#goldJewel)">
+      <path d="M0,0 C-25,-10 -40,-30 -35,-50 C-15,-60 0,-35 15,-60 C35,-50 25,-10 0,0 Z"/>
+      <line x1="0" y1="0" x2="-20" y2="-45" stroke="#FFE7A0" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="-5" y2="-48" stroke="#FFE7A0" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="10" y2="-48" stroke="#FFE7A0" stroke-width="1.2"/>
+      <line x1="0" y1="0" x2="22" y2="-40" stroke="#FFE7A0" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="3" fill="#FFF"/>
+    </g>
+
+    <!-- Cascading Gold Twisted Choker across podiums -->
+    <path d="M180,210 Q280,180 340,250 T320,380 T260,450" fill="none" stroke="url(#goldJewel)" stroke-width="9" stroke-linecap="round"/>
+    <path d="M180,210 Q280,180 340,250 T320,380 T260,450" fill="none" stroke="#FFEBA8" stroke-width="2.5" stroke-dasharray="12 16" stroke-linecap="round"/>
+
+    <!-- Delicate Double Strand Layered Bracelet on Base -->
+    <path d="M120,440 Q260,400 380,410 T460,370" fill="none" stroke="url(#goldJewel)" stroke-width="3"/>
+    <path d="M110,452 Q250,412 370,422 T450,382" fill="none" stroke="url(#goldJewel)" stroke-width="3"/>
+    <!-- Small geometric stations -->
+    <rect x="200" y="420" width="7" height="7" fill="#FFE599" transform="rotate(45 203 423)"/>
+    <rect x="280" y="405" width="7" height="7" fill="#FFE599" transform="rotate(45 283 408)"/>
+    <rect x="360" y="405" width="7" height="7" fill="#FFE599" transform="rotate(45 363 408)"/>
+  </g>
+</svg>

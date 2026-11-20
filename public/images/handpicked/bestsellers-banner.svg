@@ -1,0 +1,51 @@
+<svg width="1100" height="450" viewBox="0 0 1100 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgBestseller" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3A101A"/>
+      <stop offset="50%" stop-color="#240A11"/>
+      <stop offset="100%" stop-color="#140307"/>
+    </linearGradient>
+    <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E0"/>
+      <stop offset="40%" stop-color="#F2CB75"/>
+      <stop offset="80%" stop-color="#CFA043"/>
+      <stop offset="100%" stop-color="#8C6415"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="450" fill="url(#bgBestseller)"/>
+  <circle cx="800" cy="225" r="240" fill="#BA9048" fill-opacity="0.12"/>
+
+  <!-- Left: Typography inside image -->
+  <g transform="translate(80, 190)">
+    <text x="0" y="0" font-family="'Cinzel', Georgia, serif" font-size="24" letter-spacing="5" fill="#EEEEEE" font-weight="600">
+      EVERYDAY ELEGANCE
+    </text>
+    <text x="0" y="55" font-family="'Brush Script MT', 'Great Vibes', 'Baskerville', cursive, serif" font-size="65" font-style="italic" fill="url(#goldShine)">
+      Bestsellers
+    </text>
+    <text x="0" y="95" font-family="system-ui, sans-serif" font-size="12" letter-spacing="3" fill="#D4AF37">
+      MOST LOVED BY 20,000+ JEWELLERY PATRONS
+    </text>
+  </g>
+
+  <!-- Right: Staged Jewelry -->
+  <g transform="translate(750, 200)">
+    <!-- Low Pedestal -->
+    <polygon points="0,60 160,20 280,60 120,100" fill="#4B1622" stroke="#5E1E2C" stroke-width="2"/>
+    <polygon points="0,60 120,100 120,150 0,110" fill="#300C14"/>
+    <polygon points="120,100 280,60 280,110 120,150" fill="#24080F"/>
+
+    <!-- Gold Earrings & Ring on Pedestal -->
+    <g transform="translate(100, 30) scale(0.9)" fill="url(#goldShine)">
+      <circle cx="-30" cy="0" r="14"/>
+      <circle cx="30" cy="0" r="14"/>
+      <path d="M-30,-20 L-30,0 M30,-20 L30,0" stroke="#FFEBA8" stroke-width="3"/>
+      <!-- Ring -->
+      <ellipse cx="90" cy="10" rx="18" ry="26" fill="none" stroke="url(#goldShine)" stroke-width="8" transform="rotate(-15 90 10)"/>
+    </g>
+
+    <!-- Flowing Twisted Gold Chain -->
+    <path d="M-60,110 Q80,70 190,130 T320,110" fill="none" stroke="url(#goldShine)" stroke-width="7" stroke-linecap="round"/>
+    <path d="M-60,110 Q80,70 190,130 T320,110" fill="none" stroke="#FFF5D1" stroke-width="2" stroke-dasharray="10 12"/>
+  </g>
+</svg>

@@ -1,14 +1,12 @@
 import * as React from "react";
 import { Header } from "@/components/layout/Header";
 import { AlukasHeroSlider } from "@/components/home/AlukasHeroSlider";
-import { PromoBanners } from "@/components/home/PromoBanners";
 import { PopularCategoriesSlider } from "@/components/home/PopularCategoriesSlider";
+import { HandpickedSection } from "@/components/home/HandpickedSection";
 import { TrendyCollectionSlider } from "@/components/home/TrendyCollectionSlider";
-import { FindStoreBanner } from "@/components/home/FindStoreBanner";
-import { SplitFeatureBanners } from "@/components/home/SplitFeatureBanners";
 import { FeaturedProductsTabs } from "@/components/home/FeaturedProductsTabs";
+import { FindStoreBanner } from "@/components/home/FindStoreBanner";
 import { AlukasCustomerReviews } from "@/components/home/AlukasCustomerReviews";
-import { ReadJournalSection } from "@/components/home/ReadJournalSection";
 import { AlukasInstagramGrid } from "@/components/home/AlukasInstagramGrid";
 import { AlukasNewsletter } from "@/components/home/AlukasNewsletter";
 import { Footer } from "@/components/layout/Footer";
@@ -19,22 +17,20 @@ import { NewsletterModal } from "@/components/home/NewsletterModal";
 export default function HomePage() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-black font-sans pb-16 md:pb-0 overflow-x-hidden">
-      {/* 1. Header with Search, Logo, Cart Drawer & Full-Width Mega Menu */}
+      {/* 1. Header with Search, Centered Logo & Cart Bag */}
       <Header />
 
-      {/* 2. Hero Slider with mobile-optimized height & bold CTAs */}
+      {/* 2. Hero Section: Exact dimension from photo, text in image, boxed button below */}
       <AlukasHeroSlider />
 
-      {/* 3. Popular Categories (Compact 3x2 Grid on Mobile, 6 Circles on Desktop) */}
+      {/* 3. Popular Categories Scroller (Left-Right scroll with 3 to 4 categories per scroll) */}
       <PopularCategoriesSlider />
 
-      {/* 4. Promotional Banners (1 concise banner on Mobile, 3 on Desktop) */}
-      <PromoBanners />
+      {/* 4. Handpicked Curated Banners: Bestsellers, New Arrivals, Clearance Sale (as shown in photo) */}
+      <HandpickedSection />
 
-      {/* 5. Trendy Collection (Desktop only to prevent duplicate product feed on Mobile) */}
-      <div className="hidden md:block">
-        <TrendyCollectionSlider />
-      </div>
+      {/* 5. Trendy Collection Product Slider */}
+      <TrendyCollectionSlider />
 
       {/* 6. Primary Curated Product Showcase (Tabbed: New Arrivals | Featured | Best Seller) */}
       <FeaturedProductsTabs />
@@ -42,35 +38,25 @@ export default function HomePage() {
       {/* 7. Flagship Boutique Banner */}
       <FindStoreBanner />
 
-      {/* 8. Split Feature Banners (Desktop only) */}
-      <div className="hidden md:block">
-        <SplitFeatureBanners />
-      </div>
-
-      {/* 9. Customer Reviews Carousel */}
+      {/* 8. Customer Reviews Carousel */}
       <AlukasCustomerReviews />
 
-      {/* 10. Read Journal (Desktop only) */}
-      <div className="hidden md:block">
-        <ReadJournalSection />
-      </div>
-
-      {/* 11. Instagram Gallery */}
+      {/* 9. Instagram Gallery */}
       <AlukasInstagramGrid />
 
-      {/* 12. Newsletter Subscribe Strip */}
+      {/* 10. Newsletter Subscribe Strip */}
       <AlukasNewsletter />
 
-      {/* 13. Customer-Focused Footer */}
+      {/* 11. Customer-Focused Footer */}
       <Footer />
 
-      {/* 14. Mobile Sticky Bottom Navigation (Home, Search, Wishlist, Account) */}
+      {/* 12. Mobile Sticky Bottom Navigation (Home, Filters, Search, Wishlist, Account) */}
       <MobileBottomNav />
 
-      {/* 15. Back to Top Button */}
+      {/* 13. Back to Top Button */}
       <BackToTopButton />
 
-      {/* 16. Desktop Newsletter Modal (Disabled on mobile viewports) */}
+      {/* 14. Desktop Newsletter Modal */}
       <NewsletterModal />
     </div>
   );

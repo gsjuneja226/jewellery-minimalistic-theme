@@ -5,30 +5,27 @@ import Image from "next/image";
 import Link from "next/link";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const SLIDES = [
+const HERO_SLIDES = [
   {
     id: 1,
-    title: "Handcrafted Luxury\nArtificial Jewellery",
-    subtitle: "Bespoke Kundan, Polki & American Diamond statement chokers from our master jewellery artisans",
-    buttonText: "Explore Bridal Sets",
-    buttonLink: "/collections/jewellery-sets",
-    image: "/hero/hero-slide-luxury.jpg",
+    image: "/hero/banner-demi-fine.svg",
+    alt: "Everyday Elegance Redefined - Demi Fine Artificial Jewellery",
+    buttonText: "DEMI FINE",
+    buttonLink: "/collections/bangles-bracelets",
   },
   {
     id: 2,
-    title: "Royal Bridal &\nHeritage Kundan Sets",
-    subtitle: "Opulent simulated pearl drops, meenakari detailing & durable anti-tarnish gold plating",
-    buttonText: "Shop New Arrivals",
-    buttonLink: "/collections/new-arrivals",
-    image: "/hero/hero-slide-bridal.jpg",
+    image: "/hero/banner-bridal-kundan.svg",
+    alt: "Royal Heritage Bridal Kundan Sets",
+    buttonText: "BRIDAL KUNDAN",
+    buttonLink: "/collections/jewellery-sets",
   },
   {
     id: 3,
-    title: "Everyday Glamour &\nAnti-Tarnish Solitaires",
-    subtitle: "Featherlight earrings, rings, and bangles designed for effortless daily elegance",
-    buttonText: "Discover Collection",
-    buttonLink: "/collections",
-    image: "/hero/hero-slide-editorial.jpg",
+    image: "/hero/banner-solitaires.svg",
+    alt: "Timeless Brilliance Solitaires & American Diamond Rings",
+    buttonText: "SOLITAIRES & AD",
+    buttonLink: "/collections/rings",
   },
 ];
 
@@ -37,15 +34,14 @@ export function AlukasHeroSlider() {
   const [touchStart, setTouchStart] = React.useState<number | null>(null);
   const [touchEnd, setTouchEnd] = React.useState<number | null>(null);
 
-  // Minimum swipe distance threshold (in px)
   const minSwipeDistance = 45;
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev === 0 ? SLIDES.length - 1 : prev - 1));
+    setCurrentSlide((prev) => (prev === 0 ? HERO_SLIDES.length - 1 : prev - 1));
   };
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === SLIDES.length - 1 ? 0 : prev + 1));
+    setCurrentSlide((prev) => (prev === HERO_SLIDES.length - 1 ? 0 : prev + 1));
   };
 
   const onTouchStart = (e: React.TouchEvent) => {
@@ -60,103 +56,85 @@ export function AlukasHeroSlider() {
   const onTouchEnd = () => {
     if (!touchStart || !touchEnd) return;
     const distance = touchStart - touchEnd;
-    const isLeftSwipe = distance > minSwipeDistance;
-    const isRightSwipe = distance < -minSwipeDistance;
-    if (isLeftSwipe) {
+    if (distance > minSwipeDistance) {
       nextSlide();
-    } else if (isRightSwipe) {
+    } else if (distance < -minSwipeDistance) {
       prevSlide();
     }
   };
 
   React.useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev === SLIDES.length - 1 ? 0 : prev + 1));
+      setCurrentSlide((prev) => (prev === HERO_SLIDES.length - 1 ? 0 : prev + 1));
     }, 6000);
     return () => clearInterval(timer);
   }, []);
 
-  const slide = SLIDES[currentSlide];
+  const slide = HERO_SLIDES[currentSlide];
 
   return (
-    <section
-      className="relative w-full bg-[#1A1A1A] overflow-hidden select-none"
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
-    >
-      <div className="relative min-h-[380px] sm:min-h-[480px] md:min-h-[600px] lg:min-h-[660px] flex items-center">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={slide.image}
-            alt="Handcrafted Artificial Jewellery Collection"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-center transition-all duration-700 ease-in-out"
-          />
-          {/* Subtle gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent md:from-black/75 md:via-black/35 md:to-transparent" />
-        </div>
+    <section className="w-full bg-white pt-3 pb-6 md:pt-4 md:pb-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Banner Frame with exact dimensions matching reference photo */}
+        <div
+          className="relative w-full aspect-[16/9] sm:aspect-[2.1/1] md:aspect-[2.2/1] rounded-lg sm:rounded-xl overflow-hidden shadow-2xs select-none group bg-[#280B12]"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
+          {/* Banner Graphic with text rendered INSIDE the image (no HTML text overlay) */}
+          <Link href={slide.buttonLink} className="relative block w-full h-full">
+            <Image
+              src={slide.image}
+              alt={slide.alt}
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 1150px"
+              className="object-cover object-center transition-all duration-700 ease-in-out"
+            />
+          </Link>
 
-        {/* Content Box */}
-        <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 md:px-12 lg:px-16 w-full py-10 sm:py-14 md:py-16">
-          <div className="max-w-xl space-y-3 sm:space-y-4 md:space-y-6 animate-in fade-in-50 duration-500 text-white">
-            <span className="inline-block text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-[#F3D98A]">
-              NEW SEASON 2026 • SIGNATURE ATELIER
-            </span>
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-[52px] font-serif font-normal leading-[1.18] sm:leading-[1.14] whitespace-pre-line tracking-tight text-white drop-shadow-sm">
-              {slide.title}
-            </h1>
-            <p className="text-xs sm:text-sm md:text-base text-white/90 font-sans font-normal leading-relaxed max-w-md line-clamp-2 sm:line-clamp-none">
-              {slide.subtitle}
-            </p>
-            <div className="pt-1 sm:pt-2">
-              <Link
-                href={slide.buttonLink}
-                className="inline-block py-2.5 sm:py-3 px-6 sm:px-8 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white border border-white hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-xs"
-              >
-                {slide.buttonText}
-              </Link>
-            </div>
+          {/* Navigation Chevron Arrows */}
+          <button
+            type="button"
+            onClick={prevSlide}
+            aria-label="Previous Slide"
+            className="flex absolute left-3 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 h-8 sm:h-10 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black border border-white/20 hover:border-white transition-colors"
+          >
+            <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
+          </button>
+          <button
+            type="button"
+            onClick={nextSlide}
+            aria-label="Next Slide"
+            className="flex absolute right-3 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 h-8 sm:h-10 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black border border-white/20 hover:border-white transition-colors"
+          >
+            <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
+          </button>
+
+          {/* Slide Indicator Dots */}
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 bg-black/30 px-2.5 py-1 rounded-full backdrop-blur-xs">
+            {HERO_SLIDES.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setCurrentSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  currentSlide === idx ? "w-5 bg-white" : "w-1.5 bg-white/40 hover:bg-white/70"
+                }`}
+              />
+            ))}
           </div>
         </div>
 
-        {/* Left & Right Arrow Buttons - Accessible on Both Mobile & Desktop */}
-        <button
-          type="button"
-          onClick={prevSlide}
-          aria-label="Previous Slide"
-          className="flex absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black transition-colors"
-        >
-          <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
-        </button>
-        <button
-          type="button"
-          onClick={nextSlide}
-          aria-label="Next Slide"
-          className="flex absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black transition-colors"
-        >
-          <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
-        </button>
-
-        {/* Slide Indicators with Generous Tap Targets */}
-        <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
-          {SLIDES.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentSlide(idx)}
-              aria-label={`Go to slide ${idx + 1}`}
-              className={`py-2 px-1 focus:outline-none`}
-            >
-              <span
-                className={`block h-1.5 rounded-full transition-all duration-300 ${
-                  currentSlide === idx ? "w-6 sm:w-8 bg-white" : "w-2 sm:w-2.5 bg-white/50 hover:bg-white/75"
-                }`}
-              />
-            </button>
-          ))}
+        {/* Clean Boxed Button below the image (Exactly as shown in reference photo) */}
+        <div className="mt-3.5 sm:mt-4 flex justify-center">
+          <Link
+            href={slide.buttonLink}
+            className="px-8 sm:px-10 py-2.5 bg-white border border-black text-xs font-sans font-medium tracking-[0.25em] uppercase text-black hover:bg-black hover:text-white transition-all duration-300 shadow-2xs"
+          >
+            {slide.buttonText}
+          </Link>
         </div>
       </div>
     </section>

@@ -1,0 +1,39 @@
+<svg width="1100" height="450" viewBox="0 0 1100 450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgSale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D150B"/>
+      <stop offset="50%" stop-color="#1A0B05"/>
+      <stop offset="100%" stop-color="#0E0502"/>
+    </linearGradient>
+    <linearGradient id="goldSale" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA8"/>
+      <stop offset="50%" stop-color="#EAA646"/>
+      <stop offset="100%" stop-color="#B2651B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1100" height="450" fill="url(#bgSale)"/>
+  <circle cx="800" cy="225" r="240" fill="#B2651B" fill-opacity="0.2"/>
+
+  <!-- Left: Typography inside image -->
+  <g transform="translate(80, 190)">
+    <text x="0" y="0" font-family="'Cinzel', Georgia, serif" font-size="24" letter-spacing="5" fill="#EEEEEE" font-weight="600">
+      LIMITED QUANTITY EDIT
+    </text>
+    <text x="0" y="55" font-family="'Brush Script MT', 'Great Vibes', 'Baskerville', cursive, serif" font-size="65" font-style="italic" fill="url(#goldSale)">
+      Clearance Sale
+    </text>
+    <text x="0" y="95" font-family="system-ui, sans-serif" font-size="12" letter-spacing="3" fill="#EAA646">
+      UP TO 40% OFF SELECT SIGNATURE SILHOUETTES
+    </text>
+  </g>
+
+  <!-- Right: Jewellery Selection Staging -->
+  <g transform="translate(780, 220)">
+    <!-- Layered Solitaire Hoops & Rings -->
+    <ellipse cx="-40" cy="0" rx="35" ry="50" fill="none" stroke="url(#goldSale)" stroke-width="12" transform="rotate(-15)"/>
+    <ellipse cx="60" cy="20" rx="42" ry="30" fill="none" stroke="url(#goldSale)" stroke-width="10"/>
+    <ellipse cx="60" cy="20" rx="42" ry="30" fill="none" stroke="#FFF" stroke-width="4" stroke-dasharray="6 8"/>
+    <!-- Sparkling diamond star -->
+    <polygon points="0,-40 6,-15 30,-15 10,2 18,25 0,10 -18,25 -10,2 -30,-15 -6,-15" fill="#FFF"/>
+  </g>
+</svg>
