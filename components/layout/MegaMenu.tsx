@@ -1,122 +1,89 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
-import { Sparkles, ArrowRight } from "lucide-react";
-
-export const CATEGORIES_NAV = [
-  { name: "Rings", slug: "rings", desc: "Statement rings, bands & AD solitaires" },
-  { name: "Necklaces", slug: "necklaces", desc: "Chains, pearls & layered drops" },
-  { name: "Earrings", slug: "earrings", desc: "Studs, drops, hoops & jhumkas" },
-  { name: "Pendants", slug: "pendants", desc: "Stone pendants & delicate lockets" },
-  { name: "Bangles & Bracelets", slug: "bangles-bracelets", desc: "Gold-tone bangles & stone cuffs" },
-  { name: "Anklets", slug: "anklets", desc: "Delicate payals & modern charm chains" },
-  { name: "Jewellery Sets", slug: "jewellery-sets", desc: "Bridal, choker & festive matching sets" },
-];
-
-export const OCCASIONS_NAV = [
-  { name: "Wedding", slug: "wedding", desc: "Bridal choker sets, kundan & statement pieces" },
-  { name: "Festive", slug: "festive", desc: "Lustrous jhumkas, temple designs & gold-tone sets" },
-  { name: "Daily Wear", slug: "daily-wear", desc: "Lightweight studs, chains & anti-tarnish bands" },
-  { name: "Gifting", slug: "gifting", desc: "Delicate pendants, boxed charms & gift wrapped tokens" },
-];
+import Image from "next/image";
 
 export function MegaMenu() {
   return (
-    <nav className="hidden lg:flex items-center justify-center space-x-8 py-2.5 text-xs font-sans font-semibold tracking-wider border-t border-[#BA9048]/25 bg-[#230E14] text-[#F5E5C9]">
-      <Link
-        href="/collections/new-arrivals"
-        className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors flex items-center gap-1.5"
-      >
-        <Sparkles className="w-3.5 h-3.5 text-[#BA9048]" />
-        NEW ARRIVALS
-      </Link>
-      <Link
-        href="/collections/bestsellers"
-        className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors"
-      >
-        BESTSELLERS
-      </Link>
+    <div className="absolute top-full left-0 right-0 w-full bg-white border-y border-[#EEEEEE] shadow-2xl py-10 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-200 z-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 grid grid-cols-4 gap-10 text-left">
+        {/* Column 1: By Category */}
+        <div className="space-y-3">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-[#222222] pb-1 border-b border-[#EEEEEE]">
+            SHOP BY CATEGORY
+          </h4>
+          <ul className="space-y-2 text-[13px] text-[#666666]">
+            <li><Link href="/collections/necklaces" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Chokers & Multi-Layer Chains</Link></li>
+            <li><Link href="/collections/rings" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Cocktail & Solitaire Rings</Link></li>
+            <li><Link href="/collections/earrings" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Kundan Jhumkas & Chandbalis</Link></li>
+            <li><Link href="/collections/bangles-bracelets" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Temple Bangles & Kadas</Link></li>
+            <li><Link href="/collections/bangles-bracelets" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Tennis & Charm Bracelets</Link></li>
+            <li><Link href="/collections/pendants" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Gemstone Solitaire Pendants</Link></li>
+            <li><Link href="/collections/jewellery-sets" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Complete Matching Sets</Link></li>
+          </ul>
+        </div>
 
-      {/* Categories Dropdown */}
-      <div className="relative group">
-        <Link
-          href="/collections"
-          className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors py-2"
-        >
-          CATEGORIES
-        </Link>
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[480px] bg-[#FCFAF5] border border-[#D6C2A3] rounded-[14px] shadow-card p-6 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-          <div className="grid grid-cols-2 gap-4">
-            {CATEGORIES_NAV.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={`/collections/${cat.slug}`}
-                className="group/item p-2 rounded-lg hover:bg-[#F2EAE0] transition-colors block"
-              >
-                <div className="text-sm font-medium text-espresso group-hover/item:text-antique-gold">
-                  {cat.name}
-                </div>
-                <div className="text-xs text-brown-text/70 line-clamp-1">
-                  {cat.desc}
-                </div>
-              </Link>
-            ))}
+        {/* Column 2: By Occasion & Style */}
+        <div className="space-y-3">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-[#222222] pb-1 border-b border-[#EEEEEE]">
+            SHOP BY OCCASION
+          </h4>
+          <ul className="space-y-2 text-[13px] text-[#666666]">
+            <li><Link href="/collections/wedding" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Bridal & Wedding Troussseau</Link></li>
+            <li><Link href="/collections/festive" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Festive Celebrations</Link></li>
+            <li><Link href="/collections/daily-wear" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Anti-Tarnish Daily Wear</Link></li>
+            <li><Link href="/collections/gifting" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Curated Keepsake Gifting</Link></li>
+            <li><Link href="/collections/bestsellers" className="hover:text-black hover:translate-x-1 inline-block transition-transform">All-Time Bestsellers</Link></li>
+            <li><Link href="/collections/new-arrivals" className="hover:text-black hover:translate-x-1 inline-block transition-transform">The Latest 2026 Drops</Link></li>
+          </ul>
+        </div>
+
+        {/* Column 3: Customer Care & Services */}
+        <div className="space-y-3">
+          <h4 className="text-xs font-bold uppercase tracking-wider text-[#222222] pb-1 border-b border-[#EEEEEE]">
+            SERVICES & CARE
+          </h4>
+          <ul className="space-y-2 text-[13px] text-[#666666]">
+            <li><Link href="/account" className="hover:text-black hover:translate-x-1 inline-block transition-transform">My Account & Orders</Link></li>
+            <li><Link href="/account/wishlist" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Saved Wishlist</Link></li>
+            <li><Link href="/track-order" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Track Delivery Status</Link></li>
+            <li><Link href="/pages/care-guide" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Anti-Tarnish Care Guide</Link></li>
+            <li><Link href="/pages/shipping" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Complimentary Shipping</Link></li>
+            <li><Link href="/pages/contact" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Mohali Flagship Boutique</Link></li>
+          </ul>
+        </div>
+
+        {/* Column 4: High-Res Editorial Promo Tile */}
+        <div className="relative rounded-none overflow-hidden bg-[#FAFAFA] flex flex-col justify-end p-6 border border-[#EEEEEE] group/tile">
+          <div className="absolute inset-0 z-0">
+            <Image
+              src="/hero/hero-slide-modern.jpg"
+              alt="New Season Arrivals"
+              fill
+              className="object-cover object-center group-hover/tile:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
           </div>
-          <div className="mt-4 pt-3 border-t border-[#EAE0D0] flex justify-between items-center text-xs">
-            <span className="text-brown-text">Browse all handcrafted categories</span>
+          <div className="relative z-10 text-white space-y-1.5">
+            <span className="text-[10px] font-bold tracking-widest uppercase text-[#BA9048]">
+              2026 CURATION
+            </span>
+            <h5 className="text-base font-serif font-normal text-white leading-tight">
+              Modern Gold Elegance
+            </h5>
+            <p className="text-xs text-white/80">
+              Complimentary gift wrapping on all orders.
+            </p>
             <Link
               href="/collections"
-              className="text-antique-gold hover:text-deep-gold font-medium flex items-center gap-1"
+              className="inline-block pt-1 text-xs font-bold uppercase tracking-wider text-white border-b border-white pb-0.5 hover:text-[#BA9048] hover:border-[#BA9048] transition-colors"
             >
-              View All <ArrowRight className="w-3 h-3" />
+              Explore Collection
             </Link>
           </div>
         </div>
       </div>
-
-      {/* Occasions Dropdown */}
-      <div className="relative group">
-        <span className="text-[#F5E5C9] hover:text-[#BA9048] transition-colors py-2 cursor-pointer">
-          SHOP BY OCCASION
-        </span>
-        <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 w-[400px] bg-[#FCFAF5] border border-[#D6C2A3] rounded-[14px] shadow-card p-5 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-          <div className="space-y-3">
-            {OCCASIONS_NAV.map((occ) => (
-              <Link
-                key={occ.slug}
-                href={`/collections/${occ.slug}`}
-                className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-[#F2EAE0] transition-colors"
-              >
-                <div>
-                  <div className="text-sm font-medium text-espresso group-hover/item:text-antique-gold">
-                    {occ.name}
-                  </div>
-                  <div className="text-xs text-brown-text/70">{occ.desc}</div>
-                </div>
-                <ArrowRight className="w-4 h-4 text-gold opacity-0 group-hover/item:opacity-100 transition-opacity" />
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      <Link
-        href="/pages/about"
-        className="text-brown-text hover:text-espresso transition-colors"
-      >
-        Our Story
-      </Link>
-      <Link
-        href="/pages/care-guide"
-        className="text-brown-text hover:text-espresso transition-colors"
-      >
-        Care Guide
-      </Link>
-      <Link
-        href="/track-order"
-        className="text-brown-text hover:text-espresso transition-colors"
-      >
-        Track Order
-      </Link>
-    </nav>
+    </div>
   );
 }

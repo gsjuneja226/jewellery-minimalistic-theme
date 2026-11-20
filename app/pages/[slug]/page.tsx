@@ -174,10 +174,21 @@ const CMS_PAGES: Record<string, CmsPageContent> = {
     ),
   },
   contact: {
-    title: "Contact Us",
-    subtitle: "We love hearing from you.",
+    title: "Mohali Flagship Boutique & Contact",
+    subtitle: "Experience handcrafted artificial jewellery at our boutique in Mohali, Punjab.",
     content: (
       <div className="space-y-6 text-sm font-sans text-brown-text leading-relaxed">
+        <div className="p-6 rounded-[14px] border border-[#E7DCC6] bg-white space-y-3">
+          <span className="text-[11px] font-bold tracking-widest uppercase text-antique-gold">OUR EXCLUSIVE BOUTIQUE</span>
+          <h4 className="font-serif text-2xl text-espresso">Phabulous by Mitthat — Mohali</h4>
+          <p className="text-sm text-brown-text/90">
+            Sector 70, SAS Nagar (Mohali), Punjab 160071, India
+          </p>
+          <p className="text-xs text-brown-text/70">
+            Timings: Monday to Saturday, 11:00 AM – 8:00 PM IST
+          </p>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div className="p-5 rounded-[14px] border border-[#E7DCC6] bg-white space-y-2">
             <Mail className="w-5 h-5 text-antique-gold" />
@@ -186,10 +197,10 @@ const CMS_PAGES: Record<string, CmsPageContent> = {
             <p className="text-[11px] text-brown-text/60">Response within 4 hours</p>
           </div>
           <div className="p-5 rounded-[14px] border border-[#E7DCC6] bg-white space-y-2">
-            <Phone className="w-5 h-5 text-antique-gold" />
-            <h4 className="font-serif text-lg text-espresso">WhatsApp Hotline</h4>
-            <p className="text-xs text-brown-text/80">+91 (0) 98765 43210</p>
-            <p className="text-[11px] text-brown-text/60">Mon-Sat, 10 AM to 7 PM IST</p>
+            <Sparkles className="w-5 h-5 text-antique-gold" />
+            <h4 className="font-serif text-lg text-espresso">Bespoke Bridal Appointments</h4>
+            <p className="text-xs text-brown-text/80">Private bridal trials & customizations available at our Mohali boutique.</p>
+            <p className="text-[11px] text-brown-text/60">By prior booking</p>
           </div>
         </div>
       </div>

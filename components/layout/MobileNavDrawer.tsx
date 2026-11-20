@@ -2,10 +2,9 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Sheet } from "@/components/ui/Sheet";
-import { CATEGORIES_NAV, OCCASIONS_NAV } from "./MegaMenu";
-import { Sparkles, Heart, ShoppingBag, User, Package, HelpCircle, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import { Sheet } from "@/components/ui/Sheet";
+import { X, Search, Phone, MapPin, ChevronRight, MessageCircle } from "lucide-react";
 
 export interface MobileNavDrawerProps {
   open: boolean;
@@ -13,127 +12,223 @@ export interface MobileNavDrawerProps {
 }
 
 export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
+  const [activeTab, setActiveTab] = React.useState<"menu" | "categories">("menu");
+
   return (
     <Sheet open={open} onClose={onClose} side="left">
-      <div className="flex flex-col space-y-6">
+      <div className="flex flex-col h-full font-sans text-black bg-white">
         {/* Brand Header */}
-        <div className="flex flex-col items-center justify-center pb-4 border-b border-[#F1E8D8]">
-          <div className="relative w-36 h-12">
-            <Image
-              src="/brand/logo-wordmark.png"
-              alt="Phabulous by Mitthat"
-              fill
-              className="object-contain"
-              priority
+        <div className="flex items-center justify-between pb-4 border-b border-[#EEEEEE]">
+          <Link href="/" onClick={onClose} className="flex items-center py-1">
+            <div className="relative h-9 w-40 shrink-0">
+              <Image
+                src="/brand/newlogo.png"
+                alt="Phabulous by Mitthat"
+                fill
+                className="object-contain object-left"
+                priority
+              />
+            </div>
+          </Link>
+          <button
+            onClick={onClose}
+            className="p-1 text-[#222222] hover:text-black transition-colors"
+            aria-label="Close menu"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Search input */}
+        <div className="py-4">
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const input = form.elements.namedItem("search") as HTMLInputElement;
+              if (input && input.value) {
+                onClose();
+                window.location.href = `/search?q=${encodeURIComponent(input.value)}`;
+              }
+            }}
+            className="relative"
+          >
+            <input
+              name="search"
+              type="text"
+              placeholder="Search jhumkas, chokers, rings..."
+              className="w-full py-2 pl-4 pr-9 text-xs border border-[#E5E5E5] rounded-full focus:outline-none focus:border-black bg-[#FAFAFA]"
             />
-          </div>
-          <p className="text-xs font-serif italic text-gold mt-1 text-center">
-            Handpicked jewellery, simply irresistible
-          </p>
+            <button
+              type="submit"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-[#777777]"
+              aria-label="Search"
+            >
+              <Search className="w-3.5 h-3.5" />
+            </button>
+          </form>
         </div>
 
-        {/* Quick Links */}
-        <div className="grid grid-cols-2 gap-2 text-xs font-sans">
-          <Link
-            href="/collections/new-arrivals"
-            onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-light-blush text-espresso font-medium"
+        {/* Tabs: MENU | CATEGORIES */}
+        <div className="grid grid-cols-2 border-b border-[#EEEEEE] mb-3 text-center">
+          <button
+            onClick={() => setActiveTab("menu")}
+            className={`py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${
+              activeTab === "menu"
+                ? "border-black text-black"
+                : "border-transparent text-[#888888] hover:text-black"
+            }`}
           >
-            <Sparkles className="w-4 h-4 text-antique-gold" />
-            New Arrivals
-          </Link>
-          <Link
-            href="/collections/bestsellers"
-            onClick={onClose}
-            className="flex items-center gap-2 p-2.5 rounded-lg bg-[#FAF1D9] text-espresso font-medium"
+            MENU
+          </button>
+          <button
+            onClick={() => setActiveTab("categories")}
+            className={`py-2.5 text-xs font-bold uppercase tracking-wider transition-colors border-b-2 ${
+              activeTab === "categories"
+                ? "border-black text-black"
+                : "border-transparent text-[#888888] hover:text-black"
+            }`}
           >
-            <Sparkles className="w-4 h-4 text-gold" />
-            Bestsellers
-          </Link>
+            CATEGORIES
+          </button>
         </div>
 
-        {/* Categories Section */}
-        <div className="space-y-2">
-          <h3 className="text-xs uppercase font-sans tracking-widest text-brown-text font-semibold">
-            Categories
-          </h3>
-          <div className="space-y-1">
-            {CATEGORIES_NAV.map((cat) => (
+        {/* Navigation list */}
+        <div className="flex-1 overflow-y-auto space-y-1 text-sm font-medium">
+          {activeTab === "menu" ? (
+            <>
               <Link
-                key={cat.slug}
-                href={`/collections/${cat.slug}`}
+                href="/"
                 onClick={onClose}
-                className="flex items-center justify-between py-2 px-3 rounded-lg text-sm text-espresso hover:bg-soft-cream transition-colors"
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
               >
-                <span>{cat.name}</span>
-                <span className="text-xs text-brown-text/60">→</span>
+                <span>Home</span>
               </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Occasions Section */}
-        <div className="space-y-2 pt-2 border-t border-[#F1E8D8]">
-          <h3 className="text-xs uppercase font-sans tracking-widest text-brown-text font-semibold">
-            Shop by Occasion
-          </h3>
-          <div className="grid grid-cols-2 gap-1.5">
-            {OCCASIONS_NAV.map((occ) => (
               <Link
-                key={occ.slug}
-                href={`/collections/${occ.slug}`}
+                href="/collections"
                 onClick={onClose}
-                className="p-2 rounded-lg text-xs font-medium text-espresso bg-soft-cream/70 hover:bg-soft-cream transition-colors text-center"
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
               >
-                {occ.name}
+                <span>Collections</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
               </Link>
-            ))}
-          </div>
+              <Link
+                href="/collections/rings"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Rings</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/necklaces"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Necklaces & Chokers</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/earrings"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Earrings & Jhumkas</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/wedding"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Bridal Heritage Sets</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/new-arrivals"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#BA9048]"
+              >
+                <span>New Arrivals</span>
+                <span className="px-1.5 py-0.5 bg-[#BA9048] text-white text-[9px] font-bold rounded-full">
+                  NEW
+                </span>
+              </Link>
+              <Link
+                href="/pages/about"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Our Story</span>
+              </Link>
+              <Link
+                href="/pages/contact"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Contact Us</span>
+              </Link>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/collections/necklaces"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Necklaces & Chokers</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/rings"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Cocktail & Solitaire Rings</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/earrings"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Earrings & Jhumkas</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/bangles-bracelets"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Bangles & Bracelets</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/pendants"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Pendants & Lockets</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+              <Link
+                href="/collections/gifting"
+                onClick={onClose}
+                className="flex items-center justify-between py-2.5 border-b border-[#F5F5F5] text-[#222222]"
+              >
+                <span>Curated Keepsake Gifting</span>
+                <ChevronRight className="w-4 h-4 text-[#999999]" />
+              </Link>
+            </>
+          )}
         </div>
 
-        {/* Account & Support */}
-        <div className="space-y-2 pt-4 border-t border-[#F1E8D8]">
-          <Link
-            href="/account"
-            onClick={onClose}
-            className="flex items-center gap-3 py-2 text-sm text-espresso hover:text-antique-gold transition-colors"
-          >
-            <User className="w-4 h-4 text-gold" />
-            My Account & Orders
+        {/* Footer Support */}
+        <div className="pt-4 mt-auto border-t border-[#EEEEEE] space-y-2.5 text-xs text-[#555555]">
+          <Link href="/pages/contact" onClick={onClose} className="flex items-center gap-2 text-[#222222] font-medium">
+            <MapPin className="w-3.5 h-3.5 text-[#BA9048]" />
+            <span>Mohali Flagship Boutique • Sector 70, Punjab</span>
           </Link>
-          <Link
-            href="/account/wishlist"
-            onClick={onClose}
-            className="flex items-center gap-3 py-2 text-sm text-espresso hover:text-antique-gold transition-colors"
-          >
-            <Heart className="w-4 h-4 text-gold" />
-            Saved Wishlist
-          </Link>
-          <Link
-            href="/track-order"
-            onClick={onClose}
-            className="flex items-center gap-3 py-2 text-sm text-espresso hover:text-antique-gold transition-colors"
-          >
-            <Package className="w-4 h-4 text-gold" />
-            Track Your Order
-          </Link>
-          <Link
-            href="/pages/care-guide"
-            onClick={onClose}
-            className="flex items-center gap-3 py-2 text-sm text-espresso hover:text-antique-gold transition-colors"
-          >
-            <HelpCircle className="w-4 h-4 text-gold" />
-            Jewellery Care Guide
-          </Link>
-          <a
-            href="https://wa.me/919876543210"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-3 py-2 text-sm text-emerald-800 hover:text-emerald-900 transition-colors"
-          >
-            <MessageCircle className="w-4 h-4 text-emerald-600" />
-            WhatsApp Concierge
-          </a>
         </div>
       </div>
     </Sheet>

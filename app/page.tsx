@@ -1,55 +1,71 @@
 import * as React from "react";
 import { Header } from "@/components/layout/Header";
-import { BibaStyleHero } from "@/components/home/BibaStyleHero";
-import { Interactive3DShowcase } from "@/components/home/Interactive3DShowcase";
-import { QuickCategoryCircles } from "@/components/home/QuickCategoryCircles";
-import { ShopByCategory } from "@/components/home/ShopByCategory";
-import { BestsellersGrid } from "@/components/home/BestsellersGrid";
-import { ShopByOccasion } from "@/components/home/ShopByOccasion";
-import { BrandStoryBand } from "@/components/home/BrandStoryBand";
-import { CustomerReviews } from "@/components/home/CustomerReviews";
-import { InstagramGrid } from "@/components/home/InstagramGrid";
-import { NewsletterSection } from "@/components/home/NewsletterSection";
+import { AlukasHeroSlider } from "@/components/home/AlukasHeroSlider";
+import { PromoBanners } from "@/components/home/PromoBanners";
+import { PopularCategoriesSlider } from "@/components/home/PopularCategoriesSlider";
+import { TrendyCollectionSlider } from "@/components/home/TrendyCollectionSlider";
+import { FindStoreBanner } from "@/components/home/FindStoreBanner";
+import { SplitFeatureBanners } from "@/components/home/SplitFeatureBanners";
+import { FeaturedProductsTabs } from "@/components/home/FeaturedProductsTabs";
+import { AlukasCustomerReviews } from "@/components/home/AlukasCustomerReviews";
+import { ReadJournalSection } from "@/components/home/ReadJournalSection";
+import { AlukasInstagramGrid } from "@/components/home/AlukasInstagramGrid";
+import { AlukasNewsletter } from "@/components/home/AlukasNewsletter";
 import { Footer } from "@/components/layout/Footer";
+import { MobileBottomNav } from "@/components/layout/MobileBottomNav";
+import { BackToTopButton } from "@/components/ui/BackToTopButton";
+import { NewsletterModal } from "@/components/home/NewsletterModal";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-warm-white">
-      {/* 1. Sticky floating header when scrolled past hero */}
-      <Header isOverHero={true} />
+    <div className="min-h-screen flex flex-col bg-white text-black font-sans pb-16 md:pb-0">
+      {/* 1. Header with Announcement Bar, Search, Logo, Cart Drawer & Mega Menu */}
+      <Header />
 
-      {/* 2. Hero Area: Clean Luxury Maroonish Navbar + Clean Editorial Hero (NO PHOTOS) */}
-      <BibaStyleHero />
+      {/* 2. Full-width Hero Slider with exact typography, slides and model images */}
+      <AlukasHeroSlider />
 
-      {/* 3. Directly below hero: final3 Interactive 3D Jewellery Box component */}
-      <Interactive3DShowcase />
+      {/* 3. Three Promotional Banners (2021 Fashion, Flat Discount, New Collection) */}
+      <PromoBanners />
 
-      {/* 4. Quick Category Story Circles (Compact horizontal swipe on mobile) */}
-      <QuickCategoryCircles />
+      {/* 4. Popular Categories circular carousel with left/right navigation */}
+      <PopularCategoriesSlider />
 
-      {/* 5. Shop by Category (5 large curated visual tiles, visible on tablet/desktop) */}
-      <ShopByCategory />
+      {/* 5. Trendy Collection (Autumn Collection) with 4-card slider & hover quick add */}
+      <TrendyCollectionSlider />
 
-      {/* 7. Bestsellers with Dynamic Category Filter Tabs (Compact 4 on phone, 8 on desktop) */}
-      <BestsellersGrid />
+      {/* 6. Soft Lilac "Find Jewelry Shops Near You" Store Locator Banner */}
+      <FindStoreBanner />
 
-      {/* 8. Shop by Occasion (Wedding, Festive, Daily Wear, Gifting) */}
-      <ShopByOccasion />
+      {/* 7. Split Promotional Feature Banners (Bangles & Ring Design) */}
+      <SplitFeatureBanners />
 
-      {/* 9. Brand Story Band about Mitthat */}
-      <BrandStoryBand />
+      {/* 8. Tabbed Featured Products (New Arrivals | Featured | Best Seller) */}
+      <FeaturedProductsTabs />
 
-      {/* 10. Customer Reviews with Verified Buyer Badges (Compact 2 on phone, 6 on desktop) */}
-      <CustomerReviews />
+      {/* 9. Customer Review Testimonial Cards Carousel on Soft Warm Oatmeal Background */}
+      <AlukasCustomerReviews />
 
-      {/* 11. Instagram Community Grid (Compact 3 on phone, 6 on desktop) */}
-      <InstagramGrid />
+      {/* 10. Read Journal Fashion Blog Section */}
+      <ReadJournalSection />
 
-      {/* 12. VIP Club & Newsletter Signup with WhatsApp Opt-in */}
-      <NewsletterSection />
+      {/* 11. Follow Us on Instagram 6-photo Edge-to-Edge Grid with hover overlays */}
+      <AlukasInstagramGrid />
 
-      {/* 13. Soft Cream Luxury Footer with full logo & policies */}
+      {/* 12. Subscribe Newsletter Box */}
+      <AlukasNewsletter />
+
+      {/* 13. Clean Multi-Column Footer with Payment Badges and Phabulous Logo */}
       <Footer />
+
+      {/* 14. Mobile Sticky Bottom Navigation (Home, Search, Wishlist, Account) */}
+      <MobileBottomNav />
+
+      {/* 15. Floating Back-to-Top Button */}
+      <BackToTopButton />
+
+      {/* 16. Newsletter Modal Popup */}
+      <NewsletterModal />
     </div>
   );
 }

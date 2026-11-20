@@ -3,153 +3,244 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Menu, Search, Heart, ShoppingBag, User } from "lucide-react";
-import { MobileNavDrawer } from "./MobileNavDrawer";
+import {
+  Menu,
+  Search,
+  Heart,
+  ShoppingBag,
+  User,
+  ChevronDown,
+  MapPin,
+  X,
+} from "lucide-react";
 import { MegaMenu } from "./MegaMenu";
-import { cn } from "@/lib/utils";
+import { MobileNavDrawer } from "./MobileNavDrawer";
+import { CartDrawer } from "@/components/cart/CartDrawer";
 
 export interface HeaderProps {
-  /** If true, starts as an icons-only slim floating header that converts to a sticky bar with wordmark past hero */
   isOverHero?: boolean;
   cartCount?: number;
   wishlistCount?: number;
 }
 
 export function Header({
-  isOverHero = false,
   cartCount = 0,
   wishlistCount = 0,
 }: HeaderProps) {
-  const [isScrolledPastHero, setIsScrolledPastHero] = React.useState(!isOverHero);
-  const [isScrolled, setIsScrolled] = React.useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+  const [cartDrawerOpen, setCartDrawerOpen] = React.useState(false);
+  const [searchQuery, setSearchQuery] = React.useState("");
 
-  React.useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-      if (isOverHero) {
-        setIsScrolledPastHero(window.scrollY > 520);
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isOverHero]);
-
-  // If isOverHero is true and user hasn't scrolled past hero, do not render floating bar
-  if (isOverHero && !isScrolledPastHero) {
-    return (
-      <MobileNavDrawer
-        open={mobileMenuOpen}
-        onClose={() => setMobileMenuOpen(false)}
-      />
-    );
-  }
+  const handleSearchSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      window.location.href = `/search?q=${encodeURIComponent(searchQuery.trim())}`;
+    }
+  };
 
   return (
     <>
-      <header
-        className={cn(
-          "w-full z-50 transition-all duration-300 sticky top-0 bg-[#2A1218]/95 backdrop-blur-md border-b border-[#BA9048]/40 px-4 md:px-8 text-[#F5E5C9]",
-          isScrolled ? "py-2 shadow-card" : "py-3 shadow-subtle"
-        )}
-      >
-        <div className="relative max-w-7xl mx-auto flex items-center justify-between">
-          {/* Left: Mobile Menu Button & Search */}
-          <div className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 z-10">
-            <button
-              onClick={() => setMobileMenuOpen(true)}
-              className="p-1.5 sm:p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
-              aria-label="Open navigation menu"
-            >
-              <Menu className="w-5 h-5 text-[#F5E5C9]" />
-            </button>
-            <Link
-              href="/search"
-              className="flex items-center gap-2 p-1.5 sm:px-3 sm:py-1.5 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors border border-transparent sm:border-[#BA9048]/40 focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
-              aria-label="Search catalogue"
-            >
-              <Search className="w-4 h-4 text-[#BA9048]" />
-              <span className="hidden sm:inline text-xs font-sans text-[#E0D0BC]">
-                Search &quot;kundan&quot;, &quot;jhumka&quot;, &quot;solitaire&quot;...
-              </span>
-            </Link>
-          </div>
+      <header className="w-full z-40 bg-white font-sans border-b border-[#EEEEEE] sticky top-0 shadow-2xs">
+        {/* Main Brand & Action Row */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-3.5 md:py-4">
+          <div className="flex items-center justify-between gap-4 md:gap-8">
+            {/* Mobile: Hamburger Button */}
+            <div className="flex md:hidden items-center">
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(true)}
+                className="p-1.5 text-[#222222] hover:text-black transition-colors focus:outline-none"
+                aria-label="Open navigation menu"
+              >
+                <Menu className="w-6 h-6 stroke-[1.6]" />
+              </button>
+            </div>
 
-          {/* Mobile Center Logo (Dead center in mobile viewport) */}
-          <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center md:hidden pointer-events-auto">
-            <Link
-              href="/"
-              className="transition-all duration-300 relative block h-8 w-32 focus:outline-none"
-              aria-label="Phabulous by Mitthat Home"
-            >
-              <Image
-                src="/brand/logo-wordmark-light.png"
-                alt="Phabulous by Mitthat"
-                fill
-                className="object-contain"
-                priority
-              />
-            </Link>
-          </div>
+            {/* Desktop Left / Mobile Center: Brand Logo */}
+            <div className="flex items-center justify-start">
+              <Link
+                href="/"
+                className="flex items-center group focus:outline-none"
+                aria-label="Phabulous by Mitthat"
+              >
+                <div className="relative h-9 sm:h-11 md:h-12 w-44 sm:w-52 md:w-60 shrink-0 transition-opacity group-hover:opacity-90">
+                  <Image
+                    src="/brand/newlogo.png"
+                    alt="Phabulous by Mitthat"
+                    fill
+                    sizes="(max-width: 640px) 176px, 240px"
+                    className="object-contain object-left"
+                    priority
+                  />
+                </div>
+              </Link>
+            </div>
 
-          {/* Desktop Center Wordmark */}
-          <div className="hidden md:flex flex-1 justify-center items-center">
-            <Link
-              href="/"
-              className="transition-all duration-300 relative block opacity-100 scale-100 h-9 md:h-10 w-36 md:w-44 focus:outline-none"
-              aria-label="Phabulous by Mitthat Home"
-            >
-              <Image
-                src="/brand/logo-wordmark-light.png"
-                alt="Phabulous by Mitthat"
-                fill
-                className="object-contain"
-                priority
-              />
-            </Link>
-          </div>
+            {/* Desktop Center: Luxury Search Bar */}
+            <div className="hidden md:flex flex-1 max-w-md mx-auto">
+              <form onSubmit={handleSearchSubmit} className="relative w-full">
+                <input
+                  type="text"
+                  placeholder="Search artificial jewellery, jhumkas, chokers..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full h-10.5 pl-4 pr-11 text-xs text-[#222222] placeholder-[#888888] bg-[#F7F7F7] border border-[#E5E5E5] rounded-full focus:outline-none focus:border-black focus:bg-white transition-all shadow-2xs"
+                />
+                {searchQuery ? (
+                  <button
+                    type="button"
+                    onClick={() => setSearchQuery("")}
+                    aria-label="Clear search"
+                    className="absolute right-9 top-1/2 -translate-y-1/2 text-[#999999] hover:text-black transition-colors"
+                  >
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                ) : null}
+                <button
+                  type="submit"
+                  aria-label="Search"
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#666666] hover:text-black transition-colors"
+                >
+                  <Search className="w-4 h-4 stroke-[1.8]" />
+                </button>
+              </form>
+            </div>
 
-          {/* Right: Account, Wishlist, Cart */}
-          <div className="flex items-center space-x-1 sm:space-x-2 text-[#F5E5C9] z-10">
-            <Link
-              href="/account"
-              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
-              aria-label="Account"
-            >
-              <User className="w-5 h-5 text-[#F5E5C9]" />
-            </Link>
-            <Link
-              href="/account/wishlist"
-              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors relative focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
-              aria-label="Wishlist"
-            >
-              <Heart className="w-5 h-5 text-[#F5E5C9]" />
-              {wishlistCount > 0 && (
-                <span className="absolute top-1 right-1 bg-antique-gold text-white text-[10px] font-sans font-bold w-4 h-4 rounded-full flex items-center justify-center">
+            {/* Desktop & Mobile Right: Actions (Mohali Store, Account, Wishlist, Cart) */}
+            <div className="flex items-center justify-end space-x-3 sm:space-x-5 text-[#222222]">
+              {/* Mohali Store Pill */}
+              <Link
+                href="/pages/contact"
+                className="hidden lg:flex items-center gap-1.5 py-1 px-3 rounded-full bg-[#FAF9F5] border border-[#EBE6DC] text-xs text-[#444444] hover:text-[#BA9048] hover:border-[#BA9048] transition-colors"
+                title="Mohali Flagship Boutique, Sector 70, Punjab"
+              >
+                <MapPin className="w-3.5 h-3.5 text-[#BA9048]" />
+                <span className="font-medium tracking-wide">Mohali Boutique</span>
+              </Link>
+
+              {/* User Account */}
+              <Link
+                href="/account"
+                className="hidden sm:flex items-center text-[#222222] hover:text-[#BA9048] transition-colors p-1"
+                aria-label="My Account"
+              >
+                <User className="w-5 h-5 stroke-[1.5]" />
+              </Link>
+
+              {/* Wishlist with Gold Badge */}
+              <Link
+                href="/account/wishlist"
+                className="flex items-center text-[#222222] hover:text-[#BA9048] relative transition-colors p-1"
+                aria-label="Wishlist"
+              >
+                <Heart className="w-5 h-5 stroke-[1.5]" />
+                <span className="absolute -top-1 -right-1.5 bg-[#BA9048] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {wishlistCount}
                 </span>
-              )}
-            </Link>
-            <Link
-              href="/cart"
-              className="p-2 rounded-full text-[#F5E5C9] hover:bg-white/10 transition-colors relative focus:outline-none focus:ring-2 focus:ring-[#BA9048]"
-              aria-label="Shopping Cart"
-            >
-              <ShoppingBag className="w-5 h-5 text-[#F5E5C9]" />
-              {cartCount > 0 && (
-                <span className="absolute top-1 right-1 bg-[#BA9048] text-[#2A1218] text-[10px] font-sans font-bold w-4 h-4 rounded-full flex items-center justify-center">
+              </Link>
+
+              {/* Shopping Bag with Black Badge */}
+              <button
+                type="button"
+                onClick={() => setCartDrawerOpen(true)}
+                className="flex items-center text-[#222222] hover:text-[#BA9048] relative transition-colors focus:outline-none p-1"
+                aria-label="Open Shopping Bag"
+              >
+                <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
+                <span className="absolute -top-1 -right-1.5 bg-[#222222] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
-              )}
-            </Link>
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mega Menu underneath sticky header on desktop */}
-        <MegaMenu />
+        {/* Lower Desktop Navigation Bar - Clean, Centered, Single-Line */}
+        <div className="hidden lg:block border-t border-[#EEEEEE] bg-white relative">
+          <div className="max-w-7xl mx-auto px-4 lg:px-8">
+            <nav className="flex items-center justify-center space-x-9 text-xs font-semibold uppercase tracking-[0.16em] text-[#222222]">
+              <Link
+                href="/"
+                className="py-3.5 hover:text-[#BA9048] relative transition-colors border-b-2 border-black whitespace-nowrap"
+              >
+                HOME
+              </Link>
+
+              {/* Collections with Mega Menu - Static so MegaMenu spans full header width */}
+              <div className="group static">
+                <Link
+                  href="/collections"
+                  className="py-3.5 hover:text-[#BA9048] flex items-center gap-1 transition-colors whitespace-nowrap"
+                >
+                  <span>COLLECTIONS</span>
+                  <ChevronDown className="w-3 h-3 text-[#777777] group-hover:text-black" />
+                </Link>
+                <MegaMenu />
+              </div>
+
+              <Link
+                href="/collections/rings"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                RINGS
+              </Link>
+
+              <Link
+                href="/collections/necklaces"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                NECKLACES
+              </Link>
+
+              <Link
+                href="/collections/earrings"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                EARRINGS
+              </Link>
+
+              <Link
+                href="/collections/bangles-bracelets"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                BANGLES
+              </Link>
+
+              <Link
+                href="/collections/jewellery-sets"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                BRIDAL KUNDAN
+              </Link>
+
+              {/* NEW ARRIVALS with small badge */}
+              <Link
+                href="/collections/new-arrivals"
+                className="py-3.5 text-[#222222] hover:text-[#BA9048] flex items-center gap-1.5 transition-colors whitespace-nowrap"
+              >
+                <span>NEW ARRIVALS</span>
+                <span className="px-1.5 py-0.2 bg-[#BA9048] text-white text-[9px] font-bold rounded-full">
+                  NEW
+                </span>
+              </Link>
+
+              <Link
+                href="/pages/about"
+                className="py-3.5 hover:text-[#BA9048] transition-colors whitespace-nowrap"
+              >
+                OUR STORY
+              </Link>
+            </nav>
+          </div>
+        </div>
       </header>
+
+      {/* Cart Drawer */}
+      <CartDrawer
+        open={cartDrawerOpen}
+        onClose={() => setCartDrawerOpen(false)}
+        cartCount={cartCount}
+      />
 
       {/* Mobile Drawer */}
       <MobileNavDrawer

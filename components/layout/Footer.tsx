@@ -1,187 +1,136 @@
+"use client";
+
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { BrandDivider } from "./BrandDivider";
-import { ShieldCheck, Sparkles, Heart, HelpCircle, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Clock, Instagram, Facebook } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-soft-cream border-t border-gold/40 text-brown-text font-sans relative pt-12 pb-8 px-4 md:px-8 mt-16">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12 pb-12">
-          {/* Col 1 & 2: Brand Lockup & Story */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="relative w-48 h-16">
-              <Image
-                src="/brand/logo-full.png"
-                alt="Phabulous by Mitthat"
-                fill
-                className="object-contain object-left"
-              />
-            </div>
-            <p className="font-serif italic text-espresso text-base tracking-wide">
-              Handpicked jewellery, simply irresistible.
+    <footer className="w-full bg-white text-[#222222] font-sans border-t border-[#E5E5E5] pt-14 pb-10">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8">
+        {/* Main 4-Column Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12 border-b border-[#EEEEEE]">
+          {/* Column 1: Brand & Craftsmanship */}
+          <div className="space-y-4">
+            <Link href="/" className="inline-block group py-1">
+              <div className="relative h-11 w-48 shrink-0">
+                <Image
+                  src="/brand/newlogo.png"
+                  alt="Phabulous by Mitthat"
+                  fill
+                  sizes="192px"
+                  className="object-contain object-left"
+                />
+              </div>
+            </Link>
+            <p className="text-xs text-[#666666] leading-relaxed">
+              Curated artisanal artificial jewellery, bespoke bridal Kundan chokers, and everyday anti-tarnish statement pieces handcrafted with timeless finesse.
             </p>
-            <p className="text-sm text-brown-text/80 leading-relaxed max-w-sm">
-              Curated artificial jewellery crafted for life&apos;s celebrated moments
-              and daily elegance. From radiant gold-tone temple jhumkas to scintillating
-              American Diamond (AD) party pieces, wear your sparkle with pride.
-            </p>
-            <div className="flex items-center gap-3 pt-2 text-xs text-antique-gold font-medium">
-              <span className="flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5" /> Handpicked Quality
-              </span>
-              <span>•</span>
-              <span className="flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5" /> Anti-Tarnish Coating
-              </span>
+            <div className="flex items-center space-x-3 pt-2 text-[#222222]">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-[#E5E5E5] flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-4 h-4" />
+              </a>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-8 h-8 rounded-full border border-[#E5E5E5] flex items-center justify-center hover:bg-black hover:text-white transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook className="w-4 h-4 fill-current" />
+              </a>
             </div>
           </div>
 
-          {/* Col 3: Collections */}
+          {/* Column 2: Artificial Jewellery Collections */}
           <div className="space-y-3">
-            <h4 className="font-serif text-lg font-medium text-espresso tracking-wide">
+            <h4 className="text-sm font-semibold text-[#222222] uppercase tracking-wider">
               Collections
             </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/collections/wedding" className="hover:text-espresso transition-colors">
-                  Wedding & Bridal
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/festive" className="hover:text-espresso transition-colors">
-                  Festive & Celebrations
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/daily-wear" className="hover:text-espresso transition-colors">
-                  Daily Wear Chic
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/gifting" className="hover:text-espresso transition-colors">
-                  Curated Gifting
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/new-arrivals" className="hover:text-espresso transition-colors">
-                  New Arrivals
-                </Link>
-              </li>
-              <li>
-                <Link href="/collections/bestsellers" className="hover:text-espresso transition-colors">
-                  Bestsellers
-                </Link>
-              </li>
+            <ul className="space-y-2.5 text-xs text-[#666666]">
+              <li><Link href="/collections/jewellery-sets" className="hover:text-black transition-colors">Bridal Kundan Sets</Link></li>
+              <li><Link href="/collections/necklaces" className="hover:text-black transition-colors">Chokers & Layered Necklaces</Link></li>
+              <li><Link href="/collections/earrings" className="hover:text-black transition-colors">Jhumkas, Chandbalis & Studs</Link></li>
+              <li><Link href="/collections/rings" className="hover:text-black transition-colors">Cocktail & Solitaire Rings</Link></li>
+              <li><Link href="/collections/bangles-bracelets" className="hover:text-black transition-colors">Temple Bangles & Kadas</Link></li>
+              <li><Link href="/collections/new-arrivals" className="hover:text-black transition-colors">New Arrivals 2026</Link></li>
             </ul>
           </div>
 
-          {/* Col 4: Customer Care & Policies */}
+          {/* Column 3: Customer Care & Services */}
           <div className="space-y-3">
-            <h4 className="font-serif text-lg font-medium text-espresso tracking-wide">
+            <h4 className="text-sm font-semibold text-[#222222] uppercase tracking-wider">
               Customer Care
             </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/track-order" className="hover:text-espresso transition-colors">
-                  Track Your Order
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/care-guide" className="hover:text-espresso transition-colors">
-                  Jewellery Care Guide
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/shipping" className="hover:text-espresso transition-colors">
-                  Shipping & Delivery
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/returns" className="hover:text-espresso transition-colors">
-                  Returns & Exchanges
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/faq" className="hover:text-espresso transition-colors">
-                  Frequently Asked Questions
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/contact" className="hover:text-espresso transition-colors">
-                  Contact Us
-                </Link>
-              </li>
+            <ul className="space-y-2.5 text-xs text-[#666666]">
+              <li><Link href="/track-order" className="hover:text-black transition-colors">Track Your Order</Link></li>
+              <li><Link href="/pages/care-guide" className="hover:text-black transition-colors">Artificial Jewellery Care Guide</Link></li>
+              <li><Link href="/pages/shipping" className="hover:text-black transition-colors">India-wide Express Shipping</Link></li>
+              <li><Link href="/pages/returns" className="hover:text-black transition-colors">Easy Returns & Exchanges</Link></li>
+              <li><Link href="/pages/faq" className="hover:text-black transition-colors">Frequently Asked Questions</Link></li>
+              <li><Link href="/pages/about" className="hover:text-black transition-colors">Our Mohali Studio Story</Link></li>
             </ul>
           </div>
 
-          {/* Col 5: Legal & Trust */}
+          {/* Column 4: Mohali Flagship Boutique (Only One Store) */}
           <div className="space-y-3">
-            <h4 className="font-serif text-lg font-medium text-espresso tracking-wide">
-              Brand & Legal
+            <h4 className="text-sm font-semibold text-[#222222] uppercase tracking-wider">
+              Mohali Boutique
             </h4>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link href="/pages/about" className="hover:text-espresso transition-colors">
-                  About Mitthat
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/privacy" className="hover:text-espresso transition-colors">
-                  Privacy Policy (DPDP Act)
-                </Link>
-              </li>
-              <li>
-                <Link href="/pages/terms" className="hover:text-espresso transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link href="/admin/login" className="text-brown-text/50 hover:text-espresso transition-colors">
-                  Admin Portal
-                </Link>
-              </li>
-            </ul>
-            <div className="pt-2 text-xs text-brown-text/70 space-y-1">
-              <p className="flex items-center gap-1.5">
-                <Mail className="w-3.5 h-3.5 text-gold" /> care@phabulousbymitthat.com
-              </p>
-              <p className="flex items-center gap-1.5">
-                <Phone className="w-3.5 h-3.5 text-gold" /> +91 (0) 98765 43210
-              </p>
+            <div className="space-y-2.5 text-xs text-[#666666]">
+              <div className="flex items-start gap-2.5">
+                <MapPin className="w-4 h-4 text-[#BA9048] shrink-0 mt-0.5" />
+                <p>
+                  Phabulous by Mitthat Boutique,<br />
+                  Sector 70, SAS Nagar (Mohali),<br />
+                  Punjab 160071, India
+                </p>
+              </div>
+
+              <div className="flex items-center gap-2.5 pt-1">
+                <Mail className="w-4 h-4 text-[#BA9048] shrink-0" />
+                <a href="mailto:care@phabulousbymitthat.com" className="hover:text-black transition-colors">
+                  care@phabulousbymitthat.com
+                </a>
+              </div>
+
+              <div className="flex items-center gap-2.5 pt-1">
+                <Clock className="w-4 h-4 text-[#BA9048] shrink-0" />
+                <span>Mon – Sat: 11:00 AM – 8:00 PM</span>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Brand Divider with flower ornament */}
-        <BrandDivider withFlower={true} />
+        {/* Bottom Bar: Secure Payment Badges & Copyright */}
+        <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <p className="text-xs text-[#777777]">
+            © {new Date().getFullYear()} Phabulous by Mitthat. Handcrafted Artificial Jewellery, Mohali. All Rights Reserved.
+          </p>
 
-        {/* Bottom bar: Copyright, Disclaimer & Payment Methods */}
-        <div className="pt-4 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-brown-text/70">
-          <div className="text-center md:text-left space-y-1">
-            <p>© {new Date().getFullYear()} Phabulous by Mitthat. All rights reserved.</p>
-            <p className="text-[11px] text-brown-text/60">
-              Note: All our products are fashion artificial jewellery crafted with premium gold-tone, silver-tone, brass, and American Diamond (AD) stone embellishments.
-            </p>
-          </div>
-
-          {/* Payment Icons */}
-          <div className="flex items-center gap-2 flex-wrap justify-center">
-            <span className="px-2 py-1 bg-white border border-[#E7DCC6] rounded text-[10px] font-semibold text-espresso">
-              UPI / QR
+          {/* Payment Badges */}
+          <div className="flex items-center gap-2 text-[10px] font-bold text-[#444444]">
+            <span className="px-2.5 py-1 bg-[#FAFAFA] border border-[#E5E5E5] rounded-xs">
+              UPI
             </span>
-            <span className="px-2 py-1 bg-white border border-[#E7DCC6] rounded text-[10px] font-semibold text-espresso">
-              Visa / Mastercard
-            </span>
-            <span className="px-2 py-1 bg-white border border-[#E7DCC6] rounded text-[10px] font-semibold text-espresso">
+            <span className="px-2.5 py-1 bg-[#FAFAFA] border border-[#E5E5E5] rounded-xs">
               RuPay
             </span>
-            <span className="px-2 py-1 bg-white border border-[#E7DCC6] rounded text-[10px] font-semibold text-espresso">
-              NetBanking
+            <span className="px-2.5 py-1 bg-[#FAFAFA] border border-[#E5E5E5] rounded-xs">
+              VISA
             </span>
-            <span className="px-2 py-1 bg-white border border-[#E7DCC6] rounded text-[10px] font-semibold text-espresso">
-              Cash on Delivery (COD)
+            <span className="px-2.5 py-1 bg-[#FAFAFA] border border-[#E5E5E5] rounded-xs">
+              MasterCard
+            </span>
+            <span className="px-2.5 py-1 bg-[#FAFAFA] border border-[#E5E5E5] rounded-xs">
+              NetBanking
             </span>
           </div>
         </div>

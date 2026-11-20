@@ -190,14 +190,42 @@ export function ProductDetailClient({
           </div>
 
           {/* Pricing & Stock */}
-          <div className="space-y-2">
+          <div className="space-y-3">
             <Price
               price={selectedVariant.price}
               compareAtPrice={selectedVariant.compareAtPrice}
               size="lg"
             />
-            <p className="text-xs font-sans text-brown-text/70">
-              Inclusive of all taxes (GST 3% included). Free express shipping on orders over ₹1,499.
+
+            {/* Availability */}
+            <div className="text-xs font-semibold text-[#222222]">
+              Availability: <span className="text-[#2e7d32]">In Stock</span>
+            </div>
+
+            {/* Deal Countdown Timer (from Alukas product page) */}
+            <div className="pt-2 pb-1">
+              <div className="flex items-center gap-2 text-center">
+                <div className="border border-[#E5E5E5] px-3 py-1.5 min-w-[58px]">
+                  <span className="block text-sm font-bold text-[#222222]">1076</span>
+                  <span className="block text-[10px] text-[#888888] uppercase">Days</span>
+                </div>
+                <div className="border border-[#E5E5E5] px-3 py-1.5 min-w-[58px]">
+                  <span className="block text-sm font-bold text-[#222222]">02</span>
+                  <span className="block text-[10px] text-[#888888] uppercase">Hours</span>
+                </div>
+                <div className="border border-[#E5E5E5] px-3 py-1.5 min-w-[58px]">
+                  <span className="block text-sm font-bold text-[#222222]">04</span>
+                  <span className="block text-[10px] text-[#888888] uppercase">Mins</span>
+                </div>
+                <div className="border border-[#E5E5E5] px-3 py-1.5 min-w-[58px]">
+                  <span className="block text-sm font-bold text-[#222222]">28</span>
+                  <span className="block text-[10px] text-[#888888] uppercase">Secs</span>
+                </div>
+              </div>
+            </div>
+
+            <p className="text-xs font-sans text-black/70">
+              Inclusive of all taxes. Free express shipping on orders over ₹1,499.
             </p>
 
             {selectedVariant.stock <= 4 && (
@@ -234,19 +262,37 @@ export function ProductDetailClient({
             </div>
           )}
 
-          {/* Quantity & Add to Cart Controls */}
+          {/* Quantity & Add to Cart Controls (Alukas Style) */}
           <div className="space-y-4 pt-2">
             <div className="flex items-center gap-4">
               <QuantityStepper value={quantity} onChange={setQuantity} min={1} max={selectedVariant.stock} />
-              <Button
-                variant="primary"
-                size="lg"
+              <button
+                type="button"
                 onClick={handleAddToCart}
-                className="flex-1 h-12 text-base font-semibold shadow-gold"
+                className="flex-1 h-12 bg-[#222222] text-white text-xs font-bold uppercase tracking-wider hover:bg-black transition-colors"
               >
-                <ShoppingBag className="w-5 h-5 mr-2" />
-                Add to Bag
-              </Button>
+                ADD TO CART
+              </button>
+            </div>
+            <button
+              type="button"
+              onClick={() => {
+                handleAddToCart();
+                window.location.href = "/checkout";
+              }}
+              className="w-full h-12 bg-[#EEEEEE] text-[#222222] text-xs font-bold uppercase tracking-wider hover:bg-[#E0E0E0] transition-colors"
+            >
+              BUY IT NOW
+            </button>
+            <div className="pt-1">
+              <button
+                type="button"
+                onClick={handleToggleWishlist}
+                className="flex items-center gap-2 text-xs text-[#555555] hover:text-black transition-colors"
+              >
+                <Heart className={`w-4 h-4 ${isWishlisted ? "fill-[#F03333] text-[#F03333]" : ""}`} />
+                <span>Add to wishlist</span>
+              </button>
             </div>
           </div>
 
