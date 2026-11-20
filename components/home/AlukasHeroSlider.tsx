@@ -126,11 +126,11 @@ export function AlukasHeroSlider() {
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      {/* Full Tap/Click Link to Connected Collection - Luxury Mobile & Desktop Proportions */}
+      {/* Full Tap/Click Link to Connected Collection - Immersive Full-Length Proportions */}
       <Link
         href={slide.link}
         onClick={handleLinkClick}
-        className="block relative w-full h-[52vh] min-h-[380px] max-h-[460px] sm:h-[60vh] sm:min-h-[460px] md:h-[68vh] md:min-h-[540px] lg:h-[75vh] lg:min-h-[620px] max-h-[720px] cursor-pointer group bg-[#111111]"
+        className="block relative w-full h-[75vh] min-h-[500px] sm:h-[80vh] sm:min-h-[580px] md:h-[85vh] md:min-h-[680px] lg:h-[90vh] lg:min-h-[760px] max-h-[920px] cursor-pointer group bg-[#111111]"
         aria-label={slide.alt}
       >
         <Image
@@ -144,19 +144,19 @@ export function AlukasHeroSlider() {
 
         {/* Minimal Luxury Text Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent md:from-black/70 md:via-black/20 md:to-transparent flex items-end sm:items-center">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-14 lg:px-16 w-full pb-9 sm:pb-0 text-left">
-            <div className="max-w-md sm:max-w-lg space-y-1.5 sm:space-y-3 text-white">
-              <span className="inline-block text-[9px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-[#F3D98A]">
+          <div className="max-w-7xl mx-auto px-6 sm:px-10 md:px-14 lg:px-16 w-full pb-14 sm:pb-0 text-left">
+            <div className="max-w-md sm:max-w-lg space-y-2 sm:space-y-3.5 text-white">
+              <span className="inline-block text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-[#F3D98A]">
                 {slide.tag}
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-[44px] font-serif font-normal leading-[1.15] whitespace-pre-line tracking-tight text-white drop-shadow-sm">
+              <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-[52px] font-serif font-normal leading-[1.14] whitespace-pre-line tracking-tight text-white drop-shadow-sm">
                 {slide.title}
               </h2>
-              <p className="text-xs sm:text-sm text-white/85 font-sans font-normal leading-relaxed max-w-sm hidden sm:block">
+              <p className="text-xs sm:text-sm md:text-base text-white/85 font-sans font-normal leading-relaxed max-w-sm hidden sm:block">
                 {slide.subtitle}
               </p>
-              <div className="pt-1 sm:pt-2">
-                <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white border-b-2 border-white pb-0.5 group-hover:text-[#F3D98A] group-hover:border-[#F3D98A] transition-colors">
+              <div className="pt-1.5 sm:pt-2.5">
+                <span className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-widest text-white border-b-2 border-white pb-0.5 group-hover:text-[#F3D98A] group-hover:border-[#F3D98A] transition-colors">
                   {slide.cta} →
                 </span>
               </div>
