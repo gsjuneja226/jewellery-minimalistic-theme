@@ -77,15 +77,15 @@ export function ProductCard({
       )}
       data-testid="product-card"
     >
-      {/* 1:1 Image Container (White Background Only) */}
-      <div className="relative w-full aspect-square overflow-hidden bg-white flex items-center justify-center">
-        <Link href={`/products/${product.slug}`} className="relative block w-full h-full bg-white">
+      {/* 1:1 Image Container */}
+      <div className="relative w-full aspect-square overflow-hidden bg-[#FAFAFA] flex items-center justify-center">
+        <Link href={`/products/${product.slug}`} className="relative block w-full h-full">
           <Image
             src={primaryImage}
             alt={product.title}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 25vw"
-            className="object-contain p-1 transition-transform duration-500 group-hover:scale-105"
+            className="object-cover transition-transform duration-500 group-hover:scale-105"
           />
         </Link>
 

@@ -74,7 +74,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Rings",
     slug: "rings",
     description: "Statement cocktail rings, classic eternity bands, and shimmering American Diamond (AD) solitaires.",
-    imageUrl: "/products/white-bg/solitaire-ring.svg",
+    imageUrl: "/products/ad-solitaire-statement-ring-1.svg",
     displayOrder: 1,
   },
   {
@@ -82,7 +82,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Necklaces",
     slug: "necklaces",
     description: "Multi-layered gold-tone chains, lustrous simulated pearl strings, and regal festive chokers.",
-    imageUrl: "/products/white-bg/diamond-necklace.svg",
+    imageUrl: "/products/emerald-stone-layered-necklace-1.svg",
     displayOrder: 2,
   },
   {
@@ -90,7 +90,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Earrings",
     slug: "earrings",
     description: "Intricately carved jhumkas, chandelier drops, everyday studs, and hand-finished hoops.",
-    imageUrl: "/products/white-bg/chandbali-jhumka.svg",
+    imageUrl: "/products/chandbali-festive-jhumkas-1.svg",
     displayOrder: 3,
   },
   {
@@ -98,7 +98,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Pendants",
     slug: "pendants",
     description: "Delicate gemstone-inspired locket charms, solitaire drops, and spiritual motifs.",
-    imageUrl: "/products/white-bg/pendant-necklace.svg",
+    imageUrl: "/products/sapphire-teardrop-pendant-1.svg",
     displayOrder: 4,
   },
   {
@@ -106,7 +106,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Bangles & Bracelets",
     slug: "bangles-bracelets",
     description: "Antique temple kada cuffs, modern tennis bracelets, and delicate gold-tone charm bangles.",
-    imageUrl: "/products/white-bg/peacock-bangle.svg",
+    imageUrl: "/products/temple-peacock-cuff-bangle-1.svg",
     displayOrder: 5,
   },
   {
@@ -122,7 +122,7 @@ export const CATEGORIES_DATA: MockCategory[] = [
     name: "Jewellery Sets",
     slug: "jewellery-sets",
     description: "Harmonious bridal matching sets, festive choker & earring pairings, and reception wear.",
-    imageUrl: "/products/white-bg/kundan-set.svg",
+    imageUrl: "/products/kundan-jadau-choker-set-1.svg",
     displayOrder: 7,
   },
 ];
@@ -133,7 +133,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "Wedding",
     slug: "wedding",
     description: "Grand Kundan-style choker sets, royal jhumkas, and heirloom bridal ornaments.",
-    imageUrl: "/products/white-bg/kundan-set.svg",
+    imageUrl: "/products/kundan-jadau-choker-set-1.svg",
     isFeatured: true,
   },
   {
@@ -141,7 +141,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "Festive",
     slug: "festive",
     description: "Lustrous antique gold-tone finishes and colourful stone accents for celebratory cheer.",
-    imageUrl: "/products/white-bg/chandbali-jhumka.svg",
+    imageUrl: "/products/chandbali-festive-jhumkas-1.svg",
     isFeatured: true,
   },
   {
@@ -149,7 +149,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "Daily Wear",
     slug: "daily-wear",
     description: "Lightweight, anti-tarnish studs, sleek cuffs, and everyday delicate chains.",
-    imageUrl: "/products/white-bg/daily-hoops.svg",
+    imageUrl: "/products/classic-gold-tone-daily-hoops-1.svg",
     isFeatured: true,
   },
   {
@@ -157,7 +157,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "Gifting",
     slug: "gifting",
     description: "Pre-boxed treasures, elegant tennis bracelets, and thoughtful tokens of affection.",
-    imageUrl: "/products/white-bg/tennis-bracelet.svg",
+    imageUrl: "/products/rose-gold-tennis-bracelet-1.svg",
     isFeatured: true,
   },
   {
@@ -165,7 +165,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "New Arrivals",
     slug: "new-arrivals",
     description: "The freshest handcrafted fashion jewellery additions straight from our artisans.",
-    imageUrl: "/products/white-bg/solitaire-ring.svg",
+    imageUrl: "/products/ad-solitaire-statement-ring-1.svg",
     isFeatured: false,
   },
   {
@@ -173,7 +173,7 @@ export const COLLECTIONS_DATA: MockCollection[] = [
     name: "Bestsellers",
     slug: "bestsellers",
     description: "Beloved customer favourites tried, tested, and celebrated across India.",
-    imageUrl: "/products/white-bg/chandbali-jhumka.svg",
+    imageUrl: "/products/chandbali-festive-jhumkas-1.svg",
     isFeatured: true,
   },
 ];
@@ -196,7 +196,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 5.0,
     reviewsCount: 18,
-    images: ["/products/white-bg/heart-earrings.svg"],
+    images: ["/images/categories/earrings.jpg", "/images/instagram/insta-1.jpg"],
     variants: [
       { id: "var-alukas-1", title: "Sapphire Rhodium", sku: "PH-ER-001", price: 12900, compareAtPrice: 15900, stock: 10 },
     ],
@@ -218,7 +218,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 24,
-    images: ["/products/white-bg/solitaire-ring.svg"],
+    images: ["/images/categories/rings.jpg"],
     variants: [
       { id: "var-alukas-2", title: "Size 7 (17.3 mm)", sku: "PH-RG-001", price: 24900, stock: 14 },
     ],
@@ -240,7 +240,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 5.0,
     reviewsCount: 14,
-    images: ["/products/white-bg/pendant-necklace.svg"],
+    images: ["/images/categories/pendants.jpg"],
     variants: [
       { id: "var-alukas-3", title: "Yellow Gold Finish", sku: "PH-NC-001", price: 19900, stock: 12 },
     ],
@@ -262,7 +262,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.8,
     reviewsCount: 22,
-    images: ["/products/white-bg/gold-choker.svg"],
+    images: ["/images/categories/necklaces.jpg"],
     variants: [
       { id: "var-alukas-4", title: "Yellow Gold", sku: "PH-NC-002", price: 2900, compareAtPrice: 5900, stock: 15 },
     ],
@@ -284,7 +284,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 35,
-    images: ["/products/white-bg/kundan-set.svg"],
+    images: ["/images/categories/kundan-choker.jpg"],
     variants: [
       { id: "var-alukas-5", title: "Antique Gold / Pearl White", sku: "PH-KND-001", price: 34900, compareAtPrice: 49900, stock: 8 },
     ],
@@ -306,7 +306,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 19,
-    images: ["/products/white-bg/peacock-bangle.svg"],
+    images: ["/images/categories/bangles.jpg"],
     variants: [
       { id: "var-alukas-6", title: "2.6 Size", sku: "PH-BNG-001", price: 14900, compareAtPrice: 18500, stock: 9 },
     ],
@@ -328,7 +328,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.7,
     reviewsCount: 29,
-    images: ["/products/white-bg/daily-hoops.svg"],
+    images: ["/hero/hero-slide-modern.jpg"],
     variants: [
       { id: "var-alukas-7", title: "Medium 25mm", sku: "PH-ER-003", price: 4500, stock: 25 },
     ],
@@ -350,7 +350,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 42,
-    images: ["/products/white-bg/tennis-bracelet.svg"],
+    images: ["/images/occasions/gifting.jpg"],
     variants: [
       { id: "var-alukas-8", title: "Ruby Velvet Box", sku: "PH-GFT-001", price: 25000, stock: 18 },
     ],
@@ -374,8 +374,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 48,
     images: [
-      "/products/white-bg/kundan-set.svg",
-      "/products/white-bg/kundan-set.svg",
+      "/images/categories/kundan-choker.jpg",
+      "/products/kundan-jadau-choker-set-1.svg",
       "/products/kundan-jadau-choker-set-2.svg",
     ],
     variants: [
@@ -401,8 +401,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 36,
     images: [
-      "/products/white-bg/solitaire-ring.svg",
-      "/products/white-bg/solitaire-ring.svg",
+      "/images/categories/rings.jpg",
+      "/products/ad-solitaire-statement-ring-1.svg",
       "/products/ad-solitaire-statement-ring-2.svg",
     ],
     variants: [
@@ -430,7 +430,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     reviewsCount: 64,
     images: [
       "/images/categories/earrings.jpg",
-      "/products/white-bg/chandbali-jhumka.svg",
+      "/products/chandbali-festive-jhumkas-1.svg",
       "/products/chandbali-festive-jhumkas-2.svg",
     ],
     variants: [
@@ -456,8 +456,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.7,
     reviewsCount: 22,
     images: [
-      "/products/white-bg/gold-choker.svg",
-      "/products/white-bg/diamond-necklace.svg",
+      "/images/categories/necklaces.jpg",
+      "/products/emerald-stone-layered-necklace-1.svg",
       "/products/emerald-stone-layered-necklace-2.svg",
     ],
     variants: [
@@ -482,8 +482,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 29,
     images: [
-      "/products/white-bg/peacock-bangle.svg",
-      "/products/white-bg/peacock-bangle.svg",
+      "/images/categories/bangles.jpg",
+      "/products/temple-peacock-cuff-bangle-1.svg",
       "/products/temple-peacock-cuff-bangle-2.svg",
     ],
     variants: [
@@ -510,8 +510,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 19,
     images: [
-      "/products/white-bg/pendant-necklace.svg",
-      "/products/white-bg/pendant-necklace.svg",
+      "/images/categories/pendants.jpg",
+      "/products/sapphire-teardrop-pendant-1.svg",
       "/products/sapphire-teardrop-pendant-2.svg",
     ],
     variants: [
@@ -565,7 +565,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     reviewsCount: 31,
     images: [
       "/images/instagram/insta-3.jpg",
-      "/products/white-bg/flower-studs.svg",
+      "/products/meenakari-flower-studs-1.svg",
       "/products/meenakari-flower-studs-2.svg",
       "/products/meenakari-flower-studs-3.svg",
     ],
@@ -592,8 +592,8 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 42,
     images: [
-      "/products/white-bg/peacock-bangle.svg",
-      "/products/white-bg/tennis-bracelet.svg",
+      "/images/categories/bangles.jpg",
+      "/products/rose-gold-tennis-bracelet-1.svg",
       "/products/rose-gold-tennis-bracelet-2.svg",
       "/products/rose-gold-tennis-bracelet-3.svg",
     ],
@@ -620,7 +620,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.7,
     reviewsCount: 26,
     images: [
-      "/products/white-bg/gold-choker.svg",
+      "/images/categories/necklaces.jpg",
       "/products/oxidised-silver-tribal-necklace-1.svg",
       "/products/oxidised-silver-tribal-necklace-2.svg",
       "/products/oxidised-silver-tribal-necklace-3.svg",
@@ -675,7 +675,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     reviewsCount: 52,
     images: [
       "/images/categories/earrings.jpg",
-      "/products/white-bg/daily-hoops.svg",
+      "/products/classic-gold-tone-daily-hoops-1.svg",
       "/products/classic-gold-tone-daily-hoops-2.svg",
       "/products/classic-gold-tone-daily-hoops-3.svg",
     ],
