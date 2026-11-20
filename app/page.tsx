@@ -8,6 +8,7 @@ import { FindStoreBanner } from "@/components/home/FindStoreBanner";
 import { SplitFeatureBanners } from "@/components/home/SplitFeatureBanners";
 import { FeaturedProductsTabs } from "@/components/home/FeaturedProductsTabs";
 import { AlukasCustomerReviews } from "@/components/home/AlukasCustomerReviews";
+import { ExhibitionsGallery } from "@/components/home/ExhibitionsGallery";
 import { ReadJournalSection } from "@/components/home/ReadJournalSection";
 import { AlukasInstagramGrid } from "@/components/home/AlukasInstagramGrid";
 import { AlukasNewsletter } from "@/components/home/AlukasNewsletter";
@@ -46,7 +47,10 @@ export default function HomePage() {
       {/* 9. Customer Reviews Carousel */}
       <AlukasCustomerReviews />
 
-      {/* 10. Read Journal (Visible on mobile & laptop) */}
+      {/* 10. Trunk Shows & Exhibitions Gallery */}
+      <ExhibitionsGallery />
+
+      {/* 11. Read Journal (Visible on mobile & laptop) */}
       <ReadJournalSection />
 
       {/* 11. Instagram Gallery */}
