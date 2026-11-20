@@ -29,6 +29,7 @@ export function Header({
 }: HeaderProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const [cartDrawerOpen, setCartDrawerOpen] = React.useState(false);
+  const [searchOpen, setSearchOpen] = React.useState(false);
   const [searchQuery, setSearchQuery] = React.useState("");
 
   const handleSearchSubmit = (e: React.FormEvent) => {
@@ -42,41 +43,41 @@ export function Header({
     <>
       <header className="w-full z-40 bg-white font-sans border-b border-[#EEEEEE] sticky top-0 shadow-2xs">
         {/* Main Brand & Action Row */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-3.5 md:py-4">
-          <div className="flex items-center justify-between gap-4 md:gap-8">
-            {/* Mobile: Hamburger Button */}
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-3 md:py-4">
+          <div className="flex items-center justify-between gap-2 md:gap-8">
+            {/* Mobile Left: Hamburger Button (with 44px tap target) */}
             <div className="flex md:hidden items-center">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="p-1.5 text-[#222222] hover:text-black transition-colors focus:outline-none"
+                className="w-10 h-10 -ml-2 flex items-center justify-center text-[#222222] hover:text-black transition-colors focus:outline-none"
                 aria-label="Open navigation menu"
               >
                 <Menu className="w-6 h-6 stroke-[1.6]" />
               </button>
             </div>
 
-            {/* Desktop Left / Mobile Center: Brand Logo */}
-            <div className="flex items-center justify-start">
+            {/* Brand Logo: Centered on Mobile, Left-aligned on Desktop */}
+            <div className="flex items-center justify-center md:justify-start flex-1 md:flex-initial">
               <Link
                 href="/"
-                className="flex items-center group focus:outline-none"
+                className="flex items-center group focus:outline-none py-0.5"
                 aria-label="Phabulous by Mitthat"
               >
-                <div className="relative h-9 sm:h-11 md:h-12 w-44 sm:w-52 md:w-60 shrink-0 transition-opacity group-hover:opacity-90">
+                <div className="relative h-9 sm:h-11 md:h-12 w-36 sm:w-48 md:w-60 shrink-0 transition-opacity group-hover:opacity-90">
                   <Image
                     src="/brand/newlogo.png"
                     alt="Phabulous by Mitthat"
                     fill
-                    sizes="(max-width: 640px) 176px, 240px"
-                    className="object-contain object-left"
+                    sizes="(max-width: 640px) 150px, 240px"
+                    className="object-contain object-center md:object-left"
                     priority
                   />
                 </div>
               </Link>
             </div>
 
-            {/* Desktop Center: Luxury Search Bar */}
+            {/* Desktop Center: Permanent Luxury Search Bar */}
             <div className="hidden md:flex flex-1 max-w-md mx-auto">
               <form onSubmit={handleSearchSubmit} className="relative w-full">
                 <input
@@ -106,9 +107,9 @@ export function Header({
               </form>
             </div>
 
-            {/* Desktop & Mobile Right: Actions (Mohali Store, Account, Wishlist, Cart) */}
-            <div className="flex items-center justify-end space-x-3 sm:space-x-5 text-[#222222]">
-              {/* Mohali Store Pill */}
+            {/* Desktop & Mobile Right: Actions (Search Icon BEFORE Wishlist, Account, Cart) */}
+            <div className="flex items-center justify-end space-x-1.5 sm:space-x-3 text-[#222222]">
+              {/* Mohali Store Pill (Desktop only) */}
               <Link
                 href="/pages/contact"
                 className="hidden lg:flex items-center gap-1.5 py-1 px-3 rounded-full bg-[#FAF9F5] border border-[#EBE6DC] text-xs text-[#444444] hover:text-[#BA9048] hover:border-[#BA9048] transition-colors"
@@ -118,23 +119,33 @@ export function Header({
                 <span className="font-medium tracking-wide">Mohali Boutique</span>
               </Link>
 
-              {/* User Account */}
+              {/* User Account (Tablet/Desktop) */}
               <Link
                 href="/account"
-                className="hidden sm:flex items-center text-[#222222] hover:text-[#BA9048] transition-colors p-1"
+                className="hidden sm:flex items-center text-[#222222] hover:text-[#BA9048] transition-colors p-1.5"
                 aria-label="My Account"
               >
                 <User className="w-5 h-5 stroke-[1.5]" />
               </Link>
 
+              {/* SEARCH ICON (Explicitly placed BEFORE Wishlist on Mobile & Desktop) */}
+              <button
+                type="button"
+                onClick={() => setSearchOpen(!searchOpen)}
+                className="w-9 h-9 flex items-center justify-center text-[#222222] hover:text-[#BA9048] transition-colors focus:outline-none"
+                aria-label="Toggle Search"
+              >
+                <Search className="w-5 h-5 stroke-[1.6]" />
+              </button>
+
               {/* Wishlist with Gold Badge */}
               <Link
                 href="/account/wishlist"
-                className="flex items-center text-[#222222] hover:text-[#BA9048] relative transition-colors p-1"
+                className="w-9 h-9 flex items-center justify-center text-[#222222] hover:text-[#BA9048] relative transition-colors"
                 aria-label="Wishlist"
               >
                 <Heart className="w-5 h-5 stroke-[1.5]" />
-                <span className="absolute -top-1 -right-1.5 bg-[#BA9048] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute top-0.5 right-0.5 bg-[#BA9048] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {wishlistCount}
                 </span>
               </Link>
@@ -143,17 +154,50 @@ export function Header({
               <button
                 type="button"
                 onClick={() => setCartDrawerOpen(true)}
-                className="flex items-center text-[#222222] hover:text-[#BA9048] relative transition-colors focus:outline-none p-1"
+                className="w-9 h-9 flex items-center justify-center text-[#222222] hover:text-[#BA9048] relative transition-colors focus:outline-none"
                 aria-label="Open Shopping Bag"
               >
                 <ShoppingBag className="w-5 h-5 stroke-[1.5]" />
-                <span className="absolute -top-1 -right-1.5 bg-[#222222] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
+                <span className="absolute top-0.5 right-0.5 bg-[#222222] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">
                   {cartCount}
                 </span>
               </button>
             </div>
           </div>
         </div>
+
+        {/* Expandable Instant Search Bar (Toggled by Search Icon) */}
+        {searchOpen && (
+          <div className="w-full bg-[#FAF9F7] border-t border-b border-[#E5E5E5] px-4 py-3 animate-in fade-in slide-in-from-top-2 duration-200">
+            <div className="max-w-3xl mx-auto flex items-center gap-3">
+              <form onSubmit={handleSearchSubmit} className="relative flex-1">
+                <input
+                  type="text"
+                  autoFocus
+                  placeholder="Search artificial jewellery, jhumkas, chokers, bangles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="w-full h-10 pl-4 pr-10 text-xs text-[#222222] placeholder-[#888888] bg-white border border-[#E0E0E0] rounded-full focus:outline-none focus:border-black transition-all shadow-2xs"
+                />
+                <button
+                  type="submit"
+                  aria-label="Search"
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#444444] hover:text-black"
+                >
+                  <Search className="w-4 h-4 stroke-[1.8]" />
+                </button>
+              </form>
+              <button
+                type="button"
+                onClick={() => setSearchOpen(false)}
+                className="p-1.5 text-[#666666] hover:text-black transition-colors"
+                aria-label="Close search"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Lower Desktop Navigation Bar - Clean, Centered, Single-Line */}
         <div className="hidden lg:block border-t border-[#EEEEEE] bg-white relative">
@@ -166,7 +210,7 @@ export function Header({
                 HOME
               </Link>
 
-              {/* Collections with Mega Menu - Static so MegaMenu spans full header width */}
+              {/* Collections with Mega Menu */}
               <div className="group static">
                 <Link
                   href="/collections"

@@ -18,53 +18,59 @@ import { NewsletterModal } from "@/components/home/NewsletterModal";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-white text-black font-sans pb-16 md:pb-0">
-      {/* 1. Header with Announcement Bar, Search, Logo, Cart Drawer & Mega Menu */}
+    <div className="min-h-screen flex flex-col bg-white text-black font-sans pb-16 md:pb-0 overflow-x-hidden">
+      {/* 1. Header with Search, Logo, Cart Drawer & Full-Width Mega Menu */}
       <Header />
 
-      {/* 2. Full-width Hero Slider with exact typography, slides and model images */}
+      {/* 2. Hero Slider with mobile-optimized height & bold CTAs */}
       <AlukasHeroSlider />
 
-      {/* 3. Three Promotional Banners (2021 Fashion, Flat Discount, New Collection) */}
-      <PromoBanners />
-
-      {/* 4. Popular Categories circular carousel with left/right navigation */}
+      {/* 3. Popular Categories (Compact 3x2 Grid on Mobile, 6 Circles on Desktop) */}
       <PopularCategoriesSlider />
 
-      {/* 5. Trendy Collection (Autumn Collection) with 4-card slider & hover quick add */}
-      <TrendyCollectionSlider />
+      {/* 4. Promotional Banners (1 concise banner on Mobile, 3 on Desktop) */}
+      <PromoBanners />
 
-      {/* 6. Soft Lilac "Find Jewelry Shops Near You" Store Locator Banner */}
-      <FindStoreBanner />
+      {/* 5. Trendy Collection (Desktop only to prevent duplicate product feed on Mobile) */}
+      <div className="hidden md:block">
+        <TrendyCollectionSlider />
+      </div>
 
-      {/* 7. Split Promotional Feature Banners (Bangles & Ring Design) */}
-      <SplitFeatureBanners />
-
-      {/* 8. Tabbed Featured Products (New Arrivals | Featured | Best Seller) */}
+      {/* 6. Primary Curated Product Showcase (Tabbed: New Arrivals | Featured | Best Seller) */}
       <FeaturedProductsTabs />
 
-      {/* 9. Customer Review Testimonial Cards Carousel on Soft Warm Oatmeal Background */}
+      {/* 7. Mohali Flagship Boutique Banner */}
+      <FindStoreBanner />
+
+      {/* 8. Split Feature Banners (Desktop only) */}
+      <div className="hidden md:block">
+        <SplitFeatureBanners />
+      </div>
+
+      {/* 9. Customer Reviews Carousel */}
       <AlukasCustomerReviews />
 
-      {/* 10. Read Journal Fashion Blog Section */}
-      <ReadJournalSection />
+      {/* 10. Read Journal (Desktop only) */}
+      <div className="hidden md:block">
+        <ReadJournalSection />
+      </div>
 
-      {/* 11. Follow Us on Instagram 6-photo Edge-to-Edge Grid with hover overlays */}
+      {/* 11. Instagram Gallery */}
       <AlukasInstagramGrid />
 
-      {/* 12. Subscribe Newsletter Box */}
+      {/* 12. Newsletter Subscribe Strip */}
       <AlukasNewsletter />
 
-      {/* 13. Clean Multi-Column Footer with Payment Badges and Phabulous Logo */}
+      {/* 13. Customer-Focused Footer */}
       <Footer />
 
       {/* 14. Mobile Sticky Bottom Navigation (Home, Search, Wishlist, Account) */}
       <MobileBottomNav />
 
-      {/* 15. Floating Back-to-Top Button */}
+      {/* 15. Back to Top Button */}
       <BackToTopButton />
 
-      {/* 16. Newsletter Modal Popup */}
+      {/* 16. Desktop Newsletter Modal (Disabled on mobile viewports) */}
       <NewsletterModal />
     </div>
   );

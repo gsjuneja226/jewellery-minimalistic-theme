@@ -49,7 +49,7 @@ export function MobileBottomNav({ wishlistCount = 0 }: MobileBottomNavProps) {
       >
         <div className="relative">
           <Heart className="w-5 h-5 stroke-[1.5]" />
-          <span className="absolute -top-1 -right-2 bg-black text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
+          <span className="absolute -top-1 -right-2 bg-[#BA9048] text-white text-[9px] font-bold w-3.5 h-3.5 rounded-full flex items-center justify-center">
             {wishlistCount}
           </span>
         </div>

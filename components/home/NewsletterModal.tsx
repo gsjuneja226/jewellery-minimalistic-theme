@@ -10,11 +10,15 @@ export function NewsletterModal() {
   const [subscribed, setSubscribed] = React.useState(false);
 
   React.useEffect(() => {
+    // Disable popup modal on mobile screens (< 768px)
+    if (typeof window !== "undefined" && window.innerWidth < 768) {
+      return;
+    }
     const hidden = localStorage.getItem("alukas_newsletter_hidden");
     if (!hidden) {
       const timer = setTimeout(() => {
         setIsOpen(true);
-      }, 4000);
+      }, 5000);
       return () => clearTimeout(timer);
     }
   }, []);
