@@ -39,7 +39,7 @@ export default function HomePage() {
       {/* 6. Primary Curated Product Showcase (Tabbed: New Arrivals | Featured | Best Seller) */}
       <FeaturedProductsTabs />
 
-      {/* 7. Mohali Flagship Boutique Banner */}
+      {/* 7. Flagship Boutique Banner */}
       <FindStoreBanner />
 
       {/* 8. Split Feature Banners (Desktop only) */}

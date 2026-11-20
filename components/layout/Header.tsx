@@ -43,92 +43,83 @@ export function Header({
     <>
       <header className="w-full z-40 bg-white font-sans border-b border-[#EEEEEE] sticky top-0 shadow-2xs">
         {/* Main Brand & Action Row */}
-        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-3 md:py-4">
-          <div className="flex items-center justify-between gap-2 md:gap-8">
-            {/* Mobile Left: Hamburger Button (with 44px tap target) */}
-            <div className="flex md:hidden items-center">
+        <div className="max-w-7xl mx-auto px-4 lg:px-8 py-2.5 sm:py-3 md:py-3.5">
+          <div className="grid grid-cols-3 items-center">
+            {/* Left Column:
+                - On mobile: Hamburger Button (with 44px tap target)
+                - On desktop: Luxury Search Input */}
+            <div className="flex items-center justify-start">
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(true)}
-                className="w-10 h-10 -ml-2 flex items-center justify-center text-[#222222] hover:text-black transition-colors focus:outline-none"
+                className="flex md:hidden w-11 h-11 -ml-2 items-center justify-center text-[#222222] hover:text-black transition-colors focus:outline-none"
                 aria-label="Open navigation menu"
               >
                 <Menu className="w-6 h-6 stroke-[1.6]" />
               </button>
+
+              <div className="hidden md:block w-full max-w-[260px] lg:max-w-[320px]">
+                <form onSubmit={handleSearchSubmit} className="relative w-full">
+                  <input
+                    type="text"
+                    placeholder="Search artificial jewellery, chokers..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-full h-10 pl-4 pr-10 text-xs text-[#222222] placeholder-[#888888] bg-[#F7F7F7] border border-[#E5E5E5] rounded-full focus:outline-none focus:border-black focus:bg-white transition-all shadow-2xs"
+                  />
+                  {searchQuery ? (
+                    <button
+                      type="button"
+                      onClick={() => setSearchQuery("")}
+                      aria-label="Clear search"
+                      className="absolute right-8 top-1/2 -translate-y-1/2 text-[#999999] hover:text-black transition-colors"
+                    >
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  ) : null}
+                  <button
+                    type="submit"
+                    aria-label="Search"
+                    className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#666666] hover:text-black transition-colors"
+                  >
+                    <Search className="w-4 h-4 stroke-[1.8]" />
+                  </button>
+                </form>
+              </div>
             </div>
 
-            {/* Brand Logo: Centered on Mobile, Left-aligned on Desktop */}
-            <div className="flex items-center justify-center md:justify-start flex-1 md:flex-initial">
+            {/* Center Column: Perfectly Centered Brand Logo */}
+            <div className="flex items-center justify-center">
               <Link
                 href="/"
-                className="flex items-center group focus:outline-none py-0.5"
+                className="flex items-center justify-center group focus:outline-none py-0.5"
                 aria-label="Phabulous by Mitthat"
               >
-                <div className="relative h-9 sm:h-11 md:h-12 w-36 sm:w-48 md:w-60 shrink-0 transition-opacity group-hover:opacity-90">
+                <div className="relative h-9 sm:h-11 md:h-12 w-36 sm:w-48 md:w-56 shrink-0 transition-opacity group-hover:opacity-90">
                   <Image
                     src="/brand/newlogo.png"
                     alt="Phabulous by Mitthat"
                     fill
                     sizes="(max-width: 640px) 150px, 240px"
-                    className="object-contain object-center md:object-left"
+                    className="object-contain object-center"
                     priority
                   />
                 </div>
               </Link>
             </div>
 
-            {/* Desktop Center: Permanent Luxury Search Bar */}
-            <div className="hidden md:flex flex-1 max-w-md mx-auto">
-              <form onSubmit={handleSearchSubmit} className="relative w-full">
-                <input
-                  type="text"
-                  placeholder="Search artificial jewellery, jhumkas, chokers..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full h-10.5 pl-4 pr-11 text-xs text-[#222222] placeholder-[#888888] bg-[#F7F7F7] border border-[#E5E5E5] rounded-full focus:outline-none focus:border-black focus:bg-white transition-all shadow-2xs"
-                />
-                {searchQuery ? (
-                  <button
-                    type="button"
-                    onClick={() => setSearchQuery("")}
-                    aria-label="Clear search"
-                    className="absolute right-9 top-1/2 -translate-y-1/2 text-[#999999] hover:text-black transition-colors"
-                  >
-                    <X className="w-3.5 h-3.5" />
-                  </button>
-                ) : null}
-                <button
-                  type="submit"
-                  aria-label="Search"
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#666666] hover:text-black transition-colors"
-                >
-                  <Search className="w-4 h-4 stroke-[1.8]" />
-                </button>
-              </form>
-            </div>
-
-            {/* Desktop & Mobile Right: Actions (Search Icon BEFORE Wishlist, Account, Cart) */}
-            <div className="flex items-center justify-end space-x-1.5 sm:space-x-3 text-[#222222]">
-              {/* Mohali Store Pill (Desktop only) */}
-              <Link
-                href="/pages/contact"
-                className="hidden lg:flex items-center gap-1.5 py-1 px-3 rounded-full bg-[#FAF9F5] border border-[#EBE6DC] text-xs text-[#444444] hover:text-[#BA9048] hover:border-[#BA9048] transition-colors"
-                title="Mohali Flagship Boutique, Sector 70, Punjab"
-              >
-                <MapPin className="w-3.5 h-3.5 text-[#BA9048]" />
-                <span className="font-medium tracking-wide">Mohali Boutique</span>
-              </Link>
-
-              {/* User Account (Tablet/Desktop) */}
+            {/* Right Column: User, Search Icon, Wishlist, Cart Bag */}
+            <div className="flex items-center justify-end space-x-1 sm:space-x-3 text-[#222222]">
+              {/* User Account (Desktop) */}
               <Link
                 href="/account"
-                className="hidden sm:flex items-center text-[#222222] hover:text-[#BA9048] transition-colors p-1.5"
+                className="hidden md:flex items-center text-[#222222] hover:text-[#BA9048] transition-colors p-1.5"
                 aria-label="My Account"
               >
                 <User className="w-5 h-5 stroke-[1.5]" />
               </Link>
 
-              {/* SEARCH ICON (Explicitly placed BEFORE Wishlist on Mobile & Desktop) */}
+              {/* Search Icon (Mobile quick search & Desktop drawer toggle) */}
               <button
                 type="button"
                 onClick={() => setSearchOpen(!searchOpen)}

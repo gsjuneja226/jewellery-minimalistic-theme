@@ -21,12 +21,12 @@ export function AlukasInstagramGrid() {
           Follow Us on Instagram
         </h2>
         <a
-          href="https://instagram.com"
+          href="https://www.instagram.com/phabulous_by_mitthat"
           target="_blank"
           rel="noopener noreferrer"
           className="text-xs md:text-sm text-[#777777] font-sans hover:text-black transition-colors"
         >
-          @phabulousbymitthat
+          @phabulous_by_mitthat
         </a>
       </div>
 
@@ -35,7 +35,7 @@ export function AlukasInstagramGrid() {
         {INSTA_IMAGES.map((src, index) => (
           <a
             key={index}
-            href="https://instagram.com"
+            href="https://www.instagram.com/phabulous_by_mitthat"
             target="_blank"
             rel="noopener noreferrer"
             className="relative aspect-square overflow-hidden bg-[#FAFAFA] group block"

@@ -185,7 +185,7 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
                 onClick={onClose}
                 className="flex items-center justify-between py-3 border-b border-[#F5F5F5] text-[#222222] hover:text-[#BA9048]"
               >
-                <span>Our Mohali Story</span>
+                <span>Our Story</span>
               </Link>
               <Link
                 href="/track-order"
@@ -264,10 +264,10 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
             className="flex items-center gap-2 text-[#222222] font-semibold hover:text-[#BA9048]"
           >
             <MapPin className="w-4 h-4 text-[#BA9048] shrink-0" />
-            <span>Mohali Boutique • Sector 70, Punjab</span>
+            <span>Flagship Boutique • Sector 70, Punjab</span>
           </Link>
           <p className="text-[11px] text-[#777777]">
-            Handcrafted Artificial Jewellery Studio
+            Handcrafted Artificial Jewellery Boutique
           </p>
         </div>
       </div>

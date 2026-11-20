@@ -22,7 +22,7 @@ export function SplitFeatureBanners() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-transparent md:bg-gradient-to-r md:from-black/75 md:via-black/30 md:to-transparent" />
             <div className="absolute inset-0 p-8 md:p-12 flex flex-col justify-end md:justify-center items-start text-left z-10 text-white">
               <span className="text-[11px] font-bold tracking-widest uppercase text-[#F3D98A] mb-1.5">
-                ARTISANAL HERITAGE • MOHALI
+                ARTISANAL HERITAGE • HANDCRAFTED
               </span>
               <h3 className="text-2xl md:text-3xl font-serif text-white font-normal leading-tight whitespace-pre-line mb-4 drop-shadow-sm">
                 Royal Temple{"\n"}Bangles Collection

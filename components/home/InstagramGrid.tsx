@@ -29,7 +29,7 @@ export function InstagramGrid() {
           {posts.map((post, idx) => (
             <a
               key={post.id}
-              href="https://instagram.com"
+              href="https://www.instagram.com/phabulous_by_mitthat"
               target="_blank"
               rel="noopener noreferrer"
               className={cn(

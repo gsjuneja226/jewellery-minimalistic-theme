@@ -14,10 +14,10 @@ export function FindStoreBanner() {
           </div>
           <div>
             <h3 className="text-xl md:text-2xl font-serif text-[#222222] font-normal tracking-wide">
-              Visit Our Exclusive Mohali Flagship Boutique
+              Visit Our Exclusive Flagship Boutique
             </h3>
             <p className="text-xs text-[#777777] font-sans mt-0.5">
-              Experience handcrafted bridal Kundan sets, anti-tarnish hoops & statement chokers in Sector 70, Mohali.
+              Experience handcrafted bridal Kundan sets, anti-tarnish hoops & statement chokers in Sector 70, Punjab.
             </p>
           </div>
         </div>
@@ -27,7 +27,7 @@ export function FindStoreBanner() {
           className="py-2.5 px-7 text-xs font-bold uppercase tracking-wider text-[#222222] bg-white border border-[#222222] hover:bg-black hover:text-white transition-colors duration-300 shadow-xs shrink-0 flex items-center gap-2"
         >
           <MapPin className="w-3.5 h-3.5" />
-          <span>Mohali Boutique</span>
+          <span>Flagship Boutique</span>
         </Link>
       </div>
     </section>

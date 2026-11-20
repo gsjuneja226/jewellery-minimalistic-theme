@@ -174,15 +174,15 @@ const CMS_PAGES: Record<string, CmsPageContent> = {
     ),
   },
   contact: {
-    title: "Mohali Flagship Boutique & Contact",
-    subtitle: "Experience handcrafted artificial jewellery at our boutique in Mohali, Punjab.",
+    title: "Flagship Boutique & Contact",
+    subtitle: "Experience handcrafted artificial jewellery at our flagship boutique in Punjab.",
     content: (
       <div className="space-y-6 text-sm font-sans text-brown-text leading-relaxed">
         <div className="p-6 rounded-[14px] border border-[#E7DCC6] bg-white space-y-3">
           <span className="text-[11px] font-bold tracking-widest uppercase text-antique-gold">OUR EXCLUSIVE BOUTIQUE</span>
-          <h4 className="font-serif text-2xl text-espresso">Phabulous by Mitthat — Mohali</h4>
+          <h4 className="font-serif text-2xl text-espresso">Phabulous by Mitthat — Flagship Boutique</h4>
           <p className="text-sm text-brown-text/90">
-            Sector 70, SAS Nagar (Mohali), Punjab 160071, India
+            Sector 70, SAS Nagar, Punjab 160071, India
           </p>
           <p className="text-xs text-brown-text/70">
             Timings: Monday to Saturday, 11:00 AM – 8:00 PM IST
@@ -199,7 +199,7 @@ const CMS_PAGES: Record<string, CmsPageContent> = {
           <div className="p-5 rounded-[14px] border border-[#E7DCC6] bg-white space-y-2">
             <Sparkles className="w-5 h-5 text-antique-gold" />
             <h4 className="font-serif text-lg text-espresso">Bespoke Bridal Appointments</h4>
-            <p className="text-xs text-brown-text/80">Private bridal trials & customizations available at our Mohali boutique.</p>
+            <p className="text-xs text-brown-text/80">Private bridal trials & customizations available at our flagship boutique.</p>
             <p className="text-[11px] text-brown-text/60">By prior booking</p>
           </div>
         </div>

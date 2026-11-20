@@ -58,7 +58,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           </button>
           <div className="relative w-28 h-8">
             <Image
-              src="/brand/logo-wordmark.png"
+              src="/brand/newlogo.png"
               alt="Phabulous Admin"
               fill
               className="object-contain object-left"
@@ -81,7 +81,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
           <div className="p-6 border-b border-[#E7DCC6]/80 flex flex-col items-start gap-2">
             <Link href="/admin" className="relative w-36 h-10 block">
               <Image
-                src="/brand/logo-wordmark.png"
+                src="/brand/newlogo.png"
                 alt="Phabulous Admin"
                 fill
                 className="object-contain object-left"
