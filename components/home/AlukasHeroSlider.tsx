@@ -8,27 +8,27 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 export const SLIDES = [
   {
     id: 1,
-    link: "/collections/jewellery-sets",
-    image: "/hero/hero-slide-luxury.jpg",
-    alt: "Handcrafted Luxury Artificial Jewellery & Bridal Chokers",
+    link: "/collections",
+    image: "/hero/user-hero-1.png",
+    alt: "Holiday Season Sale - Buy 1 Get 1 Free - Code: GIFT",
   },
   {
     id: 2,
     link: "/collections/new-arrivals",
-    image: "/hero/hero-slide-bridal.jpg",
-    alt: "Royal Bridal & Heritage Kundan Sets Collection",
+    image: "/hero/user-hero-2.png",
+    alt: "Spring Festival Sale - Get 30% Off Your First Order - Code: BLOOM30",
   },
   {
     id: 3,
-    link: "/collections",
-    image: "/hero/hero-slide-editorial.jpg",
-    alt: "Everyday Glamour & Anti-Tarnish Solitaires Collection",
+    link: "/collections/jewellery-sets",
+    image: "/hero/hero-slide-luxury.jpg",
+    alt: "Handcrafted Luxury Artificial Jewellery & Bridal Sets",
   },
   {
     id: 4,
     link: "/collections/necklaces",
-    image: "/hero/hero-slide-kundan.jpg",
-    alt: "Traditional Kundan & Polki Choker Necklaces",
+    image: "/hero/hero-slide-bridal.jpg",
+    alt: "Royal Bridal Kundan Chokers & Necklaces",
   },
 ];
 
@@ -82,7 +82,6 @@ export function AlukasHeroSlider() {
       prevSlide();
     }
 
-    // Reset touch state after brief delay so tap navigation works smoothly
     setTimeout(() => {
       isSwipingRef.current = false;
       touchStartRef.current = null;
@@ -106,16 +105,16 @@ export function AlukasHeroSlider() {
 
   return (
     <section
-      className="relative w-full bg-[#1A1A1A] overflow-hidden select-none"
+      className="relative w-full bg-white overflow-hidden select-none"
       onTouchStart={onTouchStart}
       onTouchMove={onTouchMove}
       onTouchEnd={onTouchEnd}
     >
-      {/* Full Tap/Click Link to Connected Image Collection */}
+      {/* Full Tap/Click Link to Connected Collection - Enlarged Aspect Ratio */}
       <Link
         href={slide.link}
         onClick={handleLinkClick}
-        className="block relative w-full h-[65vh] min-h-[460px] sm:h-[72vh] sm:min-h-[560px] md:h-[78vh] md:min-h-[660px] lg:h-[84vh] lg:min-h-[740px] max-h-[860px] cursor-pointer group"
+        className="block relative w-full aspect-[2.2/1] sm:aspect-[2.7/1] md:aspect-[3.22/1] min-h-[180px] sm:min-h-[260px] md:min-h-[360px] lg:min-h-[420px] max-h-[580px] cursor-pointer group"
         aria-label={slide.alt}
       >
         <Image
@@ -128,26 +127,26 @@ export function AlukasHeroSlider() {
         />
       </Link>
 
-      {/* Left & Right Arrow Buttons */}
+      {/* Left & Right Arrow Navigation */}
       <button
         type="button"
         onClick={prevSlide}
         aria-label="Previous Slide"
-        className="flex absolute left-3 sm:left-5 md:left-7 top-1/2 -translate-y-1/2 z-20 w-9 sm:w-11 md:w-12 h-9 sm:h-11 md:h-12 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
+        className="flex absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
       >
-        <ChevronLeft className="w-5 sm:w-6 h-5 sm:h-6 stroke-[2]" />
+        <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
       </button>
       <button
         type="button"
         onClick={nextSlide}
         aria-label="Next Slide"
-        className="flex absolute right-3 sm:right-5 md:right-7 top-1/2 -translate-y-1/2 z-20 w-9 sm:w-11 md:w-12 h-9 sm:h-11 md:h-12 rounded-full items-center justify-center text-white bg-black/40 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
+        className="flex absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
       >
-        <ChevronRight className="w-5 sm:w-6 h-5 sm:h-6 stroke-[2]" />
+        <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
       </button>
 
-      {/* Slide Indicators with Generous Tap Targets */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+      {/* Slide Indicators */}
+      <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}
@@ -158,10 +157,10 @@ export function AlukasHeroSlider() {
               setCurrentSlide(idx);
             }}
             aria-label={`Go to slide ${idx + 1}`}
-            className={`h-2 sm:h-2.5 rounded-full transition-all duration-300 focus:outline-none ${
+            className={`h-1.5 sm:h-2 rounded-full transition-all duration-300 focus:outline-none ${
               currentSlide === idx
-                ? "w-7 sm:w-9 bg-white shadow-sm"
-                : "w-2 sm:w-2.5 bg-white/50 hover:bg-white/80"
+                ? "w-6 sm:w-8 bg-white shadow-sm"
+                : "w-1.5 sm:w-2 bg-white/50 hover:bg-white/80"
             }`}
           />
         ))}
