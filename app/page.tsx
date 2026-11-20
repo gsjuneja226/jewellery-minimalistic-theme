@@ -1,13 +1,13 @@
 import * as React from "react";
 import { Header } from "@/components/layout/Header";
 import { AlukasHeroSlider } from "@/components/home/AlukasHeroSlider";
+import { PopularCategoriesSlider } from "@/components/home/PopularCategoriesSlider";
 import { PromoBanners } from "@/components/home/PromoBanners";
 import { TrendyCollectionSlider } from "@/components/home/TrendyCollectionSlider";
 import { FindStoreBanner } from "@/components/home/FindStoreBanner";
 import { SplitFeatureBanners } from "@/components/home/SplitFeatureBanners";
 import { FeaturedProductsTabs } from "@/components/home/FeaturedProductsTabs";
 import { AlukasCustomerReviews } from "@/components/home/AlukasCustomerReviews";
-import { ExhibitionsGallery } from "@/components/home/ExhibitionsGallery";
 import { ReadJournalSection } from "@/components/home/ReadJournalSection";
 import { AlukasInstagramGrid } from "@/components/home/AlukasInstagramGrid";
 import { AlukasNewsletter } from "@/components/home/AlukasNewsletter";
@@ -25,7 +25,10 @@ export default function HomePage() {
       {/* 2. Hero Slider with mobile-optimized height & bold CTAs */}
       <AlukasHeroSlider />
 
-      {/* 3. Promotional 3-Card Feature Banners */}
+      {/* 3. Popular Categories (Compact Grid on Mobile, 6 Circles on Desktop) */}
+      <PopularCategoriesSlider />
+
+      {/* 4. Promotional 3-Card Feature Banners */}
       <PromoBanners />
 
       {/* 5. Trendy Collection (Visible on mobile & laptop) */}
@@ -43,10 +46,7 @@ export default function HomePage() {
       {/* 9. Customer Reviews Carousel */}
       <AlukasCustomerReviews />
 
-      {/* 10. Trunk Shows & Exhibitions Gallery */}
-      <ExhibitionsGallery />
-
-      {/* 11. Read Journal (Visible on mobile & laptop) */}
+      {/* 10. Read Journal (Visible on mobile & laptop) */}
       <ReadJournalSection />
 
       {/* 11. Instagram Gallery */}
