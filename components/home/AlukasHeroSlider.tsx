@@ -130,7 +130,7 @@ export function AlukasHeroSlider() {
       <Link
         href={slide.link}
         onClick={handleLinkClick}
-        className="block relative w-full h-[58vh] min-h-[420px] max-h-[500px] sm:h-[64vh] sm:min-h-[500px] md:h-[70vh] md:min-h-[560px] lg:h-[74vh] lg:min-h-[600px] max-h-[660px] cursor-pointer group bg-[#111111]"
+        className="block relative w-full h-[260px] sm:h-[340px] md:h-[calc(100vh-120px)] lg:h-[calc(100vh-125px)] max-h-[620px] cursor-pointer group bg-[#111111]"
         aria-label={slide.alt}
       >
         <Image
@@ -144,19 +144,19 @@ export function AlukasHeroSlider() {
 
         {/* Minimal Luxury Text Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent md:from-black/70 md:via-black/20 md:to-transparent flex items-end sm:items-center">
-          <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-14 lg:px-16 w-full pb-10 sm:pb-0 text-left">
-            <div className="max-w-md sm:max-w-lg space-y-1.5 sm:space-y-3 text-white">
-              <span className="inline-block text-[9.5px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-[#F3D98A]">
+          <div className="max-w-7xl mx-auto px-5 sm:px-10 md:px-14 lg:px-16 w-full pb-6 sm:pb-0 text-left">
+            <div className="max-w-md sm:max-w-lg space-y-1 sm:space-y-2 md:space-y-3 text-white">
+              <span className="inline-block text-[9px] sm:text-[11px] font-bold tracking-[0.22em] uppercase text-[#F3D98A]">
                 {slide.tag}
               </span>
-              <h2 className="text-xl sm:text-2xl md:text-4xl lg:text-[46px] font-serif font-normal leading-[1.16] whitespace-pre-line tracking-tight text-white drop-shadow-sm">
+              <h2 className="text-lg sm:text-2xl md:text-3.5xl lg:text-[40px] font-serif font-normal leading-[1.18] sm:leading-[1.16] whitespace-pre-line tracking-tight text-white drop-shadow-sm">
                 {slide.title}
               </h2>
               <p className="text-xs sm:text-sm text-white/85 font-sans font-normal leading-relaxed max-w-sm hidden sm:block">
                 {slide.subtitle}
               </p>
-              <div className="pt-1 sm:pt-2">
-                <span className="inline-flex items-center gap-1.5 text-[10.5px] sm:text-xs font-bold uppercase tracking-widest text-white border-b-2 border-white pb-0.5 group-hover:text-[#F3D98A] group-hover:border-[#F3D98A] transition-colors">
+              <div className="pt-0.5 sm:pt-2">
+                <span className="inline-flex items-center gap-1.5 text-[10px] sm:text-xs font-bold uppercase tracking-widest text-white border-b-2 border-white pb-0.5 group-hover:text-[#F3D98A] group-hover:border-[#F3D98A] transition-colors">
                   {slide.cta} →
                 </span>
               </div>
@@ -170,21 +170,21 @@ export function AlukasHeroSlider() {
         type="button"
         onClick={prevSlide}
         aria-label="Previous Slide"
-        className="flex absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
+        className="flex absolute left-2 sm:left-4 md:left-6 top-1/2 -translate-y-1/2 z-20 w-7 sm:w-10 md:w-11 h-7 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
       >
-        <ChevronLeft className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
+        <ChevronLeft className="w-3.5 sm:w-5 h-3.5 sm:h-5 stroke-[2]" />
       </button>
       <button
         type="button"
         onClick={nextSlide}
         aria-label="Next Slide"
-        className="flex absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-8 sm:w-10 md:w-11 h-8 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
+        className="flex absolute right-2 sm:right-4 md:right-6 top-1/2 -translate-y-1/2 z-20 w-7 sm:w-10 md:w-11 h-7 sm:h-10 md:h-11 rounded-full items-center justify-center text-white bg-black/45 hover:bg-white hover:text-black transition-all shadow-md focus:outline-none"
       >
-        <ChevronRight className="w-4 sm:w-5 h-4 sm:h-5 stroke-[2]" />
+        <ChevronRight className="w-3.5 sm:w-5 h-3.5 sm:h-5 stroke-[2]" />
       </button>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-3 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
+      <div className="absolute bottom-2.5 sm:bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2">
         {SLIDES.map((_, idx) => (
           <button
             key={idx}
