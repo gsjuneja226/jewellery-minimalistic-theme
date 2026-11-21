@@ -196,7 +196,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 5.0,
     reviewsCount: 18,
-    images: ["/images/products/prod-alukas-1.jpg"],
+    images: ["/images/categories/earrings.jpg", "/images/instagram/insta-1.jpg"],
     variants: [
       { id: "var-alukas-1", title: "Sapphire Rhodium", sku: "PH-ER-001", price: 12900, compareAtPrice: 15900, stock: 10 },
     ],
@@ -218,7 +218,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 24,
-    images: ["/images/products/prod-alukas-2.jpg"],
+    images: ["/images/categories/rings.jpg"],
     variants: [
       { id: "var-alukas-2", title: "Size 7 (17.3 mm)", sku: "PH-RG-001", price: 24900, stock: 14 },
     ],
@@ -240,7 +240,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 5.0,
     reviewsCount: 14,
-    images: ["/images/products/prod-alukas-3.jpg"],
+    images: ["/images/categories/pendants.jpg"],
     variants: [
       { id: "var-alukas-3", title: "Yellow Gold Finish", sku: "PH-NC-001", price: 19900, stock: 12 },
     ],
@@ -262,7 +262,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.8,
     reviewsCount: 22,
-    images: ["/images/products/prod-alukas-4.jpg"],
+    images: ["/images/categories/necklaces.jpg"],
     variants: [
       { id: "var-alukas-4", title: "Yellow Gold", sku: "PH-NC-002", price: 2900, compareAtPrice: 5900, stock: 15 },
     ],
@@ -284,7 +284,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 35,
-    images: ["/images/products/prod-alukas-5.jpg"],
+    images: ["/images/categories/kundan-choker.jpg"],
     variants: [
       { id: "var-alukas-5", title: "Antique Gold / Pearl White", sku: "PH-KND-001", price: 34900, compareAtPrice: 49900, stock: 8 },
     ],
@@ -306,7 +306,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 19,
-    images: ["/images/products/prod-alukas-6.jpg"],
+    images: ["/images/categories/bangles.jpg"],
     variants: [
       { id: "var-alukas-6", title: "2.6 Size", sku: "PH-BNG-001", price: 14900, compareAtPrice: 18500, stock: 9 },
     ],
@@ -328,7 +328,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.7,
     reviewsCount: 29,
-    images: ["/images/products/prod-alukas-7.jpg"],
+    images: ["/hero/hero-slide-modern.jpg"],
     variants: [
       { id: "var-alukas-7", title: "Medium 25mm", sku: "PH-ER-003", price: 4500, stock: 25 },
     ],
@@ -350,7 +350,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     isFeatured: true,
     rating: 4.9,
     reviewsCount: 42,
-    images: ["/images/products/prod-alukas-8.jpg"],
+    images: ["/images/occasions/gifting.jpg"],
     variants: [
       { id: "var-alukas-8", title: "Ruby Velvet Box", sku: "PH-GFT-001", price: 25000, stock: 18 },
     ],
@@ -374,7 +374,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 48,
     images: [
-      "/images/products/prod-1.jpg",
+      "/images/categories/kundan-choker.jpg",
       "/products/kundan-jadau-choker-set-1.svg",
       "/products/kundan-jadau-choker-set-2.svg",
     ],
@@ -401,7 +401,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 36,
     images: [
-      "/images/products/prod-2.jpg",
+      "/images/categories/rings.jpg",
       "/products/ad-solitaire-statement-ring-1.svg",
       "/products/ad-solitaire-statement-ring-2.svg",
     ],
@@ -429,7 +429,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 64,
     images: [
-      "/images/products/prod-3.jpg",
+      "/images/categories/earrings.jpg",
       "/products/chandbali-festive-jhumkas-1.svg",
       "/products/chandbali-festive-jhumkas-2.svg",
     ],
@@ -456,7 +456,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.7,
     reviewsCount: 22,
     images: [
-      "/images/products/prod-4.jpg",
+      "/images/categories/necklaces.jpg",
       "/products/emerald-stone-layered-necklace-1.svg",
       "/products/emerald-stone-layered-necklace-2.svg",
     ],
@@ -482,7 +482,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 29,
     images: [
-      "/images/products/prod-5.jpg",
+      "/images/categories/bangles.jpg",
       "/products/temple-peacock-cuff-bangle-1.svg",
       "/products/temple-peacock-cuff-bangle-2.svg",
     ],
@@ -510,7 +510,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 19,
     images: [
-      "/images/products/prod-6.jpg",
+      "/images/categories/pendants.jpg",
       "/products/sapphire-teardrop-pendant-1.svg",
       "/products/sapphire-teardrop-pendant-2.svg",
     ],
@@ -537,7 +537,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.6,
     reviewsCount: 15,
     images: [
-      "/images/products/prod-7.jpg",
+      "/images/occasions/wedding.jpg",
       "/products/pearl-cluster-bridal-payal-1.svg",
       "/products/pearl-cluster-bridal-payal-2.svg",
       "/products/pearl-cluster-bridal-payal-3.svg",
@@ -564,7 +564,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 31,
     images: [
-      "/images/products/prod-8.jpg",
+      "/images/instagram/insta-3.jpg",
       "/products/meenakari-flower-studs-1.svg",
       "/products/meenakari-flower-studs-2.svg",
       "/products/meenakari-flower-studs-3.svg",
@@ -592,7 +592,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 42,
     images: [
-      "/images/products/prod-9.jpg",
+      "/images/categories/bangles.jpg",
       "/products/rose-gold-tennis-bracelet-1.svg",
       "/products/rose-gold-tennis-bracelet-2.svg",
       "/products/rose-gold-tennis-bracelet-3.svg",
@@ -620,7 +620,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.7,
     reviewsCount: 26,
     images: [
-      "/images/products/prod-10.jpg",
+      "/images/categories/necklaces.jpg",
       "/products/oxidised-silver-tribal-necklace-1.svg",
       "/products/oxidised-silver-tribal-necklace-2.svg",
       "/products/oxidised-silver-tribal-necklace-3.svg",
@@ -647,7 +647,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.8,
     reviewsCount: 17,
     images: [
-      "/images/products/prod-11.jpg",
+      "/images/occasions/festive.jpg",
       "/products/ruby-drop-maang-tikka-1.svg",
       "/products/ruby-drop-maang-tikka-2.svg",
       "/products/ruby-drop-maang-tikka-3.svg",
@@ -674,7 +674,7 @@ export const PRODUCTS_DATA: MockProduct[] = [
     rating: 4.9,
     reviewsCount: 52,
     images: [
-      "/images/products/prod-12.jpg",
+      "/images/categories/earrings.jpg",
       "/products/classic-gold-tone-daily-hoops-1.svg",
       "/products/classic-gold-tone-daily-hoops-2.svg",
       "/products/classic-gold-tone-daily-hoops-3.svg",
