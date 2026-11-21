@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function SplitFeatureBanners() {
   return (
-    <section className="w-full bg-white py-6 sm:py-8 md:py-10">
+    <section className="w-full bg-white py-10 md:py-16">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
           {/* Card 1: Royal Temple Bangles */}
