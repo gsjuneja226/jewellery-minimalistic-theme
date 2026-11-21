@@ -42,9 +42,9 @@ export function AlukasCustomerReviews() {
   };
 
   return (
-    <section className="w-full bg-[#F5F1ED] py-8 sm:py-12 md:py-20 border-t border-[#EAE3DA]">
+    <section className="w-full bg-[#F5F1ED] py-7 sm:py-9 md:py-12 border-t border-[#EAE3DA]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative">
-        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+        <div className="text-center mb-5 sm:mb-6 md:mb-8">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif text-[#222222] font-normal">
             Customer Reviews
           </h2>

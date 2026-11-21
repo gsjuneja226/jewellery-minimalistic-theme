@@ -19,10 +19,10 @@ export function TrendyCollectionSlider() {
   };
 
   return (
-    <section className="w-full bg-white py-14 md:py-20 border-t border-[#F0F0F0]">
+    <section className="w-full bg-white py-7 sm:py-9 md:py-12 border-t border-[#F0F0F0]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8 relative">
         {/* Section Header */}
-        <div className="text-center mb-10 md:mb-14">
+        <div className="text-center mb-5 sm:mb-7 md:mb-9">
           <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#222222] font-normal mb-2">
             Trendy Collection
           </h2>

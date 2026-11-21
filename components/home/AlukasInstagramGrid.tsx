@@ -15,8 +15,8 @@ const INSTA_IMAGES = [
 
 export function AlukasInstagramGrid() {
   return (
-    <section className="w-full bg-white pt-16 md:pt-20">
-      <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-8 md:mb-12">
+    <section className="w-full bg-white pt-7 sm:pt-9 md:pt-12">
+      <div className="max-w-7xl mx-auto px-4 lg:px-8 text-center mb-4 sm:mb-6 md:mb-8">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#222222] font-normal mb-1">
           Follow Us on Instagram
         </h2>

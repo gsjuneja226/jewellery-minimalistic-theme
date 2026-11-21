@@ -16,12 +16,12 @@ export function AlukasNewsletter() {
   };
 
   return (
-    <section id="newsletter" className="w-full bg-white py-16 md:py-24 border-t border-[#F0F0F0]">
+    <section id="newsletter" className="w-full bg-white py-9 sm:py-11 md:py-14 border-t border-[#F0F0F0]">
       <div className="max-w-3xl mx-auto px-4 text-center">
-        <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#222222] font-normal mb-3">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-[#222222] font-normal mb-2">
           Subscribe Newsletter
         </h2>
-        <p className="text-xs md:text-sm text-[#777777] font-sans mb-8">
+        <p className="text-xs md:text-sm text-[#777777] font-sans mb-5 sm:mb-6">
           Sign up to our Newsletter and get the discount code.
         </p>
 

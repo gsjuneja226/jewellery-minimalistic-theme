@@ -45,10 +45,10 @@ const CATEGORIES = [
 
 export function PopularCategoriesSlider() {
   return (
-    <section className="w-full bg-white py-8 sm:py-12 md:py-16 border-t border-[#F0F0F0]">
+    <section className="w-full bg-white pt-5 pb-4 sm:pt-7 sm:pb-5 md:pt-9 md:pb-6 border-t border-[#F0F0F0]">
       <div className="max-w-7xl mx-auto px-4 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-6 sm:mb-8 md:mb-12">
+        <div className="text-center mb-4 sm:mb-6 md:mb-8">
           <h2 className="text-xl sm:text-2xl md:text-3xl font-serif text-[#222222] font-normal mb-1.5">
             Popular Categories
           </h2>
