@@ -30,7 +30,7 @@ const POSTS = [
     author: "PHABULOUS",
     title: "Curating Your Personal Fine Jewellery Capsule Collection",
     excerpt: "Timeless designs that transition seamlessly from daytime meetings to elegant evenings.",
-    image: "/images/categories/necklaces.jpg",
+    image: "/images/journal/editorial-capsule.jpg",
   },
 ];
 
