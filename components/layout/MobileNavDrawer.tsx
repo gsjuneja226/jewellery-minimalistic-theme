@@ -44,7 +44,7 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
         {/* Clean Single Header */}
         <div className="flex items-center justify-between px-5 py-4 border-b border-[#EEEEEE]">
           <Link href="/" onClick={onClose} className="flex items-center py-0.5">
-            <div className="relative h-9 w-36 shrink-0">
+            <div className="relative h-10 w-44 shrink-0">
               <Image
                 src="/brand/newlogo.png"
                 alt="Phabulous by Mitthat"
@@ -179,6 +179,16 @@ export function MobileNavDrawer({ open, onClose }: MobileNavDrawerProps) {
               >
                 <span>Bangles & Kadas</span>
                 <ChevronRight className="w-4 h-4 text-[#CCCCCC]" />
+              </Link>
+              <Link
+                href="/exhibitions"
+                onClick={onClose}
+                className="flex items-center justify-between py-3 border-b border-[#F5F5F5] text-[#BA9048] font-bold hover:text-black"
+              >
+                <span>Our Exhibitions</span>
+                <span className="px-1.5 py-0.5 bg-[#BA9048]/10 text-[#BA9048] text-[9px] font-bold uppercase rounded-sm">
+                  Showcase
+                </span>
               </Link>
               <Link
                 href="/pages/about"

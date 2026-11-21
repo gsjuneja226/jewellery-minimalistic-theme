@@ -24,7 +24,7 @@ const REVIEWS = [
     id: 3,
     title: "Anti-Tarnish Everyday Hoops",
     content:
-      "I wear their daily gold-tone hoops and bangles every day to work. Featherlight, hypoallergenic, and hasn't lost its lustrous warm shine. Outstanding craftsmanship from the Mitthat team!",
+      "I wear their daily gold-tone hoops and bangles every day to work. Featherlight, hypoallergenic, and hasn't lost its lustrous warm shine. Outstanding craftsmanship from the Phabulous team!",
     author: "Meera Sharma, Delhi",
     rating: 5,
   },

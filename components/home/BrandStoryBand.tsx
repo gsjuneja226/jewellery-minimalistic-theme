@@ -42,10 +42,10 @@ export function BrandStoryBand() {
           {/* Gurmukhi Script Accent */}
           <div className="space-y-0.5 sm:space-y-1">
             <span className="font-gurmukhi text-base sm:text-lg md:text-xl text-antique-gold font-medium tracking-wide">
-              ਮਿੱਠਤ ਵੱਲੋਂ • By Mitthat
+              ਫ਼ੈਬ • Phabulous
             </span>
             <p className="font-serif italic text-xs sm:text-sm text-brown-text/80 tracking-widest">
-              A Legacy of Warmth, Sweetness & Handpicked Craft
+              Founded by Mitthat • Handcrafted Luxury Jewellery
             </p>
           </div>
 
@@ -57,7 +57,7 @@ export function BrandStoryBand() {
           {/* Narrative Copy */}
           <div className="space-y-3 text-sm sm:text-base md:text-lg text-brown-text font-serif leading-relaxed">
             <p>
-              The name <em>Phabulous</em> is fun and playful — but behind every single piece lies uncompromising devotion to elegance. Inspired by the Punjabi spirit of <em>Mitthat</em> (warmth, sweetness, and genuine hospitality), our studio handpicks fashion jewellery that makes every woman feel celebrated.
+              The name <em>Phabulous</em> is fun and playful — but behind every single piece lies uncompromising devotion to elegance. Founded by <strong>Mitthat</strong>, our brand brings together royal Indian craftsmanship and skin-friendly luxury, ensuring every woman feels radiant and celebrated.
             </p>
             <p className="hidden sm:block text-xs sm:text-sm md:text-base font-sans text-brown-text/85">
               Every earring, choker, and cuff is carefully tested for skin-kind anti-tarnish comfort, intricate stone setting, and lasting lustre.

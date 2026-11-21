@@ -48,6 +48,7 @@ export function MegaMenu() {
             <li><Link href="/account" className="hover:text-black hover:translate-x-1 inline-block transition-transform">My Account & Orders</Link></li>
             <li><Link href="/account/wishlist" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Saved Wishlist</Link></li>
             <li><Link href="/track-order" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Track Delivery Status</Link></li>
+            <li><Link href="/exhibitions" className="hover:text-black hover:translate-x-1 inline-block transition-transform text-[#BA9048] font-semibold">Our Exhibitions & Trunk Shows</Link></li>
             <li><Link href="/pages/care-guide" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Anti-Tarnish Care Guide</Link></li>
             <li><Link href="/pages/shipping" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Complimentary Shipping</Link></li>
             <li><Link href="/pages/contact" className="hover:text-black hover:translate-x-1 inline-block transition-transform">Flagship Boutique</Link></li>

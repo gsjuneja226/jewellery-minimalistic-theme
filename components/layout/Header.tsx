@@ -95,12 +95,12 @@ export function Header({
                 className="flex items-center justify-center group focus:outline-none py-0.5"
                 aria-label="Phabulous by Mitthat"
               >
-                <div className="relative h-9 sm:h-11 md:h-12 w-36 sm:w-48 md:w-56 shrink-0 transition-opacity group-hover:opacity-90">
+                <div className="relative h-10 sm:h-12 md:h-14 w-40 sm:w-52 md:w-60 shrink-0 transition-opacity group-hover:opacity-90">
                   <Image
                     src="/brand/newlogo.png"
                     alt="Phabulous by Mitthat"
                     fill
-                    sizes="(max-width: 640px) 150px, 240px"
+                    sizes="(max-width: 640px) 160px, 260px"
                     className="object-contain object-center"
                     priority
                   />
@@ -193,7 +193,7 @@ export function Header({
         {/* Lower Desktop Navigation Bar - Clean, Centered, Single-Line */}
         <div className="hidden lg:block border-t border-[#EEEEEE] bg-white relative">
           <div className="max-w-7xl mx-auto px-4 lg:px-8">
-            <nav className="flex items-center justify-center space-x-9 text-xs font-semibold uppercase tracking-[0.16em] text-[#222222]">
+            <nav className="flex items-center justify-center space-x-6 lg:space-x-8 text-xs font-semibold uppercase tracking-[0.14em] text-[#222222]">
               <Link
                 href="/"
                 className="py-3.5 hover:text-[#BA9048] relative transition-colors border-b-2 border-black whitespace-nowrap"
@@ -257,6 +257,14 @@ export function Header({
                 <span className="px-1.5 py-0.2 bg-[#BA9048] text-white text-[9px] font-bold rounded-full">
                   NEW
                 </span>
+              </Link>
+
+              {/* OUR EXHIBITIONS */}
+              <Link
+                href="/exhibitions"
+                className="py-3.5 text-[#BA9048] hover:text-black transition-colors whitespace-nowrap font-bold"
+              >
+                OUR EXHIBITIONS
               </Link>
 
               <Link

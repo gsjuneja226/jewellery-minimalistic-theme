@@ -14,12 +14,12 @@ export function Footer() {
           {/* Column 1: Brand & Craftsmanship */}
           <div className="space-y-4">
             <Link href="/" className="inline-block group py-1">
-              <div className="relative h-11 w-48 shrink-0">
+              <div className="relative h-12 w-52 shrink-0">
                 <Image
                   src="/brand/newlogo.png"
                   alt="Phabulous by Mitthat"
                   fill
-                  sizes="192px"
+                  sizes="210px"
                   className="object-contain object-left"
                 />
               </div>
@@ -75,6 +75,7 @@ export function Footer() {
               <li><Link href="/pages/shipping" className="hover:text-black transition-colors">India-wide Express Shipping</Link></li>
               <li><Link href="/pages/returns" className="hover:text-black transition-colors">Easy Returns & Exchanges</Link></li>
               <li><Link href="/pages/faq" className="hover:text-black transition-colors">Frequently Asked Questions</Link></li>
+              <li><Link href="/exhibitions" className="hover:text-black transition-colors text-[#BA9048] font-semibold">Our Exhibitions</Link></li>
               <li><Link href="/pages/about" className="hover:text-black transition-colors">Our Story</Link></li>
               <li><Link href="/admin" className="text-[#888888] hover:text-black transition-colors">Admin Portal</Link></li>
             </ul>

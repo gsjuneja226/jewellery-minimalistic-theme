@@ -1,5 +1,5 @@
 import * as React from "react";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
@@ -15,28 +15,22 @@ interface CmsPageContent {
 
 const CMS_PAGES: Record<string, CmsPageContent> = {
   about: {
-    title: "Our Story — By Mitthat",
-    subtitle: "A legacy of warmth, sweetness, and handpicked luxury.",
+    title: "Our Story",
+    subtitle: "Handcrafted Luxury Jewellery, Founded by Mitthat.",
     content: (
       <div className="space-y-6 text-sm font-sans text-brown-text leading-relaxed">
-        <p className="text-base font-serif italic text-espresso">
-          The Punjabi word <strong>ਮਿੱਠਤ (Mitthat)</strong> translates to warmth, sweetness of tone,
-          and genuine heartfelt hospitality.
+        <p className="text-base font-serif text-espresso leading-relaxed">
+          <strong>Phabulous</strong> was founded by <strong>Mitthat</strong> with a clear, heartfelt conviction: that exquisite jewellery should be worn with joyful abandon, bringing timeless elegance and celebration to every single day.
         </p>
         <p>
-          We founded <em>Phabulous by Mitthat</em> with a vibrant conviction: that exquisite jewellery
-          should be worn with joyful abandon, not hidden away in a bank locker. The name Phabulous is playful,
-          spirited, and celebratory, while every piece is handpicked with connoisseur-grade discernment.
+          As the founder and creative force behind Phabulous, Mitthat set out to create a collection where traditional Indian artistry merges effortlessly with contemporary, anti-tarnish comfort. The name <em>Phabulous</em> celebrates every woman&apos;s individuality, confidence, and radiant charm.
         </p>
-        <h3 className="font-serif text-2xl text-espresso pt-4">Artisanal Craft & Ethical Curation</h3>
+        <h3 className="font-serif text-2xl text-espresso pt-4">Artisanal Craft & Thoughtful Curation</h3>
         <p>
-          We collaborate with master artisans from Amritsar, Jaipur, and Rajkot. From classical uncut
-          Kundan-style choker sets to micro-faceted American Diamond (AD) solitaires, our creations offer
-          the look and weight of royal heirloom treasures with modern anti-tarnish comfort.
+          Collaborating closely with master craftsmen from Amritsar, Jaipur, and Rajkot, Mitthat curates pieces that carry the grandeur and intricate weight of royal family heirlooms—from handcrafted uncut Kundan-style jadau chokers to micro-faceted American Diamond solitaires.
         </p>
         <p>
-          Every jewel arrives nestled inside a bespoke blush velvet pouch and keepsake box, carrying our
-          trademark touch of sweet affection.
+          Every jewel arrives nestled inside a bespoke blush velvet keepsake box, hand-inspected and prepared with uncompromising devotion to beauty and customer delight.
         </p>
       </div>
     ),
@@ -222,6 +216,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 export default function CmsPage({ params }: { params: { slug: string } }) {
+  if (params.slug === "exhibitions") {
+    redirect("/exhibitions");
+  }
   const page = CMS_PAGES[params.slug];
   if (!page) notFound();
 
